@@ -1,0 +1,27 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemList/ArrowSelectIndicator" itemID="4fac4c32-000006ec" scaleGridRight="511.45" scaleGridTop="3.4" scaleGridBottom="23.6" lastModified="1336742492" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="ArrowSelectIndicator">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Arrow Select Indicator Shape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="1.00038146972656"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="283.4" y="14"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.3984375"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

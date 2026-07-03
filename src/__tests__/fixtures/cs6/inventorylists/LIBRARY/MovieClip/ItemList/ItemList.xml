@@ -1,0 +1,112 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemList/ItemList" itemID="4fafc3e8-000009d0" linkageExportForAS="true" linkageIdentifier="ItemList" linkageClassName="skyui.components.list.TabularList" lastModified="1352046474" lastUniqueIdentifier="42" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+  <timeline>
+    <DOMTimeline name="ItemList">
+      <layers>
+        <DOMLayer name="anchors" color="#4FFFFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/Anchor" name="anchorEntriesBegin">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/Anchor" name="anchorEntriesEnd">
+                  <matrix>
+                    <Matrix ty="528.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="header" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/ItemsListHeader" name="header" centerPoint3DX="271" centerPoint3DY="19.7">
+                  <transformationPoint>
+                    <Point x="398.9" y="18"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="scroll bar" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ ItemList/ScrollBar" name="scrollbar" centerPoint3DX="541.85" centerPoint3DY="124" uniqueID="28">
+                  <matrix>
+                    <Matrix tx="534.5" ty="34.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="6.65" y="89.05"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath='1.13.11.28'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="enableInitCallback">
+      <Inspectable name="enableInitCallback" variable="enableInitCallback" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="inspectableScrollTarget">
+      <Inspectable name="inspectableScrollTarget" variable="inspectableScrollTarget" category="" verbose="0" defaultValue="&quot;&quot;" type="String"/>
+   </property>
+   <property id="offsetBottom">
+      <Inspectable name="offsetBottom" variable="offsetBottom" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="offsetTop">
+      <Inspectable name="offsetTop" variable="offsetTop" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="soundMap">
+      <Inspectable name="soundMap" variable="soundMap" category="" verbose="0" defaultValue="theme:default,scroll:scroll" type="Object"/>
+   </property>
+   <property id="trackMode">
+      <Inspectable name="trackMode" variable="trackMode" category="" verbose="0" defaultValue="scrollPage" type="String"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="border" color="#FFFF00" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="background" centerPoint3DX="272.5" centerPoint3DY="264.05">
+                  <matrix>
+                    <Matrix a="5.57817077636719" d="5.36885070800781"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <parametersAsXML><![CDATA[   <property id="textOption">
+      <Inspectable name="textOption" variable="textOption" category="" verbose="0" defaultValue="Shrink To Fit" type="String"/>
+   </property>
+   <property id="entryRenderer">
+      <Inspectable name="entryRenderer" variable="entryRenderer" category="" verbose="0" defaultValue="ItemListEntry" type="String"/>
+   </property>
+]]></parametersAsXML>
+</DOMComponentItem>

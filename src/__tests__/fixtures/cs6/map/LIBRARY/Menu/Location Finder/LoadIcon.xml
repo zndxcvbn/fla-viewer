@@ -1,0 +1,35 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Menu/ Location Finder/LoadIcon" itemID="5119275c-00000813" sourceFlashFilepath="../../../../../skyrimui/src/racesex_menu.fla" sourceLibraryItemHRef="Sprites/Sprite 108" sourceLastModified="1339713225" lastModified="1360602972" lastUniqueIdentifier="1" sourceItemID="4fda66c9-00000128">
+  <timeline>
+    <DOMTimeline name="LoadIcon" currentFrame="288">
+      <layers>
+        <DOMLayer name="script" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="299" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="299" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[gotoAndPlay(1);]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="motion" color="#4F80FF" current="true" isSelected="true" autoNamed="false" animationType="motion object">
+          <frames>
+            <DOMFrame index="0" duration="300" tweenType="motion object" motionTweenRotate="none" motionTweenScale="false" motionTweenSync="true" isMotionObject="true" visibleAnimationKeyframes="2097151" keyMode="10243">
+              <motionObjectXML><AnimationCore TimeScale="30000" Version="1" duration="300000"><TimeMap strength="0" type="Quadratic"/><metadata><names><name langID="en" value=""/></names><Settings orientToPath="0" xformPtXOffsetPct="0.5" xformPtYOffsetPct="0.5" xformPtZOffsetPixels="0"/></metadata><PropertyContainer id="headContainer"><PropertyContainer id="Basic_Motion"><Property enabled="1" id="Motion_X" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property enabled="1" id="Motion_Y" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property enabled="1" id="Rotation_Z" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/><Keyframe anchor="0,360" next="0,360" previous="0,360" roving="0" timevalue="299000"/></Property></PropertyContainer><PropertyContainer id="Transformation"><Property enabled="1" id="Skew_X" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property enabled="1" id="Skew_Y" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,0" next="0,0" previous="0,0" roving="0" timevalue="0"/></Property><Property enabled="1" id="Scale_X" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,100" next="0,100" previous="0,100" roving="0" timevalue="0"/></Property><Property enabled="1" id="Scale_Y" ignoreTimeMap="0" readonly="0" visible="1"><Keyframe anchor="0,100" next="0,100" previous="0,100" roving="0" timevalue="0"/></Property></PropertyContainer><PropertyContainer id="Colors"/><PropertyContainer id="Filters"/></PropertyContainer></AnimationCore></motionObjectXML>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/LoadIcon Shape" centerPoint3DX="16.65" centerPoint3DY="16.65">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

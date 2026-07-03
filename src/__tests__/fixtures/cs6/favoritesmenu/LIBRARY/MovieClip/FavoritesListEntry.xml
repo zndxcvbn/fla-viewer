@@ -1,0 +1,146 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/FavoritesListEntry" itemID="50a30638-00000308" linkageExportForAS="true" linkageIdentifier="FavoritesListEntry" linkageClassName="FavoritesListEntry" sourceFlashFilepath="Sprite 10" sourceLibraryItemHRef="MovieClip/ListEntry" lastModified="1371079555" lastUniqueIdentifier="9" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="FavoritesListEntry">
+      <layers>
+        <DOMLayer name="Layer 8" color="#FF4F4F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/EquipIcon" name="equipIcon" centerPoint3DX="-15" centerPoint3DY="12">
+                  <matrix>
+                    <Matrix tx="-25" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="equipicon" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/HotkeyIcon" name="hotkeyIcon" selected="true" centerPoint3DX="232.8" centerPoint3DY="17.65">
+                  <matrix>
+                    <Matrix a="0.76922607421875" d="0.76922607421875" tx="228.5" ty="11"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="5.6" y="8.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="select" color="#4F80FF" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/OptionSelectIndicator" name="selectIndicator" selected="true" centerPoint3DX="138.25" centerPoint3DY="3.1">
+                  <matrix>
+                    <Matrix a="0.960006713867188" d="0.086090087890625"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 10" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="itemicon" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ItemIcon" name="itemIcon" centerPoint3DX="10" centerPoint3DY="11">
+                  <matrix>
+                    <Matrix a="0.16949462890625" d="0.169418334960938" tx="10" ty="11"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="text" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="textField" fontRenderingMode="standard" width="190" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="24" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Item</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 11" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/MainHandIcon" name="mainHandIcon" centerPoint3DX="212.3" centerPoint3DY="11.35">
+                  <matrix>
+                    <Matrix tx="188" ty="4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.3" y="7.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/OffHandIcon" name="offHandIcon" centerPoint3DX="228.9" centerPoint3DY="19.7">
+                  <matrix>
+                    <Matrix tx="204" ty="4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24.9" y="15.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="background">
+                  <matrix>
+                    <Matrix a="2.45652770996094" d="0.24407958984375"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

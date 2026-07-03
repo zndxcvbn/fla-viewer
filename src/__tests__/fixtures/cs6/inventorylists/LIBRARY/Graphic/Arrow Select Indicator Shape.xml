@@ -1,0 +1,37 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Arrow Select Indicator Shape" itemID="4fac49d4-000006ea" symbolType="graphic" lastModified="1336691957">
+  <timeline>
+    <DOMTimeline name="Arrow Select Indicator Shape">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.345947265625" d="0.01708984375" tx="283.4" ty="14"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!10256 560S2/0 560!0 560|0 0!0 0/10256 0!10256 0/10536 280!10536 280/10256 560"/>
+                    <Edge cubics="!10256 0(;10256,0 10536,280 10536,280p10256 0q10536 280);"/>
+                    <Edge cubics="!10536 280(;10536,280 10256,560 10256,560q10536 280 10256 560);"/>
+                    <Edge cubics="!0 560(;0,560 0,0 0,0q0 560 0 0);"/>
+                    <Edge cubics="!0 0(;0,0 10256,0 10256,0q0 0 10256 0);"/>
+                    <Edge cubics="!10256 560(;10256,560 0,560 0,560q10256 560 0 560);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

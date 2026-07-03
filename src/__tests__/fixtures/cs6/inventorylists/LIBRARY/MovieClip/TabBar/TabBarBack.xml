@@ -1,0 +1,53 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ TabBar/TabBarBack" itemID="4efa796e-00000629" sourceFlashFilepath="../../tabbedinventorylists.fla" sourceLibraryItemHRef="MovieClips/TabBarBack" sourceLastModified="1325271436" lastModified="1325271436" sourceItemID="4efa796e-00000629">
+  <timeline>
+    <DOMTimeline name="TabBarBack">
+      <layers>
+        <DOMLayer name="actions" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="2" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="labels" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="right" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="left" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="image" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/TabBar Background Shape" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point x="275.25" y="25.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/TabBar Background Shape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="-1" tx="550.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="275.25" y="25.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

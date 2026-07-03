@@ -1,0 +1,3418 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/ItemCard" itemID="507358ac-00000d48" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="ItemCard" linkageClassName="ItemCard" linkageURL="itemcard.swf" sourceFlashFilepath="Sprite 232" sourceLibraryItemHRef="Sprites/Sprite 232" lastModified="1427472572" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="ItemCard" currentFrame="191">
+      <layers>
+        <DOMLayer name="Labels Layer" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="9" name="Weapons_reg" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" name="Weapons_Enchanted" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" name="Apparel_reg" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" name="Apparel_Enchanted" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="39" duration="10" name="Potions_reg" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="49" duration="10" name="Ingredients_reg" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="59" duration="10" name="Misc_reg" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="69" duration="10" name="Books_reg" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="79" duration="10" name="Books_Description" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="89" duration="5" name="Magic_reg" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="94" duration="5" name="Power_reg" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="99" duration="5" name="Magic_time_label" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="104" duration="5" name="Power_time_label" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="109" duration="11" name="Magic_short" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="120" duration="10" name="Shouts_reg" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="130" duration="10" name="Empty" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="140" duration="10" name="Quantity" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="150" duration="10" name="ConfirmMessage" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="160" duration="10" name="Item_list" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="170" duration="11" name="ActiveEffects" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="181" duration="10" name="SoulGem" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="191" name="Craft_Enchanting" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="192" name="Craft_Enchanting_Weapon" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="193" name="Craft_Enchanting_Armor" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="194" name="Craft_Enchanting_Enchantment" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="195" duration="6" name="Craft_Enchanting_SoulGem" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Script 0" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="39" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="49" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="59" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="69" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="79" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="89" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="99" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="109" duration="11" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="120" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="130" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="140" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="150" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="160" duration="31" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="191" duration="10" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 58" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="201" keyMode="8704">
+              <elements>
+                <DOMComponentInstance libraryItemName="Sprites/Sprite 34" name="QuantitySlider_mc" uniqueID="1">
+                  <matrix>
+                    <Matrix tx="60" ty="92"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Page 1' oldCopiedComponentPath='1.1'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="enableInitCallback">
+      <Inspectable name="enableInitCallback" variable="enableInitCallback" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="liveDragging">
+      <Inspectable name="liveDragging" variable="liveDragging" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="maximum">
+      <Inspectable name="maximum" variable="maximum" category="" verbose="0" defaultValue="10" type="Number"/>
+   </property>
+   <property id="minimum">
+      <Inspectable name="minimum" variable="minimum" category="" verbose="0" defaultValue="1" type="Number"/>
+   </property>
+   <property id="offsetLeft">
+      <Inspectable name="offsetLeft" variable="offsetLeft" category="" verbose="0" defaultValue="7" type="Number"/>
+   </property>
+   <property id="offsetRight">
+      <Inspectable name="offsetRight" variable="offsetRight" category="" verbose="0" defaultValue="45" type="Number"/>
+   </property>
+   <property id="snapInterval">
+      <Inspectable name="snapInterval" variable="snapInterval" category="" verbose="0" defaultValue="1" type="Number"/>
+   </property>
+   <property id="snapping">
+      <Inspectable name="snapping" variable="snapping" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="soundMap">
+      <Inspectable name="soundMap" variable="soundMap" category="" verbose="0" defaultValue="change" type="Array"/>
+   </property>
+   <property id="value">
+      <Inspectable name="value" variable="value" category="" verbose="0" defaultValue="10" type="Number"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 54" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="201" keyMode="8704">
+              <elements>
+                <DOMComponentInstance libraryItemName="Sprites/Sprite 34" name="EnchantingSlider_mc" uniqueID="1">
+                  <matrix>
+                    <Matrix tx="89.05" ty="147.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Page 1' oldCopiedComponentPath='1.1'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="enableInitCallback">
+      <Inspectable name="enableInitCallback" variable="enableInitCallback" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="liveDragging">
+      <Inspectable name="liveDragging" variable="liveDragging" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="maximum">
+      <Inspectable name="maximum" variable="maximum" category="" verbose="0" defaultValue="10" type="Number"/>
+   </property>
+   <property id="minimum">
+      <Inspectable name="minimum" variable="minimum" category="" verbose="0" defaultValue="0.000000" type="Number"/>
+   </property>
+   <property id="offsetLeft">
+      <Inspectable name="offsetLeft" variable="offsetLeft" category="" verbose="0" defaultValue="7" type="Number"/>
+   </property>
+   <property id="offsetRight">
+      <Inspectable name="offsetRight" variable="offsetRight" category="" verbose="0" defaultValue="45" type="Number"/>
+   </property>
+   <property id="snapInterval">
+      <Inspectable name="snapInterval" variable="snapInterval" category="" verbose="0" defaultValue="1" type="Number"/>
+   </property>
+   <property id="snapping">
+      <Inspectable name="snapping" variable="snapping" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="soundMap">
+      <Inspectable name="soundMap" variable="soundMap" category="" verbose="0" defaultValue="change" type="Array"/>
+   </property>
+   <property id="value">
+      <Inspectable name="value" variable="value" category="" verbose="0" defaultValue="0.000000" type="Number"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 40" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="201" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 104" name="ButtonRect">
+                  <matrix>
+                    <Matrix tx="118" ty="144"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 38" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="120" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 45" name="ItemText">
+                  <matrix>
+                    <Matrix tx="37.4" ty="29.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="120" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 45" name="ItemText">
+                  <matrix>
+                    <Matrix tx="37.4" ty="-0.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="130" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 45" name="ItemText">
+                  <matrix>
+                    <Matrix tx="37.4" ty="29.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="140" duration="61" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 35" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 71" name="WeaponChargeMeter">
+                  <matrix>
+                    <Matrix tx="317.3" ty="135.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="182" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 34" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponWeightLabel" fontRenderingMode="standard" width="54.1" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="146.5" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="101" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="120" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 185" name="ShoutTextInstance2">
+                  <matrix>
+                    <Matrix tx="276.85" ty="123.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="130" duration="71" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 33" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="73.55" height="38.1" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="323.05" ty="77.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponEnchantedLabel" fontRenderingMode="standard" width="365.45" height="54" includeOutlines="true" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="140"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Weapon Enchanted&#xD;Weapon Enchanted</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="182" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 32" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="208.75" ty="77.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="73.55" height="38.1" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="323.05" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="182" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 31" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponDamageValue" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="87.95" ty="77.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="208.75" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="182" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 30" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponValueLable" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="266.75" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponDamageValue" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="87.95" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SkillTextInstance" fontRenderingMode="standard" width="359" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="10.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Skill</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#9A9A9A"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="10" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="49" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="EffectLabel3" selected="true" fontRenderingMode="standard" width="201" height="21.35" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="214" ty="147.65"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Effect 4</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="18" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="61" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="120" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 185" name="ShoutTextInstance1">
+                  <matrix>
+                    <Matrix tx="150.85" ty="123.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="130" duration="30" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="160" duration="31" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 45" name="ItemText">
+                  <matrix>
+                    <Matrix tx="37.4" ty="29.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 45" name="ItemText">
+                  <matrix>
+                    <Matrix tx="37.4" ty="19.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 29" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponWeightLabel" fontRenderingMode="standard" width="54.1" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="146.5" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponValueLable" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="266.75" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE&#xD;&#xD;</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SkillTextInstance" fontRenderingMode="standard" width="357" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="10.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Skill</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelEnchantedLabel" fontRenderingMode="standard" width="365.45" height="61" includeOutlines="true" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="133"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Apparel Enchanted&#xD;Apparel Enchanted</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="10" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="49" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="EffectLabel1" selected="true" fontRenderingMode="standard" width="202" height="21.35" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="214" ty="119.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Effect 2</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="18" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="142" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 28" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponDamageLabel" fontRenderingMode="standard" width="63.05" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="16.05" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$DAMAGE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponDamageLabel" fontRenderingMode="standard" width="63.05" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="16.05" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$DAMAGE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="76.9" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="323.05" ty="77.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="76.9" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="323.05" ty="76.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SkillTextInstance" fontRenderingMode="standard" width="362" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="10.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Skill</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="EffectLabel2" selected="true" fontRenderingMode="standard" width="199" height="21.35" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="10" ty="147.65"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Effect 3</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="18" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="40" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="99" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SkillLevelText" fontRenderingMode="standard" width="240" height="37.55" includeOutlines="true" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="38.25" ty="131.65"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="104" duration="97" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 27" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="19" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="208.75" ty="77.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="208.75" ty="76.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="PotionsLabel" fontRenderingMode="standard" width="403" height="61" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="11" ty="111"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Potions Effects 1&#xD;Potions Effects 2</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" lineSpacing="1" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="EffectLabel0" selected="true" fontRenderingMode="standard" width="198" height="21.35" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="11" ty="119.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Effect 1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="18" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="20" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="79" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="BookDescriptionLabel" fontRenderingMode="standard" width="364.95" height="49.4" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31.5" ty="121.65"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Description Line 1&#xD;Description Line 2</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="89" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SkillLevelText" fontRenderingMode="standard" width="233" height="37.55" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="39" ty="132.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="94" duration="5" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="99" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText fontRenderingMode="standard" width="19" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="12.25" ty="139.7"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$lvl</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="104" duration="88" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="192" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 71" name="ChargeMeter_Weapon">
+                  <matrix>
+                    <Matrix a="0.999801635742188" tx="317.3" ty="129.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="193" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="EnchantmentLabel" fontRenderingMode="standard" width="365.45" height="54" includeOutlines="true" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="110"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Weapon Enchanted&#xD;Weapon Enchanted</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="194" duration="7" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 26" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="19" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelArmorValue" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="87.95" ty="77.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelArmorValue" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="87.95" ty="76.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="83.4" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="254.5" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="89.5" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="254.5" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="83.5" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="254.5" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="69" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="124.25" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="254.5" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="79" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="124.25" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="254.5" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="89" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SkillLevelLabel" fontRenderingMode="standard" width="19" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="13" ty="139.3"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$lvl</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="94" duration="5" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="99" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText fontRenderingMode="standard" width="48.6" height="24.8" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="374.2" ty="137.95"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$per sec</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="104" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicCostPerSec" fontRenderingMode="standard" width="48.6" height="24.8" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="374.2" ty="137.95"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$per sec</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="109" duration="11" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="120" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 185" name="ShoutTextInstance0">
+                  <matrix>
+                    <Matrix tx="24.85" ty="123.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="130" duration="62" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="192" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponWeightLabel" fontRenderingMode="standard" width="54.1" height="18.95" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="146.5" ty="78.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="193" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SkillTextInstance" fontRenderingMode="standard" width="357" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="0.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Skill&#xD;&#xD;</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="194" duration="7" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 25" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="19" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelValueLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="266.75" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelValueLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="266.75" ty="84.05"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="140" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="140" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="140" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="69" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" selected="true" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="140" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="79" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="140" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="89" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicCostValue" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="338" ty="132.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="94" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicCostValue" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="338" ty="132.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="99" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicCostTimeValue" fontRenderingMode="standard" width="44.1" height="40.05" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="324" ty="132.65"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="104" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicCostTimeValue" fontRenderingMode="standard" width="46.1" height="40.05" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="322" ty="132.65"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="109" duration="11" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="120" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ShoutsCostTimeLabel" fontRenderingMode="standard" width="160.8" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="27.65" ty="188.3"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$RECHARGE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="130" duration="61" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="191" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="TotalChargesValue" fontRenderingMode="standard" width="75.05" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="337.95" ty="64.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="192" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="73.55" height="38.1" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="323.05" ty="71.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="193" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="76.9" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="323.05" ty="71.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="194" duration="7" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 24" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="19" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelWeightLabel" fontRenderingMode="standard" width="59.7" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="140.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelWeightLabel" fontRenderingMode="standard" width="59.7" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="140.9" ty="84.05"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="PotionValueLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="198.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="IngredientValueLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="198.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MiscValueLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="198.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="69" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="BookValueLabel" fontRenderingMode="standard" width="47.55" height="20" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="198.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="79" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="BookValueLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="198.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="89" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicCostLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="282.4" ty="139.75"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$COST</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="94" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicCostLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="282.4" ty="139.75"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$COST</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="99" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicCostTimeLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="271.65" ty="139.15"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$COST</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="104" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicCostTimeLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="271.65" ty="139.15"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$COST</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="109" duration="11" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="120" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ShoutCostValue" fontRenderingMode="standard" width="114.25" height="25" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="201.75" ty="183.8"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>25, 205, 205</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" size="20" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="130" duration="10" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="140" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SliderValueText" fontRenderingMode="standard" left="4.55" width="69.9" height="35.45" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="327.45" ty="85.35"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" letterSpacing="1" size="30" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="150" duration="41" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="191" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="TotalChargesLabel" fontRenderingMode="standard" width="63.05" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="24.05" ty="73.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$CHARGES</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="192" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="208.75" ty="71.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="193" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="208.75" ty="71.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="194" duration="7" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 23" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="19" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 96" name="PoisonInstance">
+                  <matrix>
+                    <Matrix a="0.225082397460938" d="0.225082397460938" tx="65.55" ty="42.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelArmorLabel" fontRenderingMode="standard" width="58.5" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="20.55" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$ARMOR</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelArmorLabel" fontRenderingMode="standard" width="58.5" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="20.55" ty="84.05"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$ARMOR</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="PotionWeightLabel" fontRenderingMode="standard" width="67.65" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="63.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="IngredientWeightLabel" fontRenderingMode="standard" width="67.65" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="63.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MiscWeightLabel" fontRenderingMode="standard" width="67.65" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="63.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="69" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="BookWeightLabel" fontRenderingMode="standard" width="67.65" height="20" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="63.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="79" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="BookWeightLabel" fontRenderingMode="standard" width="67.65" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="63.9" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="89" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicEffectsLabel" fontRenderingMode="standard" width="365.45" height="59.75" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="85.05"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="94" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicEffectsLabel" selected="true" fontRenderingMode="standard" width="366.95" height="59.75" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="85.05"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="99" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicEffectsLabel" fontRenderingMode="standard" width="365.95" height="55.75" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="85.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="104" duration="5" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicEffectsLabel" fontRenderingMode="standard" width="365.95" height="55.75" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="85.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="109" duration="11" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicEffectsLabel" fontRenderingMode="standard" width="389" height="55.75" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="19" ty="85.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="120" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ShoutEffectsLabel" fontRenderingMode="standard" width="402" height="49.4" includeOutlines="true" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="12" ty="131.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Creates a force that pushes targets away.&#xD;Creates a force that pushes targets away.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="130" duration="10" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="140" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText fontRenderingMode="standard" width="387.95" height="35.55" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="23.55" ty="36.2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$How many?</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="1" size="30" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="150" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MessageText" fontRenderingMode="standard" width="407" height="154.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="10" ty="36.05"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Confirm message text</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="1" lineSpacing="1" size="30" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="160" duration="32" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="192" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponDamageValue" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="87.95" ty="71.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="193" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelArmorValue" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="87.95" ty="71.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="194" duration="7" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 22" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="192" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="192" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponValueLable" fontRenderingMode="standard" width="47.55" height="18.95" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="266.75" ty="78.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="193" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelValueLabel" fontRenderingMode="standard" width="47.55" height="18.95" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="266.75" ty="78.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="194" duration="7" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 21" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="191" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="191" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 71" name="ChargeMeter_Default">
+                  <matrix>
+                    <Matrix tx="317.3" ty="87.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="192" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="WeaponDamageLabel" fontRenderingMode="standard" width="63.05" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="16.05" ty="78.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$DAMAGE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="193" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelWeightLabel" fontRenderingMode="standard" width="59.7" height="18.95" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="140.9" ty="78.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="194" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 71" name="ChargeMeter_Enchantment">
+                  <matrix>
+                    <Matrix tx="317.3" ty="84.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="195" duration="6" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 20" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="160" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 73" name="CardList_mc">
+                  <matrix>
+                    <Matrix tx="150" ty="98"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="160" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 73" name="CardList_mc">
+                  <matrix>
+                    <Matrix tx="150" ty="98"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="170" duration="21" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 73" name="CardList_mc">
+                  <matrix>
+                    <Matrix tx="150" ty="98"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="EnchantmentLabel" fontRenderingMode="standard" width="365.45" height="54" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="97.8"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Weapon Enchanted&#xD;Weapon Enchanted</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="192" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="EnchantmentLabel" fontRenderingMode="standard" width="365.95" height="54" includeOutlines="true" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="134"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Weapon Enchanted&#xD;Weapon Enchanted</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="193" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ApparelArmorLabel" fontRenderingMode="standard" width="58.5" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="20.55" ty="78.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$ARMOR</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="194" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="EnchantmentLabel" fontRenderingMode="standard" width="365.45" height="54" includeOutlines="true" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31.5" ty="91"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Weapon Enchanted&#xD;Weapon Enchanted</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="195" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 71" name="ChargeMeter_SoulGem">
+                  <matrix>
+                    <Matrix tx="317.3" ty="127.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="196" duration="5" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 17" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="201" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 71" name="ListChargeMeter">
+                  <matrix>
+                    <Matrix tx="317.3" ty="97.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 12" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="181" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="181" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SoulLevel" fontRenderingMode="standard" width="409.95" height="23.7" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="8.15" ty="144.75"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Potions Effects</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" duration="4" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="195" duration="6" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SoulLevel" fontRenderingMode="standard" width="365.45" height="23.7" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="31" ty="131.75"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Potions Effects</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 11" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="170" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="170" duration="11" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 202">
+                  <matrix>
+                    <Matrix tx="194.95" ty="406.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="181" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="83.4" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="254.65" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" duration="4" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="195" duration="6" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemValueText" fontRenderingMode="standard" width="83.4" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="254.65" ty="72.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00099</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 10" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="170" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="170" duration="11" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="SecsText" fontRenderingMode="standard" width="48.6" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="376.75" ty="146.8"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$secs</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="181" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="140.15" ty="77.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" duration="4" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="195" duration="6" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemWeightText" fontRenderingMode="standard" width="42.85" height="40.05" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="140.15" ty="72.4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>000</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 9" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="170" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="170" duration="11" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ActiveEffectTimeValue" fontRenderingMode="standard" width="85.55" height="37.55" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="286" ty="143.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" bold="true" size="30" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="181" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="PotionValueLabel" selected="true" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="199.05" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" duration="4" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="195" duration="6" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="PotionValueLabel" fontRenderingMode="standard" width="47.55" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="199.05" ty="79.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$VALUE</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 8" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="170" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="170" duration="11" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="MagicEffectsLabel" fontRenderingMode="standard" width="365.45" height="63.75" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="31" ty="87"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label Magic Effects Label</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" size="20" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="181" duration="10" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="PotionWeightLabel" fontRenderingMode="standard" width="67.65" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="64.05" ty="84.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" duration="4" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="195" duration="6" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="PotionWeightLabel" fontRenderingMode="standard" width="67.65" height="18.95" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="64.05" ty="79.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$WEIGHT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 7" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="201" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="StolenTextInstance" fontRenderingMode="standard" width="114" height="18.95" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="281" ty="9.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$Stolen</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" lineSpacing="3" size="16" face="$EverywhereMediumFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" duration="192" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="192" duration="2" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 27" name="Enchanting_Slim_Background">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="194" duration="7" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 59" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 106" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 59" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 106" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="20" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 27" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="20" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 59" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="79" duration="30" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 27" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="109" duration="11" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 59" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="120" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 176" name="background">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="130" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 59" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="140" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 27" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="150" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 190" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="160" duration="10" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 193" name="background">
+                  <matrix>
+                    <Matrix a="1.0001220703125" d="1.00027465820313" tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="170" duration="21" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 27" name="background">
+                  <matrix>
+                    <Matrix tx="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="191" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 193" name="Enchanting_Background" selected="true">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="192" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 106" name="Enchanting_Background">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="193" duration="2" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 27" name="Enchanting_Background">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="195" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 27" name="Enchanting_Slim_Background">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="196" duration="5" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Sprites/Sprite 193" name="background">
+                  <matrix>
+                    <Matrix tx="0.25" ty="-10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

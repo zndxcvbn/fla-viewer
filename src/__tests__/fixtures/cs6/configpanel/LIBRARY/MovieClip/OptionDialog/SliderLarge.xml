@@ -1,0 +1,63 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionDialog/SliderLarge" itemID="5075349d-00000694" linkageExportForAS="true" linkageIdentifier="sliderLarge" linkageClassName="skyui.components.Slider" sourceFlashFilepath="../../../slider.fla" sourceLibraryItemHRef="SliderLarge" sourceLastModified="1349858894" lastModified="1349858894" lastUniqueIdentifier="5" sourceItemID="5075349d-00000694" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+  <timeline>
+    <DOMTimeline name="SliderLarge">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ OptionDialog/Slider Assets/Slider Thumb Assets/sliderThumb" name="thumb" centerPoint3DX="28.45" centerPoint3DY="12.6">
+                  <matrix>
+                    <Matrix d="2" tx="24" ty="0.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ OptionDialog/Slider Assets/Slider Arrow Assets/rightArrowLarge" name="rightArrow" centerPoint3DX="160.5" centerPoint3DY="6">
+                  <matrix>
+                    <Matrix tx="152"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ OptionDialog/Slider Assets/Slider Track Assets/sliderTrackLarge" name="track" centerPoint3DX="88" centerPoint3DY="6.45">
+                  <matrix>
+                    <Matrix tx="24" ty="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ OptionDialog/Slider Assets/Slider Arrow Assets/leftArrowLarge" name="leftArrow" selected="true" centerPoint3DX="8.5" centerPoint3DY="6">
+                  <matrix>
+                    <Matrix a="0.999465942382813"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="8.5" y="6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <parametersAsXML><![CDATA[   <property id="offsetLeft">
+      <Inspectable name="offsetLeft" variable="offsetLeft" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="offsetRight">
+      <Inspectable name="offsetRight" variable="offsetRight" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+]]></parametersAsXML>
+</DOMComponentItem>

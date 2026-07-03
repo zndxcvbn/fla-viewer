@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionDialog/MenuSelectIndicator" itemID="5002cb19-000006d8" lastModified="1342360378">
+  <timeline>
+    <DOMTimeline name="MenuSelectIndicator">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Center Select Indicator Shape" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-256.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="256.4" y="14"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

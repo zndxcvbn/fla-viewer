@@ -1,0 +1,51 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemIcons/clothing_head" itemID="4f95c6b7-000003ac" sourceFlashFilepath="../../../Resources/icons_item_psychosteve.fla" sourceLibraryItemHRef="Icons/item/armor/clothing_head" sourceLastModified="1338657091" lastModified="1338657091" sourceItemID="4f95c6b7-000003ac">
+  <timeline>
+    <DOMTimeline name="clothing_head">
+      <layers>
+        <DOMLayer name="flash0.ai" color="#4FFF4F" outline="true" current="true" isSelected="true" useOutlineView="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1129 -196[1356 -507 1618 -177!1618 -177[1657 -127 1754 -62!1754 -62[1928 42 1941 272!1941 272[2019 634 2185 880!2185 880[2518 1295 1994 1440!1994 1440[1985 1754 2172 1863!2172 1863[1381 2162 564 1868!564 1868[753 1754 743 1440!743 1440
+[220 1295 552 880!552 880[700 628 796 272!796 272[808 42 982 -62!982 -62[1079 -127 1129 -196"/>
+                    <Edge fillStyle0="1" edges="
+!1662 1364[1548 1508 1369 1843!1369 1843[1192 1507 1079 1356!1079 1356[966 1204 845 1186!845 1186[637 1160 1054 351!1054 351[1342 506 1682 371!1682 371[2101 1178 1893 1204!1893 1204[1773 1221 1662 1364"/>
+                    <Edge cubics="!796 272(;805,119 865,8 982,-62q796 272Q808 42q982 -62);"/>
+                    <Edge cubics="!552 880(;330,1156 395,1344 743,1440q552 880Q220 1295q743 1440);"/>
+                    <Edge cubics="!1941 272(;1933,119 1871,8 1754,-62q1941 272Q1928 42q1754 -62);"/>
+                    <Edge cubics="!2185 880(;2406,1156 2341,1344 1994,1440q2185 880Q2518 1295q1994 1440);"/>
+                    <Edge cubics="!982 -62(;1047,-107 1094,-150 1129,-196q982 -62Q1079 -127q1129 -196);"/>
+                    <Edge cubics="!1754 -62(;1689,-107 1646,-144 1618,-177q1754 -62Q1657 -127q1618 -177);"/>
+                    <Edge cubics="!1129 -196(;1278,-403 1442,-396 1618,-177q1129 -196Q1356 -507q1618 -177);"/>
+                    <Edge cubics="!564 1868(;1109,2063 1646,2063 2172,1863q564 1868Q1381 2162q2172 1863);"/>
+                    <Edge cubics="!1682 371(;1962,909 2031,1187 1893,1204q1682 371Q2101 1178q1893 1204);"/>
+                    <Edge cubics="!1054 351(;1247,455 1456,461 1682,371q1054 351Q1342 506q1682 371);"/>
+                    <Edge cubics="!1054 351(;776,890 706,1168 845,1186q1054 351Q637 1160q845 1186);"/>
+                    <Edge cubics="!845 1186(;925,1198 1003,1254 1079,1356q845 1186Q966 1204q1079 1356);"/>
+                    <Edge cubics="!1893 1204(;1813,1216 1735,1269 1662,1364q1893 1204Q1773 1221q1662 1364);"/>
+                    <Edge cubics="!1994 1440(;1988,1649 2047,1791 2172,1863q1994 1440Q1985 1754q2172 1863);"/>
+                    <Edge cubics="!1662 1364(;1586,1461 1488,1620 1369,1843q1662 1364Q1548 1508q1369 1843);"/>
+                    <Edge cubics="!1079 1356(;1154,1456 1250,1619 1369,1843q1079 1356Q1192 1507q1369 1843);"/>
+                    <Edge cubics="!1941 272(;1993,514 2075,715 2185,880q1941 272Q2019 634q2185 880);"/>
+                    <Edge cubics="!564 1868(;690,1792 750,1649 743,1440q564 1868Q753 1754q743 1440);"/>
+                    <Edge cubics="!552 880(;651,712 732,509 796,272q552 880Q700 628q796 272);"/>
+                  </edges>
+                </DOMShape>
+                <DOMGroup>
+                  <members/>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

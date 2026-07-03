@@ -1,0 +1,51 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionsPanel/SliderIcon" itemID="4fea5e74-00000992" lastModified="1340794803">
+  <timeline>
+    <DOMTimeline name="SliderIcon">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor alpha="0.6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!360 58|505 199!505 199|358 341!358 341|281 269!281 269|204 341!204 341|57 199!57 199|202 58!202 58|281 130!281 130|360 58"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!335 157|365 131!365 131|367 133!367 133|369 131!369 131|439 202!439 202|367 265!367 265|365 263!365 263|363 265!363 265|335 244!335 244|335 157"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!227 157|197 131!197 131|195 133!195 133|193 131!193 131|123 202!123 202|195 265!195 265|197 263!197 263|199 265!199 265|227 244!227 244|227 157"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!347 114|361 102!361 102|363 105!363 105|367 102!367 102|466 203!466 203|363 292!363 292|361 289!361 289|358 292!358 292|347 284!347 284|347 278!347 278|325 278!325 278|325 129!325 129|347 129!347 129|347 114"/>
+                    <Edge fillStyle1="1" edges="!240 138|198 102!198 102|195 105!195 105|192 102!192 102|93 203!93 203|195 292!195 292|198 289!198 289|200 292!200 292|241 262!241 262|241 139!241 139|240 138!353 0|559 199!559 199|351 399!351 399|279 333!279 333|208 399!208 399|0 199
+!0 199|205 0!205 0|279 68!279 68|353 0"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

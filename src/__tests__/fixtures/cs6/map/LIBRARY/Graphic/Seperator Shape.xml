@@ -1,0 +1,29 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Seperator Shape" itemID="4ffdf7a1-0000081d" sourceFlashFilepath="../../../ModConfigPanel/configpanel.fla" sourceLibraryItemHRef="Shapes/Seperator Shape" sourceLastModified="1349859218" symbolType="graphic" lastModified="1349859218" sourceItemID="4ffdf7a1-0000081d">
+  <timeline>
+    <DOMTimeline name="Seperator Shape">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix ty="-53"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#999999"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!3750 1060S1|-3750 1060!-3750 1060|-3750 1095!-3750 1095|3750 1095!3750 1095|3750 1060"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

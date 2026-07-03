@@ -1,0 +1,67 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ModListPanel/ModListEntry" itemID="4f8de6b5-00000323" linkageExportForAS="true" linkageIdentifier="ModListEntry" linkageClassName="skyui.components.list.ButtonListEntry" sourceFlashFilepath="../../../../vanilla/src/quest_journal.fla" sourceLibraryItemHRef="Sprites/Sprite 404" sourceLastModified="1323698066" lastModified="1352047863" lastUniqueIdentifier="6" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="ModListEntry">
+      <layers>
+        <DOMLayer name="textField" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="textField" selected="true" fontRenderingMode="standard" width="154" height="27.4" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="2" ty="4.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>SKY UI</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" letterSpacing="0.8" lineSpacing="0" size="22" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter distance="3"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="trigger" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="triggerArea" centerPoint3DX="81" centerPoint3DY="18">
+                  <matrix>
+                    <Matrix a="1.65812683105469" d="0.36602783203125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="48.85" y="49.2"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="select" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/ListSelectIndicator" name="selectIndicator" centerPoint3DX="81" centerPoint3DY="18">
+                  <matrix>
+                    <Matrix a="-0.31591796875" d="1.28570556640625" tx="162"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="256.4" y="14"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

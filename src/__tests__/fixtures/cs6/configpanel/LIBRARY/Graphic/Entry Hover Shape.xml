@@ -1,0 +1,38 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Entry Hover Shape" itemID="4ed8fefc-000003b5" symbolType="graphic" lastModified="1334678516" hasValidCenterPoint="true" transformCenterPoint="#16.26, #1.18">
+  <timeline>
+    <DOMTimeline name="Entry Hover Shape">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.120849609375" d="0.013427734375" tx="99" ty="11.5"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" ratio="1"/>
+                        <GradientEntry color="#FFFFFF" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!0 0/3230 0!3230 0/3460 230!3460 230/3230 460!3230 460/0 460!0 460/0 0"/>
+                    <Edge cubics="!3230 0(;3230,0 3460,230 3460,230p3230 0q3460 230);"/>
+                    <Edge cubics="!3460 230(;3460,230 3230,460 3230,460q3460 230 3230 460);"/>
+                    <Edge cubics="!0 460(;0,460 0,0 0,0p0 460q0 0);"/>
+                    <Edge cubics="!0 0(;0,0 3230,0 3230,0q0 0 3230 0);"/>
+                    <Edge cubics="!3230 460(;3230,460 0,460 0,460q3230 460 0 460);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

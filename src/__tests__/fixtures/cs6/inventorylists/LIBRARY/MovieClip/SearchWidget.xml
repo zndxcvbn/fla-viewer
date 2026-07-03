@@ -1,0 +1,61 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/SearchWidget" itemID="4ee528b0-000009ff" linkageExportForAS="true" linkageIdentifier="SearchWidget" linkageClassName="skyui.components.SearchWidget" sourceFlashFilepath="../../inventorylists2.fla" sourceLibraryItemHRef="Search_Filter BG" sourceLastModified="1323604038" lastModified="1428082328" lastUniqueIdentifier="3" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="SearchWidget">
+      <layers>
+        <DOMLayer name="text" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="textField" fontRenderingMode="standard" width="121.6" height="14.95" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="-143" ty="4.6"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$FILTER</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" face="$EverywhereMediumFont*" fillColor="#CCCCCC"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="magnifying icon" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Search Icon Shape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-15.7" ty="5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16.05" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 7" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Search Background Shape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.477371215820313" d="0.522125244140625"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-150.85" y="34.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

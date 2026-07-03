@@ -1,0 +1,62 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionsPanel/ColorIcon" itemID="505ff434-0000142a" sourceFlashFilepath="../../../ModConfigPanel/configpanel.fla" sourceLibraryItemHRef="Graphic/CheckBox BG Shape" sourceLastModified="1340710800" lastModified="1348468048" lastUniqueIdentifier="7" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="ColorIcon">
+      <layers>
+        <DOMLayer name="ColorIconBorder" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/ColorIconBorder" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point x="6.5" y="6.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color tintMultiplier="1" tintColor="#CCCCCC"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ColorIconPigment" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/ColorIconPigment" name="pigment" centerPoint3DX="6.5" centerPoint3DY="6.5">
+                  <matrix>
+                    <Matrix tx="1.55" ty="1.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="4.95" y="4.95"/>
+                  </transformationPoint>
+                  <color>
+                    <Color tintMultiplier="1" tintColor="#CCCCCC"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ColorIconHighlight" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/ColorIconHighlight" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="1.07664489746094" d="1.07664489746094" tx="0.15" ty="0.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="4.95" y="4.95"/>
+                  </transformationPoint>
+                  <color>
+                    <Color tintMultiplier="1"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

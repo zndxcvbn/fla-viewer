@@ -1,0 +1,151 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" gridColor="#C0C0C0" guidesColor="#D04104" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" gridSpacingX="18" gridSpacingY="18" gridSnapAccuracy="Can be distant" guidesSnapAccuracy="Can be distant" guidesSnapTo="false" snapAlignBorderSpacing="18" snapAlignHorizontalSpacing="1" snapAlignVerticalSpacing="1" objectsSnapTo="false" timelineLabelWidth="0" sharedLibraryURL="." useCarbonLineSpacing="true" nextSceneIdentifier="468" playOptionsPlayLoop="false" playOptionsPlayPages="false">
+     <folders>
+          <DOMFolderItem name="Fonts" itemID="4ee99cd7-0000029b"/>
+          <DOMFolderItem name="Graphic" itemID="4fb6b9fd-000002f9" isExpanded="true"/>
+          <DOMFolderItem name="Map Markers" itemID="5067e85c-00000f86" isExpanded="true"/>
+          <DOMFolderItem name="Map Markers/Description" itemID="51409e89-000019c0"/>
+          <DOMFolderItem name="Menu" itemID="506798bc-000001b8" isExpanded="true"/>
+          <DOMFolderItem name="Menu/ Local Map" itemID="51176bfa-00000295"/>
+          <DOMFolderItem name="Menu/ Location Finder" itemID="51177634-000004a9" isExpanded="true"/>
+          <DOMFolderItem name="Menu/ Location Finder/ Search" itemID="4fa90399-000000b0" isExpanded="true"/>
+          <DOMFolderItem name="Menu/ ScrollBar" itemID="5117ffff-000007b8"/>
+          <DOMFolderItem name="Menu/ ScrollBar/scrollBarGraphics" itemID="50f9250f-0000792c"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="Fonts/$EverywhereMediumFont" itemID="51176ab2-00000270" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereMediumFont" linkageURL="gfxfontlib.swf" font="FuturaStd-Condensed" size="0" id="2" sourceLastImported="1321755965" embedRanges="1|2|4|3"/>
+          <DOMFontItem name="Fonts/$EverywhereFont" itemID="4ec8937b-000001f1" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereFont" linkageURL="gfxfontlib.swf" font="FuturaStd-CondensedLight" size="0" id="1" sourceLastImported="1321767810" embedRanges="1|2|4|3"/>
+     </fonts>
+     <symbols>
+          <Include href="Graphic/background.xml" itemIcon="1" loadImmediate="false" itemID="51409cd8-0000189b" lastModified="1363189004"/>
+          <Include href="Graphic/ButtonBG Shape.xml" itemIcon="1" loadImmediate="false" itemID="505cd111-000003f9" lastModified="1348260113"/>
+          <Include href="Graphic/LoadIcon Shape.xml" itemIcon="1" loadImmediate="false" itemID="51192764-00000815" lastModified="1360602980"/>
+          <Include href="Graphic/Search Background Shape.xml" itemIcon="1" loadImmediate="false" itemID="4ee4e1ef-00000509" lastModified="1360524430"/>
+          <Include href="Graphic/Search Icon Shape.xml" itemIcon="1" loadImmediate="false" itemID="4fac491e-000006e6" lastModified="1428082009"/>
+          <Include href="Graphic/Seperator Shape.xml" itemIcon="1" loadImmediate="false" itemID="4ffdf7a1-0000081d" lastModified="1349859218"/>
+          <Include href="Map Markers/Description/MarkerDescription.xml" itemID="506e45fb-00000150" lastModified="1363146087"/>
+          <Include href="Map Markers/Description/MarkerDescriptionFader.xml" itemID="506e464f-00000155" lastModified="1363145798"/>
+          <Include href="Map Markers/Description/MarkerLineItem.xml" itemID="506e4657-00000156" lastModified="1363145802"/>
+          <Include href="Map Markers/MapMarker.xml" itemID="51409b2d-00001659" lastModified="1363966709"/>
+          <Include href="Map Markers/MarkerBlinker.xml" loadImmediate="false" itemID="51409b2b-00001658" lastModified="1426516179"/>
+          <Include href="Map Markers/MarkerIconHolder.xml" loadImmediate="false" itemID="51409b30-0000165a" lastModified="1363189045"/>
+          <Include href="Menu/ Local Map/LocalMap.xml" itemID="506e45bb-00000148" lastModified="1360525300"/>
+          <Include href="Menu/ Local Map/LocalMapBorder.xml" loadImmediate="false" itemID="506e45c6-0000014c" lastModified="1349413545"/>
+          <Include href="Menu/ Local Map/LocalMapFader.xml" loadImmediate="false" itemID="506e45d0-0000014d" lastModified="1360579567"/>
+          <Include href="Menu/ Local Map/LocalMapLoader.xml" loadImmediate="false" itemID="506e45d6-0000014e" lastModified="1360525399"/>
+          <Include href="Menu/ Local Map/LocalMapLocationText.xml" loadImmediate="false" itemID="506e45d9-0000014f" lastModified="1363144929"/>
+          <Include href="Menu/ Location Finder/ Search/SearchIcon.xml" loadImmediate="false" itemID="4ee4d137-000002c4" lastModified="1428950925"/>
+          <Include href="Menu/ Location Finder/ Search/SearchWidget.xml" itemID="4ee528b0-000009ff" lastModified="1360524465"/>
+          <Include href="Menu/ Location Finder/FoundMarker.xml" itemID="5117b3a3-00000ae6" lastModified="1360510169"/>
+          <Include href="Menu/ Location Finder/LoadIcon.xml" loadImmediate="false" itemID="5119275c-00000813" lastModified="1360602972"/>
+          <Include href="Menu/ Location Finder/LocationFinder.xml" itemID="5116ab9c-00000732" lastModified="1360603098"/>
+          <Include href="Menu/ Location Finder/LocationFinderFader.xml" loadImmediate="false" itemID="5117a4d8-00000837" lastModified="1360523464"/>
+          <Include href="Menu/ Location Finder/LocationListEntry.xml" itemID="5116c429-00000dd8" lastModified="1363188472"/>
+          <Include href="Menu/ Location Finder/ScrollingList.xml" itemID="4fe910fe-00000533" lastModified="1360528759"/>
+          <Include href="Menu/ ScrollBar/scrollBar_downArrow.xml" itemID="50f924b6-00007913" lastModified="1358505142"/>
+          <Include href="Menu/ ScrollBar/scrollBar_thumb.xml" itemID="50f924bc-00007917" lastModified="1358505148"/>
+          <Include href="Menu/ ScrollBar/scrollBar_track.xml" itemID="50f924c1-0000791b" lastModified="1358505153"/>
+          <Include href="Menu/ ScrollBar/scrollBar_upArrow.xml" itemID="50f928d6-00007ae1" lastModified="1359420473"/>
+          <Include href="Menu/ ScrollBar/scrollBarGraphics/scrollBar_cap_shape.xml" itemIcon="1" loadImmediate="false" itemID="50f924ee-00007924" lastModified="1358505198"/>
+          <Include href="Menu/ ScrollBar/scrollBarGraphics/scrollBar_thumb_shape.xml" itemIcon="1" loadImmediate="false" itemID="50f924f8-00007926" lastModified="1358505208"/>
+          <Include href="Menu/ ScrollBar/scrollBarGraphics/scrollBar_track_shape.xml" itemIcon="1" loadImmediate="false" itemID="50f92501-00007929" lastModified="1358505217"/>
+          <Include href="Menu/Background.xml" loadImmediate="false" itemID="51176b83-00000286" lastModified="1363188531"/>
+          <Include href="Menu/BottomBar.xml" loadImmediate="false" itemID="51176b9a-00000288" lastModified="1426516544"/>
+          <Include href="Menu/ButtonArt.xml" itemID="5113fc34-00000b83" lastModified="1360264244"/>
+          <Include href="Menu/ButtonBG.xml" loadImmediate="false" itemID="505cd012-000003df" lastModified="1348259858"/>
+          <Include href="Menu/ButtonPanel.xml" itemID="506a59ab-00000e80" lastModified="1360770161"/>
+          <Include href="Menu/FillArea.xml" loadImmediate="false" itemID="511775e6-00000371" lastModified="1363188963"/>
+          <Include href="Menu/MapMarkerArt.xml" itemID="5140b17b-00001cb5" lastModified="1363194349"/>
+          <Include href="Menu/MappedButton.xml" itemID="505ccf4f-000003d4" lastModified="1360770456"/>
+          <Include href="Menu/OptionSelectIndicator.xml" loadImmediate="false" itemID="4ff469ba-000003a0" lastModified="1360528312"/>
+          <Include href="Menu/ScrollBar.xml" itemID="5118000a-000007bb" lastModified="1360527370"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Page 1">
+               <layers>
+                    <DOMLayer name="Script" color="#4F80FF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="8704">
+                                   <Actionscript>
+                                        <script><![CDATA[
+function InitExtensions()
+{
+    WorldMap.InitExtensions();
+};
+
+function SetPlatform(aPlatformNum, abPS3Switch)
+{
+    WorldMap.SetPlatform(aPlatformNum, abPS3Switch);
+};
+
+// Hooray!
+function handleInput(details, pathToFocus)
+{
+    return WorldMap.handleInput(details, pathToFocus);
+};
+
+_global.gfxExtensions = true;
+Shared.GlobalFunc.MaintainTextFormat();
+Shared.GlobalFunc.SetLockFunction();
+var WorldMap = new Map.MapMenu();
+SetPlatform(0);]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Location Finder" color="#808080" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Menu/ Location Finder/LocationFinderFader" name="locationFinderFader" centerPoint3DX="840" centerPoint3DY="572.15">
+                                             <matrix>
+                                                  <Matrix tx="640" ty="324.05"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Local Map" color="#4F80FF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="8704">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Menu/ Local Map/LocalMapFader" name="localMapFader">
+                                             <matrix>
+                                                  <Matrix tx="240" ty="130"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Bottombar" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="8704">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Menu/BottomBar" name="bottomBar">
+                                             <matrix>
+                                                  <Matrix ty="720"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="1919" publishTime="1782840463"/>
+     </publishHistory>
+</DOMDocument>

@@ -1,0 +1,1142 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ItemIcon" itemID="5197ce8d-000002a1" lastModified="1369522986">
+  <timeline>
+    <DOMTimeline name="ItemIcon" currentFrame="1">
+      <layers>
+        <DOMLayer name="Layer 3" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" duration="74" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Label layer" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="none" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="default_weapon" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="weapon_sword" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="3" name="weapon_greatsword" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" name="weapon_daedra" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="5" name="weapon_dagger" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="6" name="weapon_waraxe" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="7" name="weapon_battleaxe" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="8" name="weapon_mace" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" name="weapon_hammer" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="10" name="weapon_staff" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="11" name="weapon_bow" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="12" name="weapon_arrow" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="13" name="weapon_pickaxe" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="14" name="weapon_woodaxe" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="15" name="weapon_crossbow" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="16" name="weapon_bolt" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="17" name="default_armor" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="18" name="lightarmor_body" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" name="lightarmor_head" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="20" name="lightarmor_hands" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="21" name="lightarmor_forearms" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="22" name="lightarmor_feet" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="23" name="lightarmor_calves" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="24" name="lightarmor_shield" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="25" name="lightarmor_mask" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="26" name="armor_body" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="27" name="armor_head" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="28" name="armor_hands" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="29" name="armor_forearms" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="30" name="armor_feet" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="31" name="armor_calves" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="32" name="armor_shield" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="33" name="armor_mask" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="34" name="armor_bracer" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="35" name="armor_daedra" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="36" name="clothing_body" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="37" name="clothing_robe" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="38" name="clothing_head" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="39" name="clothing_pants" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="40" name="clothing_hands" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="41" name="clothing_forearms" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="42" name="clothing_feet" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="43" name="clothing_calves" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="44" name="clothing_shoes" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="45" name="clothing_shield" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="46" name="clothing_mask" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="47" name="armor_amulet" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="48" name="armor_ring" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="49" name="armor_circlet" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="50" name="default_scroll" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="51" name="default_food" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="52" name="food_wine" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="53" name="food_beer" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="54" name="default_ingredient" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="55" name="default_potion" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="56" name="potion_health" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="57" name="potion_stam" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="58" name="potion_magic" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="59" name="potion_poison" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="60" name="potion_frost" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="61" name="potion_fire" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="62" name="potion_shock" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="63" name="default_misc" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="64" name="misc_torch" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="65" name="default_alteration" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="66" name="default_illusion" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="67" name="default_destruction" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="68" name="default_conjuration" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="69" name="default_restoration" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="70" name="default_shout" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="71" name="default_power" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="72" name="magic_fire" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="73" name="magic_frost" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="74" name="magic_shock" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="icon" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_weapon" selected="true" centerPoint3DX="42" centerPoint3DY="-54">
+                  <matrix>
+                    <Matrix tx="-95.4" ty="-405.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="95.4" y="405.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_sword" centerPoint3DX="1.8" centerPoint3DY="1.8">
+                  <matrix>
+                    <Matrix tx="-20" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="20" y="64"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_greatsword" centerPoint3DX="-0.05" centerPoint3DY="-0.3">
+                  <matrix>
+                    <Matrix a="0.123199462890625" d="0.123306274414063" tx="-22.75" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="184.65" y="518.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_daedra" centerPoint3DY="-0.55">
+                  <matrix>
+                    <Matrix a="0.147323608398438" d="0.147308349609375" tx="-64.05" ty="-41.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="434.75" y="279.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_dagger" centerPoint3DX="-0.3" centerPoint3DY="-0.45">
+                  <matrix>
+                    <Matrix a="0.123992919921875" d="0.1240234375" tx="-20.9" ty="-64.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="168.55" y="516.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_waraxe" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0.128036499023438" d="0.128097534179688" tx="-38.05" ty="-59.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="297.2" y="462.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_battleaxe" selected="true" centerPoint3DX="-0.05">
+                  <matrix>
+                    <Matrix a="0.139404296875" d="0.139434814453125" tx="-43.1" ty="-64.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="308.8" y="459.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="8" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_mace" centerPoint3DX="-0.1" centerPoint3DY="-0.1">
+                  <matrix>
+                    <Matrix a="0.12042236328125" d="0.1204833984375" tx="-38.9" ty="-60.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="323.05" y="502.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_hammer" centerPoint3DX="0.05" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0.135025024414063" d="0.13507080078125" tx="-35.1" ty="-63.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="259.95" y="472.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="10" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_staff" centerPoint3DX="0.2" centerPoint3DY="0.05">
+                  <matrix>
+                    <Matrix a="0.1182861328125" d="0.118392944335938" tx="-27.3" ty="-60.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="230.8" y="508.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="11" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_bow" centerPoint3DX="0.2" centerPoint3DY="-0.85">
+                  <matrix>
+                    <Matrix a="0.151077270507813" d="0.151138305664063" tx="-48.5" ty="-66.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="321.05" y="440.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="12" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_arrow" centerPoint3DX="0.2" centerPoint3DY="0.25">
+                  <matrix>
+                    <Matrix a="0.131011962890625" d="0.131072998046875" tx="-30.2" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="230.5" y="488.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_pickaxe" centerPoint3DX="3" centerPoint3DY="17.45">
+                  <matrix>
+                    <Matrix tx="-69.6" ty="-49.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="69.6" y="49.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_woodaxe" centerPoint3DX="8.1" centerPoint3DY="1.15">
+                  <matrix>
+                    <Matrix tx="-50.45" ty="-60.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="50.45" y="60.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="15" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_crossbow" centerPoint3DX="-0.35" centerPoint3DY="-0.35">
+                  <matrix>
+                    <Matrix a="0.960357666015625" d="0.960357666015625" tx="-60.2" ty="-59.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="62.7" y="62.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="16" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/weapon_bolt" centerPoint3DX="-0.35" centerPoint3DY="-0.35">
+                  <matrix>
+                    <Matrix a="0.960357666015625" d="0.960357666015625" tx="-60.2" ty="-59.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="62.7" y="62.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="17" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_armor" centerPoint3DX="58.85" centerPoint3DY="53.05">
+                  <matrix>
+                    <Matrix a="0.220947265625" d="0.22100830078125" tx="-51.4" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="232.65" y="289.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/lightarmor_body" centerPoint3DX="-0.15" centerPoint3DY="-0.25">
+                  <matrix>
+                    <Matrix tx="-62.1" ty="-67.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="62.1" y="67"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/lightarmor_head" centerPoint3DX="-0.3">
+                  <matrix>
+                    <Matrix tx="-68.5" ty="-41.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="68.5" y="41.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="20" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/lightarmor_hands" centerPoint3DY="-0.2">
+                  <matrix>
+                    <Matrix a="1.08779907226563" d="1.08779907226563" tx="-64.55" ty="-81.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="75.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="21" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/lightarmor_hands" centerPoint3DY="-0.2">
+                  <matrix>
+                    <Matrix a="1.08779907226563" d="1.08779907226563" tx="-64.55" ty="-81.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="75.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="22" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/lightarmor_feet" centerPoint3DX="0.4" centerPoint3DY="0.55">
+                  <matrix>
+                    <Matrix a="0.188262939453125" d="0.188262939453125" tx="-16.3" ty="-60.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="86.3" y="320.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="23" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/lightarmor_feet" centerPoint3DX="0.4" centerPoint3DY="0.55">
+                  <matrix>
+                    <Matrix a="0.188262939453125" d="0.188262939453125" tx="-16.3" ty="-60.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="86.3" y="320.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="24" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/lightarmor_shield" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="1.07781982421875" d="1.07781982421875" tx="-53.8" ty="-72.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="50" y="67.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="25" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/lightarmor_mask" centerPoint3DX="-0.35" centerPoint3DY="-0.25">
+                  <matrix>
+                    <Matrix a="1.07481384277344" d="1.07481384277344" tx="-77.05" ty="-84"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="71.65" y="78.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="26" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_body" centerPoint3DX="-0.05" centerPoint3DY="-0.3">
+                  <matrix>
+                    <Matrix a="1.013427734375" d="1.013427734375" tx="-62.85" ty="-67.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="62" y="66.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="27" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_head" centerPoint3DX="-0.2" centerPoint3DY="0.05">
+                  <matrix>
+                    <Matrix a="1.07713317871094" d="1.07713317871094" tx="-73.65" ty="-44.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="68.25" y="41.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="28" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_hands" centerPoint3DX="0.1" centerPoint3DY="-0.45">
+                  <matrix>
+                    <Matrix tx="-59.35" ty="-75.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="75.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_hands" centerPoint3DX="0.1" centerPoint3DY="-0.45">
+                  <matrix>
+                    <Matrix tx="-59.35" ty="-75.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="75.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="30" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_feet" centerPoint3DX="-0.1">
+                  <matrix>
+                    <Matrix a="0.172332763671875" d="0.172332763671875" tx="-15.4" ty="-55.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="89.35" y="322.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="31" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_feet" centerPoint3DX="-0.1">
+                  <matrix>
+                    <Matrix a="0.172332763671875" d="0.172332763671875" tx="-15.4" ty="-55.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="89.35" y="322.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="32" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_shield" centerPoint3DX="-0.05" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="1.07684326171875" d="1.07684326171875" tx="-53.75" ty="-72.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="50.05" y="67.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="33" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_mask" centerPoint3DX="-0.15" centerPoint3DY="-0.25">
+                  <matrix>
+                    <Matrix tx="-71.5" ty="-78.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="71.5" y="78.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="34" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_bracer" centerPoint3DX="0.2" centerPoint3DY="0.7">
+                  <matrix>
+                    <Matrix tx="-53.75" ty="-52.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="53.75" y="52.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="35" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_daedra" centerPoint3DX="8.9" centerPoint3DY="-21">
+                  <matrix>
+                    <Matrix a="1.0836181640625" d="1.0836181640625" tx="-529" ty="-600.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="488.1" y="554.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="36" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_body" centerPoint3DX="-0.2" centerPoint3DY="-0.3">
+                  <matrix>
+                    <Matrix tx="-62" ty="-67.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="62" y="67.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="37" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_robe" centerPoint3DY="-3.6">
+                  <matrix>
+                    <Matrix tx="-64" ty="-42.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="64" y="42.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="38" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_head" centerPoint3DX="0.05">
+                  <matrix>
+                    <Matrix a="1.05072021484375" tx="-71.85" ty="-41.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="68.4" y="41.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_pants" centerPoint3DX="-0.05" centerPoint3DY="0.55">
+                  <matrix>
+                    <Matrix tx="-54.35" ty="-49.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54.35" y="49.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="40" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_hands" centerPoint3DX="-0.25" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="1.13534545898438" d="1.13534545898438" tx="-67.45" ty="-85.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.4" y="75.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="41" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_hands" centerPoint3DX="-0.25" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="1.13534545898438" d="1.13534545898438" tx="-67.45" ty="-85.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59.35" y="75.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="42" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_feet" centerPoint3DX="-0.45" centerPoint3DY="0.35">
+                  <matrix>
+                    <Matrix a="0.17352294921875" d="0.17352294921875" tx="-15.5" ty="-55.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="89.35" y="322.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="43" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_feet" centerPoint3DX="-0.45" centerPoint3DY="0.35">
+                  <matrix>
+                    <Matrix a="0.17352294921875" d="0.17352294921875" tx="-15.5" ty="-55.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="89.35" y="322.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="44" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_shoes" centerPoint3DX="-0.55" centerPoint3DY="-0.5">
+                  <matrix>
+                    <Matrix tx="-55.05" ty="-25.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="55.05" y="25.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="45" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_shield" centerPoint3DX="-0.55" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix tx="-50.45" ty="-67.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="50.4" y="67.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="46" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/clothing_mask" centerPoint3DX="-0.25" centerPoint3DY="-0.25">
+                  <matrix>
+                    <Matrix tx="-71.6" ty="-78.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="71.6" y="78.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="47" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_amulet" centerPoint3DX="0.05" centerPoint3DY="-0.15">
+                  <matrix>
+                    <Matrix tx="-75.8" ty="-67"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="75.8" y="67"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="48" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_ring" centerPoint3DX="0.15" centerPoint3DY="-0.15">
+                  <matrix>
+                    <Matrix a="0.242630004882813" d="0.242630004882813" tx="-51" ty="-50.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="210.2" y="208.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/armor_circlet" centerPoint3DX="0.25" centerPoint3DY="0.15">
+                  <matrix>
+                    <Matrix tx="-44.2" ty="-18.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="44.2" y="18.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_scroll" centerPoint3DX="87.35" centerPoint3DY="31.35">
+                  <matrix>
+                    <Matrix a="0.1981201171875" d="0.198806762695313" tx="-16" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="80.75" y="321.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="51" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_food" centerPoint3DX="46.45" centerPoint3DY="63.05">
+                  <matrix>
+                    <Matrix a="0.244827270507813" d="0.2451171875" tx="-49.45" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="202" y="261.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="52" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/food_wine" centerPoint3DX="0.1">
+                  <matrix>
+                    <Matrix tx="-37.15" ty="-54.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="37.2" y="54.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="53" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/food_beer" centerPoint3DX="-0.35" centerPoint3DY="-0.2">
+                  <matrix>
+                    <Matrix tx="-17.6" ty="-54.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="17.6" y="54.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="54" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_ingredient" centerPoint3DX="-2.75" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0.211212158203125" d="0.215927124023438" tx="-53.85" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="254" y="296.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="55" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_potion" centerPoint3DX="2.1" centerPoint3DY="3.9">
+                  <matrix>
+                    <Matrix a="0.149871826171875" d="0.14984130859375" tx="-49.8" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="332.3" y="427.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="56" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/potion_health" centerPoint3DX="-0.5" centerPoint3DY="-0.1">
+                  <matrix>
+                    <Matrix a="0.134002685546875" d="0.134002685546875" tx="-46.05" ty="-60.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="343.3" y="452.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="57" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/potion_stamina" centerPoint3DX="-0.15" centerPoint3DY="-0.2">
+                  <matrix>
+                    <Matrix a="0.135330200195313" d="0.135330200195313" tx="-45.45" ty="-61.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="335.85" y="452.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="58" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/potion_magic" centerPoint3DX="-0.4" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0.136642456054688" d="0.136642456054688" tx="-48.2" ty="-62.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="352.75" y="457.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/potion_poison" centerPoint3DX="-0.75" centerPoint3DY="-0.5">
+                  <matrix>
+                    <Matrix a="0.14080810546875" d="0.14080810546875" tx="-49.35" ty="-62.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="350.5" y="445.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="60" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/potion_frost" centerPoint3DX="0.15" centerPoint3DY="-0.2">
+                  <matrix>
+                    <Matrix tx="-31.2" ty="-54.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31.35" y="54.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="61" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/potion_fire" centerPoint3DX="0.15" centerPoint3DY="-0.2">
+                  <matrix>
+                    <Matrix tx="-31.15" ty="-54.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31.3" y="54.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="62" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/potion_shock" centerPoint3DX="0.15" centerPoint3DY="-0.2">
+                  <matrix>
+                    <Matrix tx="-31.15" ty="-54.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31.3" y="54.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="63" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_misc">
+                  <matrix>
+                    <Matrix a="0.195022583007813" d="0.195098876953125" tx="-61.7" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="316.35" y="328.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="64" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/misc_torch" centerPoint3DX="0.95" centerPoint3DY="0.15">
+                  <matrix>
+                    <Matrix tx="-35.9" ty="-58.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="35.9" y="58.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="65" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_alteration" centerPoint3DX="0.65" centerPoint3DY="-0.2">
+                  <matrix>
+                    <Matrix a="0.124069213867188" d="0.124160766601563" tx="-59.95" ty="-63.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="482.8" y="514.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="66" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_illusion" centerPoint3DY="4.05">
+                  <matrix>
+                    <Matrix a="0.117080688476563" d="0.1170654296875" tx="-64" ty="-54.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="546.65" y="468.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="67" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_destruction" centerPoint3DX="0.6" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0.123184204101563" d="0.12322998046875" tx="-37.65" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="305.65" y="519.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="68" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_conjuration" centerPoint3DX="-0.3" centerPoint3DY="-0.3">
+                  <matrix>
+                    <Matrix a="0.121963500976563" d="0.121963500976563" tx="-64.3" ty="-54"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="527.2" y="442.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="69" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_restoration" centerPoint3DX="-0.45" centerPoint3DY="1.5">
+                  <matrix>
+                    <Matrix a="0.09796142578125" d="0.0979156494140625" tx="-64" ty="-48"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="653.3" y="490.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="70" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_shout" centerPoint3DX="-0.65" centerPoint3DY="-0.35">
+                  <matrix>
+                    <Matrix a="0.122329711914063" d="0.12237548828125" tx="-63.75" ty="-34"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="521.15" y="277.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="71" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/default_power" centerPoint3DX="0.75" centerPoint3DY="-0.2">
+                  <matrix>
+                    <Matrix a="0.132965087890625" d="0.13311767578125" tx="-48.4" ty="-64"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="364" y="480.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="72" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/magic_fire" centerPoint3DX="-3.45" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix tx="-53.05" ty="-69.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="53.05" y="69.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="73" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/magic_frost" centerPoint3DX="-0.05">
+                  <matrix>
+                    <Matrix tx="-54.1" ty="-58.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54.1" y="58.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="74" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemIcons/magic_shock" centerPoint3DX="-0.2" centerPoint3DY="-0.3">
+                  <matrix>
+                    <Matrix tx="-515.95" ty="-383.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="515.95" y="383.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

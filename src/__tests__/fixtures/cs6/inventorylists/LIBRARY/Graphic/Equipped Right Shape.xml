@@ -1,0 +1,51 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Equipped Right Shape" itemID="4ee37fc6-0000004b" symbolType="graphic" lastModified="1359473118">
+  <timeline>
+    <DOMTimeline name="Equipped Right Shape">
+      <layers>
+        <DOMLayer name="Layer 3" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!217 154[217 135 209 124!209 124[204 111 193 105!193 105|86 102!86 102|86 287!86 287|119 287!119 287|119 211!119 211|126 211!126 211|142 213!142 213|151 221!151 221|193 287!193 287|231 287!231 287|193 222!193 222|175 206!175 206[195 204
+ 208 188!208 188[217 175 217 154!184 155|181 168!181 168|172 177!172 177|142 181!142 181|119 181!119 181|119 133!119 133|167 133!167 133|180 141!180 141[184 145 184 155"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#FFFF00" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor alpha="0.4"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="
+!35 129|35 269!35 269|149 353!149 353|343 200!343 200|147 45!147 45|35 129"/>
+                    <Edge fillStyle1="1" edges="
+!93 41|147 0!147 0|400 200!400 200|147 400!147 400|88 355!88 355|28 395!28 395|0 395!0 395|0 5!0 5|29 5!29 5|93 41"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

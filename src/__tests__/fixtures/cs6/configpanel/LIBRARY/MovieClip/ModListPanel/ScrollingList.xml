@@ -1,0 +1,73 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ModListPanel/ScrollingList" itemID="4fe910fe-00000533" linkageExportForAS="true" linkageIdentifier="ScrollingList" linkageClassName="skyui.components.list.ScrollingList" sourceFlashFilepath="../../../../vanilla/src/quest_journal.fla" sourceLibraryItemHRef="Sprites/Sprite 405" sourceLastModified="1323436067" lastModified="1341870085" lastUniqueIdentifier="36" sourceItemID="00000000-ffffffff" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+  <timeline>
+    <DOMTimeline name="ScrollingList">
+      <layers>
+        <DOMLayer name="arrows" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/ScrollingArrow" name="scrollUpButton" centerPoint3DX="-91.05" centerPoint3DY="-321">
+                  <matrix>
+                    <Matrix tx="64.65" ty="4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/ScrollingArrow" name="scrollDownButton" centerPoint3DX="-91" centerPoint3DY="484">
+                  <matrix>
+                    <Matrix a="-1" d="-1" tx="103.3" ty="484"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="background" selected="true" centerPoint3DX="88.4" centerPoint3DY="243.95">
+                  <matrix>
+                    <Matrix a="1.80961608886719" d="4.96018981933594"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="48.85" y="49.2"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <parametersAsXML><![CDATA[   <property id="entryRenderer">
+      <Inspectable name="entryRenderer" variable="entryRenderer" category="" verbose="0" defaultValue="ModListEntry" type="String"/>
+   </property>
+   <property id="topBorder">
+      <Inspectable name="topBorder" variable="topBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="bottomBorder">
+      <Inspectable name="bottomBorder" variable="bottomBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="leftBorder">
+      <Inspectable name="leftBorder" variable="leftBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="rightBorder">
+      <Inspectable name="rightBorder" variable="rightBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="entryHeight">
+      <Inspectable name="entryHeight" variable="entryHeight" category="" verbose="0" defaultValue="30" type="Number"/>
+   </property>
+   <property id="isAutoUnselect">
+      <Inspectable name="isAutoUnselect" variable="isAutoUnselect" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+</DOMComponentItem>

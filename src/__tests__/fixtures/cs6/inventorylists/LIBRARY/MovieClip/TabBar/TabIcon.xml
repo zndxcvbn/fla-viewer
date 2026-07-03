@@ -1,0 +1,112 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ TabBar/TabIcon" itemID="4f039329-00000405" sourceFlashFilepath="../../tabbedinventorylists.fla" sourceLibraryItemHRef="MovieClips/TabIcon" sourceLastModified="1325638294" lastModified="1429200043" sourceItemID="4f039329-00000405">
+  <timeline>
+    <DOMTimeline name="TabIcon" currentFrame="3">
+      <layers>
+        <DOMLayer name="action" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="labels" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="give" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="take" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="buy" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="3" name="sell" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 5" color="#4FFFFF">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="icons" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/ContainerIcon2 Shape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.420272827148438" d="0.42059326171875" tx="5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59" y="45.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/ContainerIcon3 Shape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.420455932617188" d="0.42059326171875" tx="7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="59" y="45.15"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Buy Icon Shape 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.900955200195313" d="0.901535034179688"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="21" y="21"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Sell Icon Shape 2" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.321975708007813" d="0.322311401367188" tx="21.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="58.55" y="58.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="button" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Area Shape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.600021362304688" d="0.3800048828125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="50" y="50"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

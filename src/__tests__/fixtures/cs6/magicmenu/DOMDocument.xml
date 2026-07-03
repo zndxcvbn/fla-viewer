@@ -1,0 +1,117 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" gridColor="#C0C0C0" guidesColor="#000000" width="1280" height="720" currentTimeline="2" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" gridSpacingX="18" gridSpacingY="18" gridSnapAccuracy="Can be distant" guidesSnapAccuracy="Can be distant" guidesSnapTo="false" guidesVisible="false" snapAlignBorderSpacing="18" snapAlignHorizontalSpacing="1" snapAlignVerticalSpacing="1" objectsSnapTo="false" timelineLabelWidth="-1" sharedLibraryURL="." useCarbonLineSpacing="true" nextSceneIdentifier="5" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <folders>
+          <DOMFolderItem name="Fonts" itemID="4eeb3b39-000000af" isExpanded="true"/>
+          <DOMFolderItem name="Graphic" itemID="4ef4be3d-00000106" isExpanded="true"/>
+          <DOMFolderItem name="MovieClip" itemID="4ef4be35-00000104" isExpanded="true"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="Fonts/$EverywhereMediumFont" itemID="4eeb3b93-000000b6" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereMediumFont" linkageURL="gfxfontlib.swf" font="FuturaStd-Condensed" size="0" id="2" sourceLastImported="1321755965"/>
+     </fonts>
+     <symbols>
+          <Include href="Graphic/Trigger Area Shape.xml" itemIcon="1" loadImmediate="false" itemID="4ef4be25-00000103" lastModified="1327249543"/>
+          <Include href="MovieClip/BottomBar.xml" itemID="50608a1f-0000085b" lastModified="1348504104"/>
+          <Include href="MovieClip/InventoryLists.xml" itemID="50608a31-0000085c" lastModified="1348504113"/>
+          <Include href="MovieClip/ItemCard.xml" itemID="50735a23-00000d6c" lastModified="1349736995"/>
+          <Include href="MovieClip/ItemCardContainer.xml" loadImmediate="false" itemID="4ef4c19b-00000113" lastModified="1324663204"/>
+          <Include href="MovieClip/MagicMenuObj.xml" itemID="4ef4be75-0000010a" lastModified="1351985679"/>
+          <Include href="MovieClip/TriggerArea.xml" loadImmediate="false" itemID="4ef4befe-00000112" lastModified="1324662529"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Page 1">
+               <layers>
+                    <DOMLayer name="Labels Layer" color="#4F80FF">
+                         <frames>
+                              <DOMFrame index="0" keyMode="8704">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="1" duration="5" name="fadeOut" labelType="name" keyMode="8704">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="6" duration="5" name="fadeIn" labelType="name" keyMode="8704">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Script 0" color="#4F80FF">
+                         <frames>
+                              <DOMFrame index="0" duration="5" keyMode="8704">
+                                   <Actionscript>
+                                        <script><![CDATA[
+function InitExtensions()
+{
+    Menu_mc.InitExtensions();
+}
+
+function SetPlatform(aiPlatform, abPS3Switch)
+{
+    Menu_mc.SetPlatform(aiPlatform, abPS3Switch);
+}
+
+function GetInventoryItemList()
+{
+    return Menu_mc.GetInventoryItemList();
+}
+
+_global.gfxExtensions = true;
+
+Shared.GlobalFunc.MaintainTextFormat();
+
+Menu_mc.SetFadedIn();
+
+stop();]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="5" duration="6" keyMode="8704">
+                                   <Actionscript>
+                                        <script><![CDATA[
+Menu_mc.onFadeCompletion();
+stop();]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" duration="5" tweenType="motion" keyMode="17921">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClip/MagicMenuObj" name="Menu_mc" selected="true">
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="5" duration="5" tweenType="motion" keyMode="17921">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClip/MagicMenuObj" name="Menu_mc" selected="true">
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <color>
+                                                  <Color alphaMultiplier="0"/>
+                                             </color>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="10" keyMode="15872">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClip/MagicMenuObj" name="Menu_mc">
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <color>
+                                                  <Color alphaMultiplier="0.83203125"/>
+                                             </color>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <PrinterSettings/>
+     <publishHistory/>
+</DOMDocument>

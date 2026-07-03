@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/ColorIconPigment" itemID="505ff455-0000142d" symbolType="graphic" lastModified="1348466365">
+  <timeline>
+    <DOMTimeline name="ColorIconPigment">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!99 0|0 99!0 99|99 199!99 199|199 99!199 99|99 0"/>
+                    <Edge cubics="!99 199(;99,199 199,99 199,99q99 199 199 99);"/>
+                    <Edge cubics="!0 99(;0,99 99,199 99,199q0 99 99 199);"/>
+                    <Edge cubics="!199 99(;199,99 99,0 99,0q199 99 99 0);"/>
+                    <Edge cubics="!99 0(;99,0 0,99 0,99q99 0 0 99);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

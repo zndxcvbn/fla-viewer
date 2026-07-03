@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemIcons/weapon_arrow" itemID="4ef2156a-000001f5" sourceFlashFilepath="../../../Resources/icons_item_psychosteve.fla" sourceLibraryItemHRef="Icons/item/weapon/weapon_arrow" sourceLastModified="1345731218" lastModified="1345731218" sourceItemID="4ef2156a-000001f5">
+  <timeline>
+    <DOMTimeline name="weapon_arrow">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC" locked="true" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!1878 3445|-3645 1497!-3645 1497|-1697 7015!-1697 7015|-277 5599!-277 5599|5563 11438!5563 11438|5802 14414!5802 14414|9416 18031!9416 18031|9138 15013!9138 15013|9847 14303!9847 14303|12860 14586!12860 14586|9247 10968!9247 10968|6273
+ 10728!6273 10728|434 4890!434 4890|1878 3445"/>
+                    <Edge cubics="!-1697 7015(;-1697,7015 -277,5599 -277,5599q-1697 7015 -277 5599);"/>
+                    <Edge cubics="!434 4890(;434,4890 1878,3445 1878,3445q434 4890 1878 3445);"/>
+                    <Edge cubics="!1878 3445(;1878,3445 -3645,1497 -3645,1497q1878 3445 -3645 1497);"/>
+                    <Edge cubics="!-3645 1497(;-3645,1497 -1697,7015 -1697,7015q-3645 1497 -1697 7015);"/>
+                    <Edge cubics="!5802 14414(;5802,14414 5563,11438 5563,11438q5802 14414 5563 11438);"/>
+                    <Edge cubics="!6273 10728(;6273,10728 9247,10968 9247,10968q6273 10728 9247 10968);"/>
+                    <Edge cubics="!434 4890(;434,4890 6273,10728 6273,10728q434 4890 6273 10728);"/>
+                    <Edge cubics="!5563 11438(;5563,11438 -277,5599 -277,5599q5563 11438 -277 5599);"/>
+                    <Edge cubics="!12860 14586(;12860,14586 9847,14303 9847,14303q12860 14586 9847 14303);"/>
+                    <Edge cubics="!9138 15013(;9138,15013 9416,18031 9416,18031q9138 15013 9416 18031);"/>
+                    <Edge cubics="!9847 14303(;9847,14303 9138,15013 9138,15013q9847 14303 9138 15013);"/>
+                    <Edge cubics="!9247 10968(;9247,10968 12860,14586 12860,14586q9247 10968 12860 14586);"/>
+                    <Edge cubics="!9416 18031(;9416,18031 5802,14414 5802,14414q9416 18031 5802 14414);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

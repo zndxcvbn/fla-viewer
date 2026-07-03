@@ -1,0 +1,93 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionDialog/OptionMenuList" itemID="50579ea4-00002473" linkageExportForAS="true" linkageIdentifier="OptionScrollingList" linkageClassName="skyui.components.list.ScrollingList" lastModified="1349561748" lastUniqueIdentifier="2" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+  <timeline>
+    <DOMTimeline name="OptionMenuList">
+      <layers>
+        <DOMLayer name="scrollbar" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ ScrollBar/ScrollBar" name="scrollbar" selected="true" centerPoint3DX="373.35" centerPoint3DY="61.95" uniqueID="2">
+                  <matrix>
+                    <Matrix d="0.6732177734375" tx="366" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="6.65" y="89.05"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath=''>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="enableInitCallback">
+      <Inspectable name="enableInitCallback" variable="enableInitCallback" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="offsetBottom">
+      <Inspectable name="offsetBottom" variable="offsetBottom" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="offsetTop">
+      <Inspectable name="offsetTop" variable="offsetTop" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="inspectableScrollTarget">
+      <Inspectable name="inspectableScrollTarget" variable="inspectableScrollTarget" category="" verbose="0" defaultValue="&quot;&quot;" type="String"/>
+   </property>
+   <property id="soundMap">
+      <Inspectable name="soundMap" variable="soundMap" category="" verbose="0" defaultValue="theme:default,scroll:scroll" type="Object"/>
+   </property>
+   <property id="trackMode">
+      <Inspectable name="trackMode" variable="trackMode" category="" verbose="0" defaultValue="scrollPage" type="String"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="background" centerPoint3DX="192" centerPoint3DY="62.5">
+                  <matrix>
+                    <Matrix a="3.93031311035156" d="1.27090454101563"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="48.85" y="49.2"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <parametersAsXML><![CDATA[   <property id="entryRenderer">
+      <Inspectable name="entryRenderer" variable="entryRenderer" category="" verbose="0" defaultValue="OptionMenuListEntry" type="String"/>
+   </property>
+   <property id="topBorder">
+      <Inspectable name="topBorder" variable="topBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="bottomBorder">
+      <Inspectable name="bottomBorder" variable="bottomBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="leftBorder">
+      <Inspectable name="leftBorder" variable="leftBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="rightBorder">
+      <Inspectable name="rightBorder" variable="rightBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="entryHeight">
+      <Inspectable name="entryHeight" variable="entryHeight" category="" verbose="0" defaultValue="30" type="Number"/>
+   </property>
+   <property id="isAutoUnselect">
+      <Inspectable name="isAutoUnselect" variable="isAutoUnselect" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+</DOMComponentItem>

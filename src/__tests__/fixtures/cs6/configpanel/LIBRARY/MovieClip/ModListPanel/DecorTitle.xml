@@ -1,0 +1,277 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ModListPanel/DecorTitle" itemID="4fd7e47a-000001d5" lastModified="1350906094" lastUniqueIdentifier="6">
+  <timeline>
+    <DOMTimeline name="DecorTitle">
+      <layers>
+        <DOMLayer name="actions" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="10" duration="10" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();
+
+decorTitleText.textField.text = "NOOO";
+
+with (_parent) {
+	onAnimFinish(ANIM_DECORTITLE_FADE_IN);
+}]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="20" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();
+
+decorTitleText.textField.text = "NOOO";
+
+with (_parent) {
+	onAnimFinish(ANIM_DECORTITLE_FADE_OUT);
+}]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="labels" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="init" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" duration="10" name="fadeIn" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="11" duration="10" name="fadeOut" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="text" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/DecorTextHolder" name="textHolder" selected="true" centerPoint3DX="80" centerPoint3DY="15.7">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="9" tweenType="motion" motionTweenSync="true" motionTweenSnap="true" keyMode="24065">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/DecorTextHolder" name="textHolder" centerPoint3DX="80" centerPoint3DY="15.7">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="10" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/DecorTextHolder" name="textHolder" centerPoint3DX="80" centerPoint3DY="15.7">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="11" duration="9" tweenType="motion" motionTweenSync="true" motionTweenSnap="true" keyMode="24065">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/DecorTextHolder" name="textHolder" centerPoint3DX="80" centerPoint3DY="15.7">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="20" tweenType="motion" motionTweenSync="true" motionTweenSnap="true" keyMode="24065">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/DecorTextHolder" name="textHolder" centerPoint3DX="80" centerPoint3DY="15.7">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="active" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/ModListBGSelect" name="decorTitle" centerPoint3DX="88.5" centerPoint3DY="17.95">
+                  <matrix>
+                    <Matrix d="1.3819580078125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="88.5" y="13"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="9" tweenType="motion" motionTweenSync="true" motionTweenSnap="true" keyMode="24065">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/ModListBGSelect" name="decorTitle" centerPoint3DX="88.5" centerPoint3DY="17.95">
+                  <matrix>
+                    <Matrix d="1.38197326660156"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="88.5" y="13"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="10" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/ModListBGSelect" name="decorTitle" centerPoint3DX="88.5" centerPoint3DY="17.95">
+                  <matrix>
+                    <Matrix d="1.3819580078125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="88.5" y="13"/>
+                  </transformationPoint>
+                  <color>
+                    <Color/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="11" duration="9" tweenType="motion" motionTweenSync="true" motionTweenSnap="true" keyMode="24065">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/ModListBGSelect" name="decorTitle" centerPoint3DX="88.5" centerPoint3DY="17.95">
+                  <matrix>
+                    <Matrix d="1.3819580078125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="88.5" y="13"/>
+                  </transformationPoint>
+                  <color>
+                    <Color/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="20" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/ModListBGSelect" name="decorTitle" centerPoint3DX="88.5" centerPoint3DY="17.95">
+                  <matrix>
+                    <Matrix d="1.3819580078125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="88.5" y="13"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="normal" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/DecorTile" name="decorNormal" centerPoint3DX="165.45" centerPoint3DY="18">
+                  <matrix>
+                    <Matrix d="0.224365234375" tx="162"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.45" y="80.25"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="9" tweenType="motion" motionTweenSync="true" motionTweenSnap="true" keyMode="24065">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/DecorTile" name="decorNormal" centerPoint3DX="165.45" centerPoint3DY="18">
+                  <matrix>
+                    <Matrix d="0.224365234375" tx="162"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.45" y="80.25"/>
+                  </transformationPoint>
+                  <color>
+                    <Color/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="10" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/DecorTile" name="decorNormal" centerPoint3DX="165.45" centerPoint3DY="18">
+                  <matrix>
+                    <Matrix d="0.224365234375" tx="162"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.45" y="80.25"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="11" duration="9" tweenType="motion" motionTweenSync="true" motionTweenSnap="true" keyMode="24065">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/DecorTile" name="decorNormal" centerPoint3DX="165.45" centerPoint3DY="18">
+                  <matrix>
+                    <Matrix d="0.224365234375" tx="162"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.45" y="80.25"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="20" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ModListPanel/DecorTile" name="decorNormal" centerPoint3DX="165.45" centerPoint3DY="18">
+                  <matrix>
+                    <Matrix d="0.224365234375" tx="162"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.45" y="80.25"/>
+                  </transformationPoint>
+                  <color>
+                    <Color/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

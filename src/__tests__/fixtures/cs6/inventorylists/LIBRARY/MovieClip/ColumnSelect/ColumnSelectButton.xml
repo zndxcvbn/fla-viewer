@@ -1,0 +1,114 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ColumnSelect/ColumnSelectButton" itemID="4fb02ce3-00002016" linkageExportForAS="true" linkageIdentifier="ColumnSelectButton" linkageClassName="gfx.controls.Button" sourceFlashFilepath="../../../../vanilla/src/map.fla" sourceLibraryItemHRef="Sprites/Sprite 292" sourceLastModified="1323436067" lastModified="1428082808" sourceItemID="00000000-ffffffff" displayAsComponent="false" customIconID="0" actionscriptClass="gfx.controls.Button" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0">
+  <timeline>
+    <DOMTimeline name="ColumnSelectButton">
+      <layers>
+        <DOMLayer name="actions" color="#4FFFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="labels" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="up" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="over" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="down" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="3" name="disabled" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="line" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#999999"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-952 262/-952 178!-952 178|-916 178!-916 178/-916 262!-916 262/-916 663!-916 663/-916 750!-916 750|-952 750!-952 750/-952 663!-952 663/-952 262"/>
+                    <Edge cubics="!-952 178(;-952,178 -952,262 -952,262q-952 178 -952 262);"/>
+                    <Edge cubics="!-952 262(;-952,262 -952,663 -952,663q-952 262 -952 663);"/>
+                    <Edge cubics="!-916 178(;-916,178 -916,262 -916,262q-916 178 -916 262);"/>
+                    <Edge cubics="!-916 262(;-916,262 -916,663 -916,663q-916 262 -916 663);"/>
+                    <Edge cubics="!-952 750(;-952,750 -952,663 -952,663q-952 750 -952 663);"/>
+                    <Edge cubics="!-916 750(;-916,750 -916,663 -916,663q-916 750 -916 663);"/>
+                    <Edge cubics="!-952 750(;-952,750 -916,750 -916,750q-952 750 -916 750);"/>
+                    <Edge cubics="!-916 178(;-916,178 -952,178 -952,178q-916 178 -952 178);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="icon" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Customize Icon Shape" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-34" ty="10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Options Background Shape" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <classProperties><![CDATA[<class id="gfx.controls.Button" >
+</class>
+<class id="gfx.core.UIComponent" >
+</class>
+<class id="MovieClip" >
+</class>
+]]></classProperties>
+</DOMComponentItem>

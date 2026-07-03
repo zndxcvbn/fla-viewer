@@ -1,0 +1,32 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes/ScrollbarArrowShape" itemID="4ffdf7dc-00000823" sourceFlashFilepath="../../../PauseMenu/quest_journal.fla" sourceLibraryItemHRef="Shapes/Shape 422" sourceLastModified="1323436067" symbolType="graphic" lastModified="1342044124" sourceItemID="4ee20823-00000108">
+  <timeline>
+    <DOMTimeline name="ScrollbarArrowShape">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#333333"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!181 210|168 239!168 239|122 239!122 239|112 212!112 212|144 142!144 142|146 142!146 142|181 210!53 327|53 305!53 305|70 257!70 257|50 218!50 218|146 32!146 32|242 218!242 218|220 262!220 262|240 306!240 306|240 327"/>
+                    <Edge fillStyle0="1" edges="!240 327|262 327!262 327|262 301!262 301|245 262!245 262|267 218!267 218|147 -14!147 -14|28 218!28 218|48 258!48 258|33 301!33 301|33 327!33 327|53 327"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!72 218|113 301!113 301|180 301!180 301|220 218!220 218|146 75!146 75|72 218"/>
+                    <Edge fillStyle0="2" edges="!53 327|240 327"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

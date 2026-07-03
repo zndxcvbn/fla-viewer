@@ -1,0 +1,34 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Menu/ Location Finder/FoundMarker" itemID="5117b3a3-00000ae6" linkageExportForAS="true" linkageIdentifier="FoundMarker" lastModified="1360510169">
+  <timeline>
+    <DOMTimeline name="FoundMarker">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix ty="1.75"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#99FFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="2" edges="!780 -35S1|390 640!390 640|-390 640!-390 640|-780 -35!-780 -35|-390 -710!-390 -710|390 -710!390 -710|780 -35"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!901 -35S3|451 745!451 745|-451 745!-451 745|-901 -35!-901 -35|-451 -815!-451 -815|451 -815!451 -815|901 -35"/>
+                    <Edge fillStyle1="1" edges="!960 -35S2|480 796!480 796|-480 796!-480 796|-960 -35!-960 -35|-480 -866!-480 -866|480 -866!480 -866|960 -35"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

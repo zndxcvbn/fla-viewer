@@ -1,0 +1,33 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemIcons/magic_shock" itemID="4f77ad86-00000a4b" sourceFlashFilepath="../../../Resources/icons_item_psychosteve.fla" sourceLibraryItemHRef="Icons/magic/magictypes/magic_shock" sourceLastModified="1338661138" lastModified="1338661138" sourceItemID="4f77ad86-00000a4b">
+  <timeline>
+    <DOMTimeline name="magic_shock">
+      <layers>
+        <DOMLayer name="flash0.ai" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!11026 7362|9560 8847!9560 8847|10306 7677!10306 7677|9708 7677!9708 7677|10471 6481!10471 6481|11069 6481!11069 6481|10509 7362!10509 7362|11026 7362"/>
+                    <Edge cubics="!10471 6481(;10471,6481 11069,6481 11069,6481q10471 6481 11069 6481);"/>
+                    <Edge cubics="!10509 7362(;10509,7362 11026,7362 11026,7362q10509 7362 11026 7362);"/>
+                    <Edge cubics="!10509 7362(;10509,7362 11069,6481 11069,6481q10509 7362 11069 6481);"/>
+                    <Edge cubics="!9708 7677(;9708,7677 10306,7677 10306,7677q9708 7677 10306 7677);"/>
+                    <Edge cubics="!10306 7677(;10306,7677 9560,8847 9560,8847q10306 7677 9560 8847);"/>
+                    <Edge cubics="!10471 6481(;10471,6481 9708,7677 9708,7677q10471 6481 9708 7677);"/>
+                    <Edge cubics="!9560 8847(;9560,8847 11026,7362 11026,7362q9560 8847 11026 7362);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

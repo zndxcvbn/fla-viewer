@@ -1,0 +1,41 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemIcons/lightarmor_feet" itemID="4f95c669-00000348" sourceFlashFilepath="../../../Resources/icons_item_psychosteve.fla" sourceLibraryItemHRef="Icons/item/armor/lightarmor_feet" sourceLastModified="1338656109" lastModified="1338656109" sourceItemID="4f95c669-00000348">
+  <timeline>
+    <DOMTimeline name="lightarmor_feet">
+      <layers>
+        <DOMLayer name="flash0.ai" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!834 4017[64 2484 291 126!291 126[2333 2499 3257 2095!3257 2095[5028 1332 6921 1945!6921 1945[5861 2609 5612 4206!5612 4206[5360 5805 5989 7847!5989 7847[6615 9889 6174 12081!6174 12081[5039 12902 3634 12447!3634 12447|3192 11350!3192
+ 11350|2232 12447!2232 12447[-33 12902 -2330 12447!-2330 12447[-4010 11581 -3221 10207!-3221 10207[-1200 10025 103 8795!103 8795[792 8106 1402 7400!1402 7400[1603 5545 834 4017"/>
+                    <Edge cubics="!2232 12447(;2232,12447 3192,11350 3192,11350q2232 12447 3192 11350);"/>
+                    <Edge cubics="!3192 11350(;3192,11350 3634,12447 3634,12447q3192 11350 3634 12447);"/>
+                    <Edge cubics="!-2330 12447(;-3461,11854 -3734,11120 -3221,10207q-2330 12447Q-4010 11581q-3221 10207);"/>
+                    <Edge cubics="!2232 12447(;725,12769 -788,12769 -2330,12447q2232 12447Q-33 12902q-2330 12447);"/>
+                    <Edge cubics="!6174 12081(;5419,12629 4560,12769 3634,12447q6174 12081Q5039 12902q3634 12447);"/>
+                    <Edge cubics="!103 8795(;-755,9616 -1885,10071 -3221,10207q103 8795Q-1200 10025q-3221 10207);"/>
+                    <Edge cubics="!103 8795(;561,8334 995,7874 1402,7400q103 8795Q792 8106q1402 7400);"/>
+                    <Edge cubics="!1402 7400(;1536,6164 1349,5034 834,4017q1402 7400Q1603 5545q834 4017);"/>
+                    <Edge cubics="!6921 1945(;6211,2387 5781,3144 5612,4206q6921 1945Q5861 2609q5612 4206);"/>
+                    <Edge cubics="!5989 7847(;6410,9209 6471,10623 6174,12081q5989 7847Q6615 9889q6174 12081);"/>
+                    <Edge cubics="!5612 4206(;5443,5275 5572,6484 5989,7847q5612 4206Q5360 5805q5989 7847);"/>
+                    <Edge cubics="!834 4017(834,4017;320,2995 138,1702 291,126q834 4017Q64 2484q291 126);"/>
+                    <Edge cubics="!3257 2095(;4437,1589 5660,1539 6921,1945q3257 2095Q5028 1332q6921 1945);"/>
+                    <Edge cubics="!291 126(;1650,1710 2641,2363 3257,2095q291 126Q2333 2499q3257 2095);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

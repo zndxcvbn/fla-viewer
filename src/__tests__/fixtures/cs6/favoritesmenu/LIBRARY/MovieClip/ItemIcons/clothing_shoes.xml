@@ -1,0 +1,35 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemIcons/clothing_shoes" itemID="4fba80b9-000004a7" sourceFlashFilepath="../../../Resources/icons_item_psychosteve.fla" sourceLibraryItemHRef="Icons/item/armor/clothing_shoes" sourceLastModified="1338662204" lastModified="1338662204" sourceItemID="4fba80b9-000004a7">
+  <timeline>
+    <DOMTimeline name="clothing_shoes">
+      <layers>
+        <DOMLayer name="Calque 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1640 998|1533 775!1533 775|1301 998!1301 998[753 1091 198 998!198 998[-209 822 -18 541!-18 541[471 505 786 254!786 254[952 113 1160 -36!1160 -36[1564 351 2007 -36!2007 -36[2363 477 2255 923!2255 923[1981 1091 1640 998"/>
+                    <Edge cubics="!1160 -36(;1017,67 894,161 786,254q1160 -36Q952 113q786 254);"/>
+                    <Edge cubics="!1301 998(;1301,998 1533,775 1533,775q1301 998 1533 775);"/>
+                    <Edge cubics="!1533 775(;1533,775 1640,998 1640,998q1533 775 1640 998);"/>
+                    <Edge cubics="!198 998(;-77,878 -143,727 -18,541q198 998Q-209 822q-18 541);"/>
+                    <Edge cubics="!1301 998(;935,1064 570,1064 198,998q1301 998Q753 1091q198 998);"/>
+                    <Edge cubics="!2255 923(;2073,1035 1865,1064 1640,998q2255 923Q1981 1091q1640 998);"/>
+                    <Edge cubics="!786 254(;578,421 304,513 -18,541q786 254Q471 505q-18 541);"/>
+                    <Edge cubics="!2007 -36(;2244,306 2327,626 2255,923q2007 -36Q2363 477q2255 923);"/>
+                    <Edge cubics="!1160 -36(;1428,221 1711,221 2007,-36q1160 -36Q1564 351q2007 -36);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

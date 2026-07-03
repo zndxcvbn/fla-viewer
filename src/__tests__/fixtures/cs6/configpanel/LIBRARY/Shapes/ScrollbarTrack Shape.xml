@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes/ScrollbarTrack Shape" itemID="4ffdf7c6-00000821" sourceFlashFilepath="../../../PauseMenu/quest_journal.fla" sourceLibraryItemHRef="Shapes/Shape 420" sourceLastModified="1323436067" symbolType="graphic" lastModified="1342044102" sourceItemID="4ee20823-00000105">
+  <timeline>
+    <DOMTimeline name="ScrollbarTrack Shape">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#333333"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#FFFFFF" alpha="0.2"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!53 0|33 0!33 0|33 503!33 503|53 503"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!53 503|53 0"/>
+                    <Edge fillStyle1="2" edges="!53 0|73 0"/>
+                    <Edge fillStyle1="3" edges="!73 0|222 0"/>
+                    <Edge fillStyle1="2" edges="!222 0|240 0"/>
+                    <Edge fillStyle1="1" edges="!240 0|262 0!262 0|262 503!262 503|240 503"/>
+                    <Edge fillStyle1="2" edges="!240 503|222 503"/>
+                    <Edge fillStyle1="3" edges="!222 503|73 503"/>
+                    <Edge fillStyle1="2" edges="!73 503|53 503"/>
+                    <Edge fillStyle0="2" fillStyle1="3" edges="!73 503|73 0!222 0|222 503"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!240 0|240 503"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

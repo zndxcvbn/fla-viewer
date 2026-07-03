@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ TitleBar/TitleBarBG" itemID="5006e77b-00000229" scaleGridLeft="-378" scaleGridRight="378" scaleGridTop="-0.5" scaleGridBottom="46.4" lastModified="1346603031">
+  <timeline>
+    <DOMTimeline name="TitleBarBG">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes/TitleBarBG Shape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-431.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="431.25" y="23"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

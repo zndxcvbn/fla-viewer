@@ -1,0 +1,41 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Best Icon Shape" itemID="4ecea100-00000335" sourceFlashFilepath="../../inventorylists.fla" sourceLibraryItemHRef="Graphic/Best Icon Shape" sourceLastModified="1322164480" symbolType="graphic" lastModified="1323728391" sourceItemID="4ecea100-00000335">
+  <timeline>
+    <DOMTimeline name="Best Icon Shape">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix ty="-1"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!0 146S2|1 143!1 143|0 141!0 141|2 141!2 141/73 20!73 20/144 141!144 141|146 141!146 141|145 144!145 144|146 146!146 146|144 146!144 146/73 275!73 275/2 146!2 146|0 146"/>
+                    <Edge cubics="!144 141(;144,141 146,141 146,141q144 141 146 141);"/>
+                    <Edge cubics="!146 141(;146,141 145,144 145,144q146 141 145 144);"/>
+                    <Edge cubics="!145 144(;145,144 146,146 146,146q145 144 146 146);"/>
+                    <Edge cubics="!146 146(;146,146 144,146 144,146q146 146 144 146);"/>
+                    <Edge cubics="!2 146(;2,146 0,146 0,146q2 146 0 146);"/>
+                    <Edge cubics="!0 146(;0,146 1,143 1,143q0 146 1 143);"/>
+                    <Edge cubics="!1 143(;1,143 0,141 0,141q1 143 0 141);"/>
+                    <Edge cubics="!0 141(;0,141 2,141 2,141q0 141 2 141);"/>
+                    <Edge cubics="!2 141(;2,141 73,20 73,20p2 141q73 20);"/>
+                    <Edge cubics="!73 20(;73,20 144,141 144,141q73 20 144 141);"/>
+                    <Edge cubics="!73 275(;73,275 2,146 2,146p73 275q2 146);"/>
+                    <Edge cubics="!144 146(;144,146 73,275 73,275q144 146 73 275);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

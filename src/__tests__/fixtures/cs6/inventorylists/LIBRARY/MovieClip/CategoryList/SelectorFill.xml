@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ CategoryList/SelectorFill" itemID="4ed908e1-000003c6" lastModified="1322846433">
+  <timeline>
+    <DOMTimeline name="SelectorFill">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Selector Fill Shape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.925918579101563" ty="10.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54" y="3.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

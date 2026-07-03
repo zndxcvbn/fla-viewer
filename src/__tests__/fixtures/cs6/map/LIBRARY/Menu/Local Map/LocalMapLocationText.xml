@@ -1,0 +1,32 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Menu/ Local Map/LocalMapLocationText" itemID="506e45d9-0000014f" sourceFlashFilepath="Sprite 354" lastModified="1363144929" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="LocalMapLocationText">
+      <layers>
+        <DOMLayer name="Location Text" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="LocationText" selected="true" fontRenderingMode="standard" width="520.4" height="42.65" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-260.2" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Location</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" size="36" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

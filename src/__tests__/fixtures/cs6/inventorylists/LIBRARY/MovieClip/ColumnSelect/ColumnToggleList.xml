@@ -1,0 +1,40 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ColumnSelect/ColumnToggleList" itemID="4fad3f98-000001cc" linkageExportForAS="true" linkageIdentifier="ColumnToggleList" linkageClassName="skyui.components.list.ButtonList" lastModified="1352046336" lastUniqueIdentifier="5" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+  <timeline>
+    <DOMTimeline name="ColumnToggleList">
+      <layers>
+        <DOMLayer name="background" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ColumnSelect/ColumnSelectDialogBG" name="background" centerPoint3DX="-50" centerPoint3DY="60.05">
+                  <matrix>
+                    <Matrix a="1.03305053710938" d="1.0029296875" tx="-100"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="48.4" y="59.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <parametersAsXML><![CDATA[   <property id="entryRenderer">
+      <Inspectable name="entryRenderer" variable="entryRenderer" category="" verbose="0" defaultValue="ColumnToggleListEntry" type="String"/>
+   </property>
+   <property id="topBorder">
+      <Inspectable name="topBorder" variable="topBorder" category="" verbose="0" defaultValue="15" type="Number"/>
+   </property>
+   <property id="bottomBorder">
+      <Inspectable name="bottomBorder" variable="bottomBorder" category="" verbose="0" defaultValue="3" type="Number"/>
+   </property>
+   <property id="leftBorder">
+      <Inspectable name="leftBorder" variable="leftBorder" category="" verbose="0" defaultValue="3" type="Number"/>
+   </property>
+   <property id="rightBorder">
+      <Inspectable name="rightBorder" variable="rightBorder" category="" verbose="0" defaultValue="3" type="Number"/>
+   </property>
+]]></parametersAsXML>
+</DOMComponentItem>

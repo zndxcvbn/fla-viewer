@@ -1,0 +1,54 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ColumnSelect/ColumnSelectDialogBG" itemID="4fb02d17-0000201b" scaleGridLeft="5" scaleGridRight="77" scaleGridTop="17" scaleGridBottom="114" lastModified="1336945943">
+  <timeline>
+    <DOMTimeline name="ColumnSelectDialogBG">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!1741 0/1552 226!1552 226/0 226!0 226/0 505!0 505/0 2393!0 2393/1936 2393!1936 2393/1936 282!1936 282/1741 0"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!1887 248/1917 294!1917 294/1919 2357!1919 2357/1919 2371!1919 2371/20 2371!20 2371/20 505!20 505/20 248!20 248/1552 248!1552 248/1563 248!1563 248/1741 32!1741 32/1887 248"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!1887 307/1889 2339!1889 2339/50 2339!50 2339/50 280!50 280/1590 280!1590 280/1741 91!1741 91/1887 307"/>
+                    <Edge cubics="!0 505(;0,505 0,226 0,226p0 505q0 226);"/>
+                    <Edge cubics="!20 505(;20,505 20,248 20,248q20 505 20 248);"/>
+                    <Edge cubics="!1919 2371(;1919,2371 1919,2357 1919,2357p1919 2371q1919 2357);"/>
+                    <Edge cubics="!20 505(;20,505 20,2371 20,2371q20 505 20 2371);"/>
+                    <Edge cubics="!0 505(;0,505 0,2393 0,2393q0 505 0 2393);"/>
+                    <Edge cubics="!0 2393(;0,2393 1936,2393 1936,2393q0 2393 1936 2393);"/>
+                    <Edge cubics="!20 2371(;20,2371 1919,2371 1919,2371q20 2371 1919 2371);"/>
+                    <Edge cubics="!1889 2339(;1889,2339 50,2339 50,2339q1889 2339 50 2339);"/>
+                    <Edge cubics="!1936 282(;1936,282 1936,2393 1936,2393q1936 282 1936 2393);"/>
+                    <Edge cubics="!1552 248(;1552,248 20,248 20,248q1552 248 20 248);"/>
+                    <Edge cubics="!1917 294(;1917,294 1919,2357 1919,2357q1917 294 1919 2357);"/>
+                    <Edge cubics="!50 280(;50,280 50,2339 50,2339q50 280 50 2339);"/>
+                    <Edge cubics="!1889 2339(;1889,2339 1887,307 1887,307q1889 2339 1887 307);"/>
+                    <Edge cubics="!1887 248(;1887,248 1917,294 1917,294q1887 248 1917 294);"/>
+                    <Edge cubics="!50 280(;50,280 1590,280 1590,280q50 280 1590 280);"/>
+                    <Edge cubics="!1590 280(;1590,280 1741,91 1741,91q1590 280 1741 91);"/>
+                    <Edge cubics="!1741 91(;1741,91 1887,307 1887,307q1741 91 1887 307);"/>
+                    <Edge cubics="!0 226(;0,226 1552,226 1552,226q0 226 1552 226);"/>
+                    <Edge cubics="!1552 226(;1552,226 1741,0 1741,0p1552 226q1741 0);"/>
+                    <Edge cubics="!1552 248(;1552,248 1563,248 1563,248q1552 248 1563 248);"/>
+                    <Edge cubics="!1563 248(;1563,248 1741,32 1741,32q1563 248 1741 32);"/>
+                    <Edge cubics="!1741 32(;1741,32 1887,248 1887,248q1741 32 1887 248);"/>
+                    <Edge cubics="!1936 282(;1936,282 1741,0 1741,0q1936 282 1741 0);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

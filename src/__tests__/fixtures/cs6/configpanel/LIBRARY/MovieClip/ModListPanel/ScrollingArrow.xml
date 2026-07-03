@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ModListPanel/ScrollingArrow" itemID="4fe99a2e-0000003e" sourceFlashFilepath="../../../../vanilla/src/quest_journal.fla" sourceLibraryItemHRef="Sprites/Sprite 494" sourceLastModified="1323436067" lastModified="1341868515" sourceItemID="4ee20823-0000010c">
+  <timeline>
+    <DOMTimeline name="ScrollingArrow">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Arrow Shape" selected="true" symbolType="graphic" loop="single frame">
+                  <matrix>
+                    <Matrix d="1.07743835449219"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

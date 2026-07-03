@@ -1,0 +1,35 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionsPanel/MenuIcon" itemID="4fea625c-000009d2" lastModified="1340762762">
+  <timeline>
+    <DOMTimeline name="MenuIcon">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix tx="-3.55" ty="-2.6"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.6"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="2" edges="!149 141S1|210 211!210 211|279 143"/>
+                    <Edge fillStyle0="1" edges="!279 143S1|281 145!281 145|210 215!210 215|147 143!147 143|149 141"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!149 141S3|147 139!147 139|168 111!168 111|255 111!255 111|281 141!281 141|279 143"/>
+                    <Edge fillStyle1="1" edges="!354 136S2|213 281!213 281|71 134!71 134|148 52!148 52|278 52!278 52|354 136"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

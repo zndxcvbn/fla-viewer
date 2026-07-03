@@ -1,0 +1,115 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ TabBar/TabBar" itemID="4ef9103e-00000099" linkageExportForAS="true" linkageIdentifier="TabBar" linkageClassName="skyui.components.TabBar" sourceFlashFilepath="../../tabbedinventorylists.fla" sourceLibraryItemHRef="MovieClips/TabBar" sourceLastModified="1325635923" lastModified="1337126840" lastUniqueIdentifier="21" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="TabBar">
+      <layers>
+        <DOMLayer name="buttons" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="leftButton" centerPoint3DX="135.5" centerPoint3DY="26">
+                  <matrix>
+                    <Matrix a="2.77375793457031" d="0.488067626953125" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="48.85" y="49.15"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="rightButton" centerPoint3DX="414.5" centerPoint3DY="26">
+                  <matrix>
+                    <Matrix a="2.77375793457031" d="0.488067626953125" tx="279" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="48.85" y="49.15"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="icons" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ TabBar/TabIcon" name="rightIcon" centerPoint3DX="515.45" centerPoint3DY="27">
+                  <matrix>
+                    <Matrix tx="485.45" ty="8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="30" y="19"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ TabBar/TabIcon" name="leftIcon" centerPoint3DX="34.1" centerPoint3DY="27">
+                  <matrix>
+                    <Matrix tx="4.1" ty="8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="30" y="19"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="text" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="leftLabel" width="184.7" height="34.8" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="70.5" ty="10"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>CONTAINER</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="28" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="rightLabel" width="183.9" height="34.8" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="293.6" ty="10"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>PLAYER</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="28" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="image" color="#4FFFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ TabBar/TabBarBack" name="image" centerPoint3DX="275.25" centerPoint3DY="25.4">
+                  <transformationPoint>
+                    <Point x="275.25" y="25.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

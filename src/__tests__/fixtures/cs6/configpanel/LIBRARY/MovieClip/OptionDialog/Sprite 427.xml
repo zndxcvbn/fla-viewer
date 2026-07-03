@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionDialog/Sprite 427" itemID="4ee20823-0000011a" sourceFlashFilepath="../../../PauseMenu/quest_journal.fla" sourceLibraryItemHRef="Sprites/Sprite 427" sourceLastModified="1338820274" lastModified="1342040628" sourceItemID="4ee20823-0000011a">
+  <timeline>
+    <DOMTimeline name="Sprite 427">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes/ScrollbarThumb Shape" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

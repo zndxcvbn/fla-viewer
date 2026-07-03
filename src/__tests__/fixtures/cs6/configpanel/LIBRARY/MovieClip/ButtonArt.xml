@@ -1,0 +1,15 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ButtonArt" itemID="505f0679-0000004d" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="ButtonArt" linkageURL="buttonart.swf" sourceFlashFilepath="../../bottombar.fla" sourceLibraryItemHRef="MovieClip/ButtonArt" sourceLastModified="1348419407" lastModified="1348419407" sourceItemID="505f0679-0000004d">
+  <timeline>
+    <DOMTimeline name="ButtonArt">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

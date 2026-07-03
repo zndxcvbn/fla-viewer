@@ -1,0 +1,205 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/GroupButtonHolder" itemID="519ec493-000012e8" lastModified="1369517814" lastUniqueIdentifier="8">
+  <timeline>
+    <DOMTimeline name="GroupButtonHolder">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ CategoryButtons/GroupButton" name="btnGroup2" centerPoint3DX="46" centerPoint3DY="16" uniqueID="1">
+                  <matrix>
+                    <Matrix tx="30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.37.1.1'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="groupIndex">
+      <Inspectable name="groupIndex" variable="groupIndex" category="" verbose="0" defaultValue="1" type="Number"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="MovieClip/ CategoryButtons/GroupButton" name="btnGroup1" selected="true" centerPoint3DX="16" centerPoint3DY="16" uniqueID="2">
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.37.1.2'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="groupIndex">
+      <Inspectable name="groupIndex" variable="groupIndex" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="MovieClip/ CategoryButtons/GroupButton" name="btnGroup4" centerPoint3DX="106" centerPoint3DY="16" uniqueID="3">
+                  <matrix>
+                    <Matrix tx="90"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.37.1.3'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="groupIndex">
+      <Inspectable name="groupIndex" variable="groupIndex" category="" verbose="0" defaultValue="3" type="Number"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="MovieClip/ CategoryButtons/GroupButton" name="btnGroup3" centerPoint3DX="76" centerPoint3DY="16" uniqueID="4">
+                  <matrix>
+                    <Matrix tx="60"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.37.1.4'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="groupIndex">
+      <Inspectable name="groupIndex" variable="groupIndex" category="" verbose="0" defaultValue="2" type="Number"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="MovieClip/ CategoryButtons/GroupButton" name="btnGroup6" centerPoint3DX="166" centerPoint3DY="16" uniqueID="5">
+                  <matrix>
+                    <Matrix tx="150"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.37.1.5'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="groupIndex">
+      <Inspectable name="groupIndex" variable="groupIndex" category="" verbose="0" defaultValue="5" type="Number"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="MovieClip/ CategoryButtons/GroupButton" name="btnGroup5" centerPoint3DX="136" centerPoint3DY="16" uniqueID="6">
+                  <matrix>
+                    <Matrix tx="120"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.37.1.6'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="groupIndex">
+      <Inspectable name="groupIndex" variable="groupIndex" category="" verbose="0" defaultValue="4" type="Number"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="MovieClip/ CategoryButtons/GroupButton" name="btnGroup8" centerPoint3DX="226" centerPoint3DY="16" uniqueID="7">
+                  <matrix>
+                    <Matrix tx="210"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.37.1.7'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="groupIndex">
+      <Inspectable name="groupIndex" variable="groupIndex" category="" verbose="0" defaultValue="7" type="Number"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="MovieClip/ CategoryButtons/GroupButton" name="btnGroup7" centerPoint3DX="196" centerPoint3DY="16" uniqueID="8">
+                  <matrix>
+                    <Matrix tx="180"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.37.1.8'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="groupIndex">
+      <Inspectable name="groupIndex" variable="groupIndex" category="" verbose="0" defaultValue="6" type="Number"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

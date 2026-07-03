@@ -1,0 +1,35 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Menu/OptionSelectIndicator" itemID="4ff469ba-000003a0" sourceFlashFilepath="../../FavoritesMenu/favoritesmenu.fla" sourceLibraryItemHRef="OptionSelectIndicator" sourceLastModified="1352916227" lastModified="1360528312" sourceItemID="4ff469ba-000003a0">
+  <timeline>
+    <DOMTimeline name="OptionSelectIndicator">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix a="-1" tx="251"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient interpolationMethod="linearRGB">
+                        <matrix>
+                          <Matrix a="0.3607177734375" d="0.240478515625" tx="208.95" ty="139.3"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0.4" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" alpha="0" ratio="0.705882352941177"/>
+                      </RadialGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!0 0S1|0 5572!0 5572|5020 5572!5020 5572|5020 0!5020 0|0 0"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

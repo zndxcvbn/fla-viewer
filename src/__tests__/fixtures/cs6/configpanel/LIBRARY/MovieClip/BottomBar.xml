@@ -1,0 +1,74 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/BottomBar" itemID="506a1bf7-00000299" sourceFlashFilepath="../../../PauseMenu/quest_journal.fla" sourceLibraryItemHRef="Sprites/JournalBottomBar (Sprite 568)" sourceLastModified="1349037669" lastModified="1369649826" lastUniqueIdentifier="5" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="BottomBar">
+      <layers>
+        <DOMLayer name="right" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ButtonPanel" name="buttonPanelR" centerPoint3DX="1512.5" centerPoint3DY="-16" uniqueID="5">
+                  <matrix>
+                    <Matrix tx="1250" ty="-30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath='10.1.127.5'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="buttonRenderer">
+      <Inspectable name="buttonRenderer" variable="buttonRenderer" category="" verbose="0" defaultValue="NavButton" type="String"/>
+   </property>
+   <property id="maxButtons">
+      <Inspectable name="maxButtons" variable="maxButtons" category="" verbose="0" defaultValue="1" type="Number"/>
+   </property>
+   <property id="isReversed">
+      <Inspectable name="isReversed" variable="isReversed" category="" verbose="0" defaultValue="true" type="Default"/>
+   </property>
+   <property id="buttonInitializer">
+      <Inspectable name="buttonInitializer" variable="buttonInitializer" category="" verbose="0" defaultValue="disableConstraints:false,disabled:true,disableFocus:true,hiddenBackground:true" type="Object"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="left" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes/Shape 552" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMComponentInstance libraryItemName="MovieClip/ButtonPanel" name="buttonPanelL" selected="true" centerPoint3DX="292.5" centerPoint3DY="-16" uniqueID="4">
+                  <matrix>
+                    <Matrix tx="30" ty="-30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath='10.1.127.4'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="buttonRenderer">
+      <Inspectable name="buttonRenderer" variable="buttonRenderer" category="" verbose="0" defaultValue="NavButton" type="String"/>
+   </property>
+   <property id="maxButtons">
+      <Inspectable name="maxButtons" variable="maxButtons" category="" verbose="0" defaultValue="3" type="Number"/>
+   </property>
+   <property id="buttonInitializer">
+      <Inspectable name="buttonInitializer" variable="buttonInitializer" category="" verbose="0" defaultValue="disableConstraints:false,disabled:true,disableFocus:true,hiddenBackground:true" type="Object"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

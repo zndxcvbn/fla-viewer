@@ -1,0 +1,74 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Map Markers/Description/MarkerLineItem" itemID="506e4657-00000156" linkageExportForRS="true" linkageIdentifier="DescriptionLineItem" linkageURL="." sourceFlashFilepath="Sprite 342" lastModified="1363145802" sourceItemID="00000000-7fffffff">
+  <timeline>
+    <DOMTimeline name="MarkerLineItem">
+      <layers>
+        <DOMLayer name="Diamond Icon" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!30 221|0 277!0 277|0 278!0 278|31 337!31 337[60 386 64 386!64 386|98 337!98 337|128 278!128 278|128 277!128 277|64 168!64 168[60 168 30 221"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Item" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="Item" fontRenderingMode="standard" width="36.15" height="23.7" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="12.05" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Item:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.2" lineSpacing="0" size="20" face="$EverywhereFont*" fillColor="#B9B9B9"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="1" blurY="1" distance="2" quality="2" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Value" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="Value" fontRenderingMode="standard" width="37.8" height="23.7" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="52.3" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Value</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" letterSpacing="0.8" lineSpacing="0" size="20" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="1" blurY="1" distance="2" quality="2" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,36 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Select Indicator Shape" itemID="5001f544-000000a4" sourceFlashFilepath="../../inventorylists.fla" sourceLibraryItemHRef="Graphic/Select Indicator Shape" sourceLastModified="1336753945" symbolType="graphic" lastModified="1341443932" sourceItemID="4facf237-00000076">
+  <timeline>
+    <DOMTimeline name="Select Indicator Shape">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="-0.345947265625" d="-0.01708984375" tx="229.4" ty="14"/>
+                        </matrix>
+                        <GradientEntry color="#999999" alpha="0" ratio="0"/>
+                        <GradientEntry color="#999999" alpha="0.501960784313725" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!10256 560/0 560!0 560/0 0!0 0/10256 0!10256 0|10256 560"/>
+                    <Edge cubics="!0 560(;0,560 0,0 0,0q0 560 0 0);"/>
+                    <Edge cubics="!0 0(;0,0 10256,0 10256,0q0 0 10256 0);"/>
+                    <Edge cubics="!10256 560(;10256,560 0,560 0,560q10256 560 0 560);"/>
+                    <Edge cubics="!10256 0(;10256,0 10256,560 10256,560q10256 0 10256 560);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

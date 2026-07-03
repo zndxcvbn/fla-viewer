@@ -1,0 +1,15 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Menu/MapMarkerArt" itemID="5140b17b-00001cb5" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="MapMarkerArt" linkageURL="skyui\mapmarkerart.swf" lastModified="1363194349">
+  <timeline>
+    <DOMTimeline name="MapMarkerArt">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

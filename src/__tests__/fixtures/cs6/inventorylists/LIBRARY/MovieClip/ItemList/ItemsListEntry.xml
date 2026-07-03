@@ -1,0 +1,296 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemList/ItemsListEntry" itemID="4f945217-00000052" linkageExportForAS="true" linkageIdentifier="ItemsListEntry" linkageClassName="InventoryListEntry" lastModified="1362416364" lastUniqueIdentifier="11">
+  <timeline>
+    <DOMTimeline name="ItemsListEntry">
+      <layers>
+        <DOMLayer name="bg" color="#FFFF00" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="background" selected="true" centerPoint3DX="263.5" centerPoint3DY="14.05">
+                  <matrix>
+                    <Matrix a="5.39413452148438" d="0.285491943359375"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="miniIcons" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/Icons/PoisonIcon" name="poisonIcon" centerPoint3DX="55.35" centerPoint3DY="15.35">
+                  <matrix>
+                    <Matrix tx="45.35" ty="5.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/Icons/EnchantedIcon" name="enchIcon" centerPoint3DX="67" centerPoint3DY="11.9">
+                  <matrix>
+                    <Matrix tx="57" ty="1.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/Icons/FavoriteIcon" name="favoriteIcon" centerPoint3DX="85.2" centerPoint3DY="13.5">
+                  <matrix>
+                    <Matrix tx="75.2" ty="3.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="6.95" y="6.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/Icons/BestClassIcon" name="bestIcon" centerPoint3DX="94.2" centerPoint3DY="12.9">
+                  <matrix>
+                    <Matrix tx="84.2" ty="2.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.85" y="7.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/Icons/StolenIcon" name="stolenIcon" centerPoint3DX="116" centerPoint3DY="14.7">
+                  <matrix>
+                    <Matrix tx="106" ty="4.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/Icons/ReadIcon" name="readIcon" selected="true" centerPoint3DX="127.35" centerPoint3DY="12.35">
+                  <matrix>
+                    <Matrix tx="117.35" ty="2.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="10" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="equipIcon" color="#FFFF00" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/Icons/EquipIcon" name="equipIcon" centerPoint3DX="-20.5" centerPoint3DY="14">
+                  <matrix>
+                    <Matrix tx="-30.5" ty="4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="itemIcon" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/IconArea" name="itemIcon" centerPoint3DX="10" centerPoint3DY="14">
+                  <matrix>
+                    <Matrix a="0.15625" d="0.15625" ty="4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="64" y="64"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="textFields" color="#4F80FF" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="textField0" fontRenderingMode="standard" width="62" height="19.9" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="5" ty="4.1"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>textField0</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField1" fontRenderingMode="standard" width="62" height="19.9" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="100" ty="4.1"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>textField1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField4" fontRenderingMode="standard" width="66.95" height="20" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="145" ty="4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>textField4</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField5" fontRenderingMode="standard" width="66.95" height="20" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="120.95" ty="4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>textField5</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField6" fontRenderingMode="standard" width="66.95" height="20" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="191.9" ty="4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>textField6</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField7" fontRenderingMode="standard" width="66.95" height="20" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="95.85" ty="4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>textField7</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField8" fontRenderingMode="standard" width="66.95" height="20" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="116.8" ty="4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>textField8</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField9" fontRenderingMode="standard" width="66.95" height="20" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="120.75" ty="4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>textField9</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField3" fontRenderingMode="standard" width="61" height="20" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="111" ty="4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>textField3</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField2" fontRenderingMode="standard" width="60" height="20" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="172" ty="4"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>textField2</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="selectIndicator" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/ArrowSelectIndicator" name="selectIndicator" centerPoint3DX="263.5" centerPoint3DY="14">
+                  <transformationPoint>
+                    <Point x="263.5" y="14"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

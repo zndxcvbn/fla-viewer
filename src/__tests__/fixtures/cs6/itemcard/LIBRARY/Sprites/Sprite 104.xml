@@ -1,0 +1,196 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/Sprite 104" itemID="4ee20821-00000101" sourceFlashFilepath="Sprite 104" lastModified="1323436065" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="Sprite 104">
+      <layers>
+        <DOMLayer name="Layer 13" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMComponentInstance libraryItemName="Sprites/Sprite 41" name="CancelMouseButton" uniqueID="1">
+                  <matrix>
+                    <Matrix tx="160"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Page 1' oldCopiedComponentPath='1.1.1'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="XBoxArt">
+      <Inspectable name="XBoxArt" variable="XBoxArt" category="" verbose="0" defaultValue="360_B" type="Default"/>
+   </property>
+   <property id="disableConstraints">
+      <Inspectable name="disableConstraints" variable="disableConstraints" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="labelID">
+      <Inspectable name="labelID" variable="labelID" category="" verbose="0" defaultValue="$No" type="Default"/>
+   </property>
+   <property id="PCArt">
+      <Inspectable name="PCArt" variable="PCArt" category="" verbose="0" defaultValue="Tab" type="Default"/>
+   </property>
+   <property id="PS3Art">
+      <Inspectable name="PS3Art" variable="PS3Art" category="" verbose="0" defaultValue="PS3_B" type="Default"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 9" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMComponentInstance libraryItemName="Sprites/Sprite 41" name="AcceptMouseButton" uniqueID="1">
+                  <matrix>
+                    <Matrix tx="28"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Page 1' oldCopiedComponentPath='1.1.1'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="XBoxArt">
+      <Inspectable name="XBoxArt" variable="XBoxArt" category="" verbose="0" defaultValue="360_A" type="Default"/>
+   </property>
+   <property id="disableConstraints">
+      <Inspectable name="disableConstraints" variable="disableConstraints" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="labelID">
+      <Inspectable name="labelID" variable="labelID" category="" verbose="0" defaultValue="$Yes" type="Default"/>
+   </property>
+   <property id="PCArt">
+      <Inspectable name="PCArt" variable="PCArt" category="" verbose="0" defaultValue="Enter" type="Default"/>
+   </property>
+   <property id="PS3Art">
+      <Inspectable name="PS3Art" variable="PS3Art" category="" verbose="0" defaultValue="PS3_A" type="Default"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 5" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMComponentInstance libraryItemName="Sprites/Sprite 43" name="CancelGamepadButton" uniqueID="1">
+                  <matrix>
+                    <Matrix tx="160"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Page 1' oldCopiedComponentPath='1.1.1'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="XBoxArt">
+      <Inspectable name="XBoxArt" variable="XBoxArt" category="" verbose="0" defaultValue="360_B" type="Default"/>
+   </property>
+   <property id="disableConstraints">
+      <Inspectable name="disableConstraints" variable="disableConstraints" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="labelID">
+      <Inspectable name="labelID" variable="labelID" category="" verbose="0" defaultValue="$No" type="Default"/>
+   </property>
+   <property id="PCArt">
+      <Inspectable name="PCArt" variable="PCArt" category="" verbose="0" defaultValue="Tab" type="Default"/>
+   </property>
+   <property id="PS3Art">
+      <Inspectable name="PS3Art" variable="PS3Art" category="" verbose="0" defaultValue="PS3_B" type="Default"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMComponentInstance libraryItemName="Sprites/Sprite 43" name="AcceptGamepadButton" uniqueID="1">
+                  <matrix>
+                    <Matrix tx="28"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Page 1' oldCopiedComponentPath='1.1.1'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="XBoxArt">
+      <Inspectable name="XBoxArt" variable="XBoxArt" category="" verbose="0" defaultValue="360_A" type="Default"/>
+   </property>
+   <property id="disableConstraints">
+      <Inspectable name="disableConstraints" variable="disableConstraints" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="labelID">
+      <Inspectable name="labelID" variable="labelID" category="" verbose="0" defaultValue="$Yes" type="Default"/>
+   </property>
+   <property id="PCArt">
+      <Inspectable name="PCArt" variable="PCArt" category="" verbose="0" defaultValue="Enter" type="Default"/>
+   </property>
+   <property id="PS3Art">
+      <Inspectable name="PS3Art" variable="PS3Art" category="" verbose="0" defaultValue="PS3_A" type="Default"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

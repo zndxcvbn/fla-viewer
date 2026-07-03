@@ -1,0 +1,200 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Enter Shape" itemID="4ffa3783-0000129b" sourceFlashFilepath="../../../../../vanilla/src/startmenu.fla" sourceLibraryItemHRef="Shapes/Shape 16" sourceLastModified="1323436069" symbolType="graphic" lastModified="1341798275" sourceItemID="4ee20825-00000105">
+  <timeline>
+    <DOMTimeline name="Enter Shape">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!623 239[590 239 590 275!590 275|590 386!590 386|557 386!557 386|557 210!557 210|590 210!590 210|590 231!590 231|591 231!591 231[603 207 628 207!628 207|628 240!628 240|623 239"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!520 370[506 389 480 389!480 389[427 389 427 299!427 299[427 207 479 207!479 207[532 207 532 299!532 299|532 304!532 304|460 304!460 304[460 359 480 359!480 359[501 359 501 327!501 327|531 327!531 327[531 353 520 370!499 281[499 236 479
+ 236!479 236[460 236 460 281!460 281|499 281"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!412 236|394 236!394 236|394 386!394 386|362 386!362 386|362 236!362 236|344 236!344 236|344 210!344 210|362 210!362 210|362 160!362 160|394 160!394 160|394 210!394 210|412 210!412 210|412 236"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!253 230[265 207 289 207!289 207[312 207 321 226!321 226|325 265!325 265|325 386!325 386|292 386!292 386|292 264!292 264[292 236 273 236!273 236[259 236 255 251!255 251|253 276!253 276|253 386!253 386|220 386!220 386|220 210!220 210|253
+ 210!253 210|253 230"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!199 153|140 153!140 153|140 236!140 236|193 236!193 236|193 266!193 266|140 266!140 266|140 355!140 355|199 355!199 355|199 386!199 386|105 386!105 386|105 123!105 123|199 123!199 123|199 153"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!601 219|601 241!601 241|602 241!602 241[614 216 639 216!639 216|639 249!639 249|634 249!634 249[602 249 602 285!602 285|602 395!602 395|569 395!569 395|569 219!569 219|601 219"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!543 337[543 364 531 380!531 380[517 399 491 399!491 399[438 399 438 309!438 309[438 216 491 216!491 216[544 216 544 309!544 309|544 314!544 314|471 314!471 314[471 369 492 369!492 369[513 369 513 337!513 337|543 337!511 290[511 246 491
+ 246!491 246[471 246 471 290!471 290|511 290"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!406 219|423 219!423 219|423 245!423 245|406 245!406 245|406 395!406 395|373 395!373 395|373 245!373 245|356 245!356 245|356 219!356 219|373 219!373 219|373 170!373 170|406 170!406 170|406 219"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!264 219|264 240!264 240|265 240!265 240[277 216 300 216!300 216[323 216 332 236!332 236|336 275!336 275|336 395!336 395|304 395!304 395|304 274!304 274[304 246 285 246!285 246[270 246 266 261!266 261|264 286!264 286|264 395!264 395|232
+ 395!232 395|232 219!232 219|264 219"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!211 164|152 164!152 164|152 246!152 246|204 246!204 246|204 276!204 276|152 276!152 276|152 366!152 366|211 366!211 366|211 395!211 395|117 395!117 395|117 133!117 133|211 133!211 133|211 164"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

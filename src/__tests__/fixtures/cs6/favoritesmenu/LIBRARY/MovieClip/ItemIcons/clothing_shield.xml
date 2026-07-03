@@ -1,0 +1,32 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemIcons/clothing_shield" itemID="4f95c6ef-0000044d" sourceFlashFilepath="../../../Resources/icons_item_psychosteve.fla" sourceLibraryItemHRef="Icons/item/armor/clothing_shield" sourceLastModified="1338657406" lastModified="1338657406" sourceItemID="4f95c6ef-0000044d">
+  <timeline>
+    <DOMTimeline name="clothing_shield">
+      <layers>
+        <DOMLayer name="rhysfaber_basic_shield.ai" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1818 1716[1567 2237 1009 2523!1009 2523[482 2237 207 1726!207 1726[-66 1211 -57 561!-57 561|1009 166!1009 166|2074 567!2074 567[2074 1198 1818 1716"/>
+                    <Edge cubics="!2074 567(;2074,990 1989,1371 1818,1716q2074 567Q2074 1198q1818 1716);"/>
+                    <Edge cubics="!207 1726(;28,1383 -62,994 -57,561q207 1726Q-66 1211q-57 561);"/>
+                    <Edge cubics="!-57 561(;-57,561 1009,166 1009,166q-57 561 1009 166);"/>
+                    <Edge cubics="!1009 166(;1009,166 2074,567 2074,567q1009 166 2074 567);"/>
+                    <Edge cubics="!1818 1716(;1650,2063 1379,2330 1009,2523q1818 1716Q1567 2237q1009 2523);"/>
+                    <Edge cubics="!1009 2523(;657,2330 389,2063 207,1726q1009 2523Q482 2237q207 1726);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

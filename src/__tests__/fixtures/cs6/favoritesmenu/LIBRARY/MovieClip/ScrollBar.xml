@@ -1,0 +1,58 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ScrollBar" itemID="5118000a-000007bb" linkageExportForAS="true" linkageIdentifier="ScrollBar" linkageClassName="gfx.controls.ScrollBar" sourceFlashFilepath="../../../MapMenu/map.fla" sourceLibraryItemHRef="Menu/ScrollBar" sourceLastModified="1360527370" scaleGridRight="10" scaleGridTop="18" scaleGridBottom="84.5" lastModified="1368668729" sourceItemID="5118000a-000007bb" displayAsComponent="false" customIconID="0" actionscriptClass="gfx.controls.ScrollBar" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+  <timeline>
+    <DOMTimeline name="ScrollBar">
+      <layers>
+        <DOMLayer name="Thumb" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ ScrollBar/scrollBar_thumb" name="thumb" selected="true" centerPoint3DX="4.55" centerPoint3DY="7" uniqueID="15">
+                  <matrix>
+                    <Matrix a="0.631576538085938"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.2" y="7"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.1.40.15'>
+</component>
+]]></dataBindingXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Track" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ ScrollBar/scrollBar_track" name="track" centerPoint3DX="3.65" centerPoint3DY="45.85" uniqueID="16">
+                  <matrix>
+                    <Matrix a="0.521743774414063" d="3.65864562988281"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7" y="12.55"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.1.40.16'>
+</component>
+]]></dataBindingXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <classProperties><![CDATA[<class id="gfx.controls.ScrollBar" >
+</class>
+<class id="gfx.controls.ScrollIndicator" >
+</class>
+<class id="gfx.core.UIComponent" >
+</class>
+<class id="MovieClip" >
+</class>
+]]></classProperties>
+</DOMComponentItem>

@@ -1,0 +1,96 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ CategoryList/CategoryList" itemID="4ec920e8-00000551" linkageExportForAS="true" linkageIdentifier="CategoryList" linkageClassName="CategoryList" lastModified="1336919078" lastUniqueIdentifier="32" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+  <timeline>
+    <DOMTimeline name="CategoryList">
+      <layers>
+        <DOMLayer name="anchors" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/Anchor" name="anchorEntriesEnd">
+                  <matrix>
+                    <Matrix tx="545.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/Anchor" name="anchorEntriesBegin">
+                  <matrix>
+                    <Matrix tx="5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="selectors" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ CategoryList/SelectorFill" name="selectorLeft">
+                  <matrix>
+                    <Matrix ty="32"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54" y="3.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ CategoryList/SelectorFill" name="selectorRight" centerPoint3DX="182.7" centerPoint3DY="45.65">
+                  <matrix>
+                    <Matrix tx="132.7" ty="32"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="54" y="3.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ CategoryList/SelectorCurrent" name="selectorCenter" centerPoint3DX="113" centerPoint3DY="41.55">
+                  <matrix>
+                    <Matrix tx="100" ty="32.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.05" y="11.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="background" centerPoint3DX="275.15" centerPoint3DY="23.1">
+                  <matrix>
+                    <Matrix a="5.63233947753906" d="0.469985961914063"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <parametersAsXML><![CDATA[   <property id="textOption">
+      <Inspectable name="textOption" variable="textOption" category="" verbose="0" defaultValue="Shrink To Fit" type="String"/>
+   </property>
+   <property id="entryRenderer">
+      <Inspectable name="entryRenderer" variable="entryRenderer" category="" verbose="0" defaultValue="CategoryListEntry" type="String"/>
+   </property>
+   <property id="iconIndent">
+      <Inspectable name="iconIndent" variable="iconIndent" category="" verbose="0" defaultValue="5" type="Number"/>
+   </property>
+   <property id="iconSize">
+      <Inspectable name="iconSize" variable="iconSize" category="" verbose="0" defaultValue="32" type="Number"/>
+   </property>
+]]></parametersAsXML>
+</DOMComponentItem>

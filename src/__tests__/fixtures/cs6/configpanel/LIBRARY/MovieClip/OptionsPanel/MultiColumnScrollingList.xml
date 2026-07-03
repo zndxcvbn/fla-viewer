@@ -1,0 +1,102 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionsPanel/MultiColumnScrollingList" itemID="4ff1cc89-000000e2" linkageExportForAS="true" linkageIdentifier="MultiColumnScrollingList" linkageClassName="MultiColumnScrollingList" lastModified="1350782927" lastUniqueIdentifier="4" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+  <timeline>
+    <DOMTimeline name="MultiColumnScrollingList">
+      <layers>
+        <DOMLayer name="scrollbar" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ ScrollBar/MultiColumnScrollBar" name="scrollbar" selected="true" centerPoint3DX="754.35" centerPoint3DY="92.45" uniqueID="4">
+                  <matrix>
+                    <Matrix tx="747" ty="3.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="6.65" y="89.05"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath='10.1.124.5.1.4'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="enableInitCallback">
+      <Inspectable name="enableInitCallback" variable="enableInitCallback" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="offsetBottom">
+      <Inspectable name="offsetBottom" variable="offsetBottom" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="offsetTop">
+      <Inspectable name="offsetTop" variable="offsetTop" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="inspectableScrollTarget">
+      <Inspectable name="inspectableScrollTarget" variable="inspectableScrollTarget" category="" verbose="0" defaultValue="&quot;&quot;" type="String"/>
+   </property>
+   <property id="soundMap">
+      <Inspectable name="soundMap" variable="soundMap" category="" verbose="0" defaultValue="theme:default,scroll:scroll" type="Object"/>
+   </property>
+   <property id="trackMode">
+      <Inspectable name="trackMode" variable="trackMode" category="" verbose="0" defaultValue="scrollPage" type="String"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="background" centerPoint3DX="385" centerPoint3DY="223">
+                  <matrix>
+                    <Matrix a="7.88116455078125" d="4.53465270996094"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="48.85" y="49.2"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <parametersAsXML><![CDATA[   <property id="entryRenderer">
+      <Inspectable name="entryRenderer" variable="entryRenderer" category="" verbose="0" defaultValue="OptionsListEntry" type="String"/>
+   </property>
+   <property id="topBorder">
+      <Inspectable name="topBorder" variable="topBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="bottomBorder">
+      <Inspectable name="bottomBorder" variable="bottomBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="leftBorder">
+      <Inspectable name="leftBorder" variable="leftBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="rightBorder">
+      <Inspectable name="rightBorder" variable="rightBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="entryHeight">
+      <Inspectable name="entryHeight" variable="entryHeight" category="" verbose="0" defaultValue="30" type="Number"/>
+   </property>
+   <property id="isAutoUnselect">
+      <Inspectable name="isAutoUnselect" variable="isAutoUnselect" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="columnSpacing">
+      <Inspectable name="columnSpacing" variable="columnSpacing" category="" verbose="0" defaultValue="50" type="Number"/>
+   </property>
+   <property id="separatorRenderer">
+      <Inspectable name="separatorRenderer" variable="separatorRenderer" category="" verbose="0" defaultValue="ColumnSeparator" type="String"/>
+   </property>
+   <property id="columnCount">
+      <Inspectable name="columnCount" variable="columnCount" category="" verbose="0" defaultValue="2" type="Number"/>
+   </property>
+]]></parametersAsXML>
+</DOMComponentItem>

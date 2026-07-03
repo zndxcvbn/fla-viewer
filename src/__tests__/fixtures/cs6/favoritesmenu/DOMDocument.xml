@@ -1,0 +1,186 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#134D34" gridColor="#C0C0C0" guidesColor="#000000" width="1280" height="720" frameRate="30" currentTimeline="2" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" gridSpacingX="18" gridSpacingY="18" gridSnapAccuracy="Can be distant" guidesSnapAccuracy="Can be distant" guidesSnapTo="false" guidesVisible="false" snapAlignBorderSpacing="18" snapAlignHorizontalSpacing="1" snapAlignVerticalSpacing="1" timelineLabelWidth="-1" sharedLibraryURL="." useCarbonLineSpacing="true" nextSceneIdentifier="3883" playOptionsPlayLoop="false" playOptionsPlayPages="false">
+     <folders>
+          <DOMFolderItem name="Fonts" itemID="4ee9704e-00002b5d"/>
+          <DOMFolderItem name="Graphic" itemID="4f0489a5-00000311" isExpanded="true"/>
+          <DOMFolderItem name="MovieClip" itemID="50a15e8d-00000067" isExpanded="true"/>
+          <DOMFolderItem name="MovieClip/ CategoryButtons" itemID="51960754-0000005b" isExpanded="true"/>
+          <DOMFolderItem name="MovieClip/ ItemIcons" itemID="5197cea7-000002a2"/>
+          <DOMFolderItem name="MovieClip/ ScrollBar" itemID="5117ffff-000007b8"/>
+          <DOMFolderItem name="MovieClip/ ScrollBar/scrollBarGraphics" itemID="50f9250f-0000792c"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="Fonts/$EverywhereMediumFont" itemID="4ec84e45-00001751" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereMediumFont" linkageURL="gfxfontlib.swf" font="FuturaStd-Condensed" size="0" id="1" sourceLastImported="1321755965" embedRanges="1|2|4|3"/>
+     </fonts>
+     <symbols>
+          <Include href="Graphic/0.xml" itemIcon="1" loadImmediate="false" itemID="50147034-0000036b" lastModified="1343521723"/>
+          <Include href="Graphic/1.xml" itemIcon="1" loadImmediate="false" itemID="50146ff8-00000359" lastModified="1343521731"/>
+          <Include href="Graphic/2.xml" itemIcon="1" loadImmediate="false" itemID="50146fff-0000035b" lastModified="1343521738"/>
+          <Include href="Graphic/3.xml" itemIcon="1" loadImmediate="false" itemID="50147004-0000035d" lastModified="1343521742"/>
+          <Include href="Graphic/4.xml" itemIcon="1" loadImmediate="false" itemID="5014700b-0000035f" lastModified="1343521746"/>
+          <Include href="Graphic/5.xml" itemIcon="1" loadImmediate="false" itemID="50147010-00000361" lastModified="1343521750"/>
+          <Include href="Graphic/6.xml" itemIcon="1" loadImmediate="false" itemID="50147014-00000363" lastModified="1343521754"/>
+          <Include href="Graphic/7.xml" itemIcon="1" loadImmediate="false" itemID="50147023-00000365" lastModified="1343521759"/>
+          <Include href="Graphic/8.xml" itemIcon="1" loadImmediate="false" itemID="50147027-00000367" lastModified="1343521768"/>
+          <Include href="Graphic/9.xml" itemIcon="1" loadImmediate="false" itemID="5014702e-00000369" lastModified="1343521782"/>
+          <Include href="Graphic/Area Shape.xml" itemIcon="1" loadImmediate="false" itemID="51a0a955-00000128" lastModified="1336690995"/>
+          <Include href="Graphic/ButtonBG Shape.xml" itemIcon="1" loadImmediate="false" itemID="505cd111-000003f9" lastModified="1348260113"/>
+          <Include href="Graphic/Equipped Left Shape.xml" itemIcon="1" loadImmediate="false" itemID="4ee37fbc-0000004a" lastModified="1369657070"/>
+          <Include href="Graphic/Equipped LR Shape.xml" itemIcon="1" loadImmediate="false" itemID="4ee37fdb-0000004e" lastModified="1359473140"/>
+          <Include href="Graphic/Equipped Right Shape.xml" itemIcon="1" loadImmediate="false" itemID="4ee37fc6-0000004b" lastModified="1359473118"/>
+          <Include href="Graphic/Equipped Shape.xml" itemIcon="1" loadImmediate="false" itemID="4ee37fd3-0000004d" lastModified="1359473107"/>
+          <Include href="Graphic/Group Border Shape.xml" itemIcon="1" loadImmediate="false" itemID="519d6222-00001adc" lastModified="1369268779"/>
+          <Include href="MovieClip/ CategoryButtons/AidButton.xml" itemID="519d1dd1-0000010b" lastModified="1429388913"/>
+          <Include href="MovieClip/ CategoryButtons/AidIcon.xml" loadImmediate="false" itemID="519521fa-000000b9" lastModified="1368728058"/>
+          <Include href="MovieClip/ CategoryButtons/AllButton.xml" itemID="519d1dd6-0000010e" lastModified="1429388962"/>
+          <Include href="MovieClip/ CategoryButtons/AllIcon.xml" loadImmediate="false" itemID="519521ff-000000ba" lastModified="1368728063"/>
+          <Include href="MovieClip/ CategoryButtons/GearButton.xml" itemID="519d1dd9-00000111" lastModified="1429389074"/>
+          <Include href="MovieClip/ CategoryButtons/GearIcon.xml" loadImmediate="false" itemID="5195220c-000000bb" lastModified="1429388845"/>
+          <Include href="MovieClip/ CategoryButtons/GroupButton.xml" itemID="519d1de4-00000117" lastModified="1369517819"/>
+          <Include href="MovieClip/ CategoryButtons/GroupNumber.xml" loadImmediate="false" itemID="519d2440-00000447" lastModified="1369253235"/>
+          <Include href="MovieClip/ CategoryButtons/MagicButton.xml" itemID="519d1de0-00000114" lastModified="1369263832"/>
+          <Include href="MovieClip/ CategoryButtons/MagicIcon.xml" loadImmediate="false" itemID="51952210-000000bc" lastModified="1368786656"/>
+          <Include href="MovieClip/ ItemIcons/armor_amulet.xml" loadImmediate="false" itemID="4f52c702-00000278" lastModified="1338657511"/>
+          <Include href="MovieClip/ ItemIcons/armor_body.xml" loadImmediate="false" itemID="4f52c6f2-00000276" lastModified="1337126784"/>
+          <Include href="MovieClip/ ItemIcons/armor_bracer.xml" loadImmediate="false" itemID="4fba7f93-00000487" lastModified="1338656803"/>
+          <Include href="MovieClip/ ItemIcons/armor_circlet.xml" loadImmediate="false" itemID="4f52c7f8-00000298" lastModified="1338657593"/>
+          <Include href="MovieClip/ ItemIcons/armor_daedra.xml" loadImmediate="false" itemID="4edfa7e1-000000fb" lastModified="1338656883"/>
+          <Include href="MovieClip/ ItemIcons/armor_feet.xml" loadImmediate="false" itemID="4f52c6bd-00000261" lastModified="1338656573"/>
+          <Include href="MovieClip/ ItemIcons/armor_hands.xml" loadImmediate="false" itemID="4f52c6c9-00000264" lastModified="1338656532"/>
+          <Include href="MovieClip/ ItemIcons/armor_head.xml" loadImmediate="false" itemID="4f529806-00000ac4" lastModified="1338656461"/>
+          <Include href="MovieClip/ ItemIcons/armor_mask.xml" loadImmediate="false" itemID="4f53b28f-00000eed" lastModified="1338656711"/>
+          <Include href="MovieClip/ ItemIcons/armor_ring.xml" loadImmediate="false" itemID="4f52cff7-000002e8" lastModified="1338657542"/>
+          <Include href="MovieClip/ ItemIcons/armor_shield.xml" loadImmediate="false" itemID="4f52d562-0000037a" lastModified="1338656646"/>
+          <Include href="MovieClip/ ItemIcons/clothing_body.xml" loadImmediate="false" itemID="4f95c69c-000003a2" lastModified="1338656971"/>
+          <Include href="MovieClip/ ItemIcons/clothing_feet.xml" loadImmediate="false" itemID="4f95c6da-00000401" lastModified="1338657293"/>
+          <Include href="MovieClip/ ItemIcons/clothing_hands.xml" loadImmediate="false" itemID="4f95c6c3-000003b6" lastModified="1338657243"/>
+          <Include href="MovieClip/ ItemIcons/clothing_head.xml" loadImmediate="false" itemID="4f95c6b7-000003ac" lastModified="1338657091"/>
+          <Include href="MovieClip/ ItemIcons/clothing_mask.xml" loadImmediate="false" itemID="4f95c6fb-00000457" lastModified="1338657468"/>
+          <Include href="MovieClip/ ItemIcons/clothing_pants.xml" loadImmediate="false" itemID="4fba802b-00000498" lastModified="1338657198"/>
+          <Include href="MovieClip/ ItemIcons/clothing_robe.xml" loadImmediate="false" itemID="4fba8093-000004a0" lastModified="1338657008"/>
+          <Include href="MovieClip/ ItemIcons/clothing_shield.xml" loadImmediate="false" itemID="4f95c6ef-0000044d" lastModified="1338657406"/>
+          <Include href="MovieClip/ ItemIcons/clothing_shoes.xml" loadImmediate="false" itemID="4fba80b9-000004a7" lastModified="1338662204"/>
+          <Include href="MovieClip/ ItemIcons/default_alteration.xml" loadImmediate="false" itemID="4f77ad45-00000a3e" lastModified="1338660711"/>
+          <Include href="MovieClip/ ItemIcons/default_armor.xml" loadImmediate="false" itemID="4f529781-00000ab3" lastModified="1338654055"/>
+          <Include href="MovieClip/ ItemIcons/default_conjuration.xml" loadImmediate="false" itemID="4f77ad45-00000a3f" lastModified="1338660878"/>
+          <Include href="MovieClip/ ItemIcons/default_destruction.xml" loadImmediate="false" itemID="4f77ad45-00000a40" lastModified="1338660831"/>
+          <Include href="MovieClip/ ItemIcons/default_food.xml" loadImmediate="false" itemID="4ef21c16-00000240" lastModified="1338657972"/>
+          <Include href="MovieClip/ ItemIcons/default_illusion.xml" loadImmediate="false" itemID="4f77ad45-00000a42" lastModified="1338660777"/>
+          <Include href="MovieClip/ ItemIcons/default_ingredient.xml" loadImmediate="false" itemID="4ef21c1a-00000241" lastModified="1338658116"/>
+          <Include href="MovieClip/ ItemIcons/default_misc.xml" loadImmediate="false" itemID="4ef21c24-00000243" lastModified="1338658842"/>
+          <Include href="MovieClip/ ItemIcons/default_potion.xml" loadImmediate="false" itemID="4ef21c29-00000244" lastModified="1338658398"/>
+          <Include href="MovieClip/ ItemIcons/default_power.xml" loadImmediate="false" itemID="4f77ad45-00000a43" lastModified="1338661008"/>
+          <Include href="MovieClip/ ItemIcons/default_restoration.xml" loadImmediate="false" itemID="4f77ad45-00000a44" lastModified="1338660931"/>
+          <Include href="MovieClip/ ItemIcons/default_scroll.xml" loadImmediate="false" itemID="4f52a011-00000be7" lastModified="1338657648"/>
+          <Include href="MovieClip/ ItemIcons/default_shout.xml" loadImmediate="false" itemID="4f77ad45-00000a45" lastModified="1338660957"/>
+          <Include href="MovieClip/ ItemIcons/default_weapon.xml" loadImmediate="false" itemID="4ef21c75-00000247" lastModified="1338653119"/>
+          <Include href="MovieClip/ ItemIcons/food_beer.xml" loadImmediate="false" itemID="4fba7bea-00000377" lastModified="1338658068"/>
+          <Include href="MovieClip/ ItemIcons/food_wine.xml" loadImmediate="false" itemID="4fba7bdf-00000373" lastModified="1338658001"/>
+          <Include href="MovieClip/ ItemIcons/lightarmor_body.xml" loadImmediate="false" itemID="4f95c613-000002ef" lastModified="1338654124"/>
+          <Include href="MovieClip/ ItemIcons/lightarmor_feet.xml" loadImmediate="false" itemID="4f95c669-00000348" lastModified="1338656109"/>
+          <Include href="MovieClip/ ItemIcons/lightarmor_hands.xml" loadImmediate="false" itemID="4f95c62b-00000303" lastModified="1338656046"/>
+          <Include href="MovieClip/ ItemIcons/lightarmor_head.xml" loadImmediate="false" itemID="4f95c621-000002f9" lastModified="1338655921"/>
+          <Include href="MovieClip/ ItemIcons/lightarmor_mask.xml" loadImmediate="false" itemID="4f95c690-00000398" lastModified="1338656317"/>
+          <Include href="MovieClip/ ItemIcons/lightarmor_shield.xml" loadImmediate="false" itemID="4f95c686-0000038e" lastModified="1337126632"/>
+          <Include href="MovieClip/ ItemIcons/magic_fire.xml" loadImmediate="false" itemID="4f77ad7c-00000a4a" lastModified="1338661085"/>
+          <Include href="MovieClip/ ItemIcons/magic_frost.xml" loadImmediate="false" itemID="4f77ad90-00000a4c" lastModified="1338661114"/>
+          <Include href="MovieClip/ ItemIcons/magic_shock.xml" loadImmediate="false" itemID="4f77ad86-00000a4b" lastModified="1338661138"/>
+          <Include href="MovieClip/ ItemIcons/misc_torch.xml" loadImmediate="false" itemID="4f52f84d-00000912" lastModified="1338660328"/>
+          <Include href="MovieClip/ ItemIcons/potion_fire.xml" loadImmediate="false" itemID="4fba7cdd-000003ea" lastModified="1338658602"/>
+          <Include href="MovieClip/ ItemIcons/potion_frost.xml" loadImmediate="false" itemID="4fba7cd5-000003e5" lastModified="1338658577"/>
+          <Include href="MovieClip/ ItemIcons/potion_health.xml" loadImmediate="false" itemID="4ee4087e-000002b1" lastModified="1338658450"/>
+          <Include href="MovieClip/ ItemIcons/potion_magic.xml" loadImmediate="false" itemID="4ee40845-000002b0" lastModified="1338658515"/>
+          <Include href="MovieClip/ ItemIcons/potion_poison.xml" loadImmediate="false" itemID="4ee647c9-00000702" lastModified="1338658544"/>
+          <Include href="MovieClip/ ItemIcons/potion_shock.xml" loadImmediate="false" itemID="4fba7ce5-000003ee" lastModified="1338658630"/>
+          <Include href="MovieClip/ ItemIcons/potion_stamina.xml" loadImmediate="false" itemID="4ee4083f-000002af" lastModified="1338658483"/>
+          <Include href="MovieClip/ ItemIcons/weapon_arrow.xml" loadImmediate="false" itemID="4ef2156a-000001f5" lastModified="1345731218"/>
+          <Include href="MovieClip/ ItemIcons/weapon_battleaxe.xml" loadImmediate="false" itemID="4ef2156f-000001f6" lastModified="1337126447"/>
+          <Include href="MovieClip/ ItemIcons/weapon_bolt.xml" loadImmediate="false" itemID="50d1b942-00000863" lastModified="1355921730"/>
+          <Include href="MovieClip/ ItemIcons/weapon_bow.xml" loadImmediate="false" itemID="4ed65813-00000660" lastModified="1337126443"/>
+          <Include href="MovieClip/ ItemIcons/weapon_crossbow.xml" loadImmediate="false" itemID="50d1b946-00000864" lastModified="1355921734"/>
+          <Include href="MovieClip/ ItemIcons/weapon_daedra.xml" loadImmediate="false" itemID="4ed6580e-0000065f" lastModified="1338653338"/>
+          <Include href="MovieClip/ ItemIcons/weapon_dagger.xml" loadImmediate="false" itemID="4ef21581-000001f7" lastModified="1338653415"/>
+          <Include href="MovieClip/ ItemIcons/weapon_greatsword.xml" loadImmediate="false" itemID="4ef21592-000001f8" lastModified="1338653257"/>
+          <Include href="MovieClip/ ItemIcons/weapon_hammer.xml" loadImmediate="false" itemID="4ef215c1-000001fc" lastModified="1337126419"/>
+          <Include href="MovieClip/ ItemIcons/weapon_mace.xml" loadImmediate="false" itemID="4ef21598-000001f9" lastModified="1337126424"/>
+          <Include href="MovieClip/ ItemIcons/weapon_pickaxe.xml" loadImmediate="false" itemID="4fa98528-00000c4d" lastModified="1338653906"/>
+          <Include href="MovieClip/ ItemIcons/weapon_staff.xml" loadImmediate="false" itemID="4ef2159d-000001fa" lastModified="1338653692"/>
+          <Include href="MovieClip/ ItemIcons/weapon_sword.xml" loadImmediate="false" itemID="4ef21c68-00000246" lastModified="1338653172"/>
+          <Include href="MovieClip/ ItemIcons/weapon_waraxe.xml" loadImmediate="false" itemID="4ef215af-000001fb" lastModified="1337126398"/>
+          <Include href="MovieClip/ ItemIcons/weapon_woodaxe.xml" loadImmediate="false" itemID="4fa98616-00000c52" lastModified="1338653952"/>
+          <Include href="MovieClip/ ScrollBar/scrollBar_downArrow.xml" itemID="50f924b6-00007913" lastModified="1358505142"/>
+          <Include href="MovieClip/ ScrollBar/scrollBar_thumb.xml" itemID="50f924bc-00007917" lastModified="1368668920"/>
+          <Include href="MovieClip/ ScrollBar/scrollBar_track.xml" itemID="50f924c1-0000791b" lastModified="1358505153"/>
+          <Include href="MovieClip/ ScrollBar/scrollBar_upArrow.xml" itemID="50f928d6-00007ae1" lastModified="1359420473"/>
+          <Include href="MovieClip/ ScrollBar/scrollBarGraphics/scrollBar_cap_shape.xml" itemIcon="1" loadImmediate="false" itemID="50f924ee-00007924" lastModified="1358505198"/>
+          <Include href="MovieClip/ ScrollBar/scrollBarGraphics/scrollBar_thumb_shape.xml" itemIcon="1" loadImmediate="false" itemID="50f924f8-00007926" lastModified="1358505208"/>
+          <Include href="MovieClip/ ScrollBar/scrollBarGraphics/scrollBar_track_shape.xml" itemIcon="1" loadImmediate="false" itemID="50f92501-00007929" lastModified="1358505217"/>
+          <Include href="MovieClip/Background.xml" loadImmediate="false" itemID="51960783-0000005e" lastModified="1368925318"/>
+          <Include href="MovieClip/ButtonArt.xml" itemID="505f0679-0000004d" lastModified="1369271134"/>
+          <Include href="MovieClip/ButtonBG.xml" loadImmediate="false" itemID="505cd012-000003df" lastModified="1369271108"/>
+          <Include href="MovieClip/ButtonPanel.xml" itemID="506a59ab-00000e80" lastModified="1429388884"/>
+          <Include href="MovieClip/EquipIcon.xml" itemID="4ec92138-00000554" lastModified="1369657138"/>
+          <Include href="MovieClip/FavoritesListEntry.xml" itemID="50a30638-00000308" lastModified="1371079555"/>
+          <Include href="MovieClip/FavoritesMenu.xml" itemID="5071c68c-0000064a" lastModified="1429388924"/>
+          <Include href="MovieClip/FillArea.xml" loadImmediate="false" itemID="51a0a955-00000125" lastModified="1337106552"/>
+          <Include href="MovieClip/GroupButtonFader.xml" loadImmediate="false" itemID="519ec33d-000012a9" lastModified="1369359903"/>
+          <Include href="MovieClip/GroupButtonHolder.xml" loadImmediate="false" itemID="519ec493-000012e8" lastModified="1369517814"/>
+          <Include href="MovieClip/Holder.xml" loadImmediate="false" itemID="50a15ec6-00000069" lastModified="1429388726"/>
+          <Include href="MovieClip/HotkeyIcon.xml" loadImmediate="false" itemID="519428fe-000002b6" lastModified="1368786819"/>
+          <Include href="MovieClip/ItemIcon.xml" loadImmediate="false" itemID="5197ce8d-000002a1" lastModified="1369522986"/>
+          <Include href="MovieClip/MainHandIcon.xml" loadImmediate="false" itemID="51a34faa-0000038e" lastModified="1369675961"/>
+          <Include href="MovieClip/NavButton.xml" itemID="507064d0-00000e98" lastModified="1369319229"/>
+          <Include href="MovieClip/NavPanelHolder.xml" loadImmediate="false" itemID="51a0d647-000008bc" lastModified="1369497131"/>
+          <Include href="MovieClip/OffHandIcon.xml" loadImmediate="false" itemID="51a3500c-00000390" lastModified="1369675976"/>
+          <Include href="MovieClip/OptionSelectIndicator.xml" loadImmediate="false" itemID="4ff469ba-000003a0" lastModified="1368695712"/>
+          <Include href="MovieClip/ScrollBar.xml" itemID="5118000a-000007bb" lastModified="1368668729"/>
+          <Include href="MovieClip/ScrollingList.xml" itemID="50a30c14-000003aa" lastModified="1369358516"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Page 1">
+               <layers>
+                    <DOMLayer name="Script" color="#4F80FF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="8704">
+                                   <Actionscript>
+                                        <script><![CDATA[
+function InitExtensions()
+{
+    MenuHolder.Menu_mc.InitExtensions();
+}
+function SetPlatform(aiPlatform, abPS3Switch)
+{
+    MenuHolder.Menu_mc.SetPlatform(aiPlatform, abPS3Switch);
+}
+function GetSelectedIndex()
+{
+    return MenuHolder.Menu_mc.selectedIndex;
+}
+_global.gfxExtensions = true;
+Shared.GlobalFunc.MaintainTextFormat();]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="8704">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClip/Holder" name="MenuHolder" selected="true">
+                                             <matrix>
+                                                  <Matrix ty="720"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <PrinterSettings/>
+     <publishHistory/>
+</DOMDocument>

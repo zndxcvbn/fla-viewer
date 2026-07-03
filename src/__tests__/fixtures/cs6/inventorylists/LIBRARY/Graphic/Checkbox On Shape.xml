@@ -1,0 +1,31 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Checkbox On Shape" itemID="4fa7f72b-000006a0" symbolType="graphic" lastModified="1336754159">
+  <timeline>
+    <DOMTimeline name="Checkbox On Shape">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!114 334|117 330!117 330|155 267!155 267[201 187 203 174!203 174|203 173!203 173[203 166 155 84!155 84|112 14"/>
+                    <Edge fillStyle0="1" edges="!112 14|100 0!100 0[95 0 48 84!48 84[1 166 0 173!0 173|0 174!0 174[3 189 49 267!49 267[95 346 102 346!102 346|114 334"/>
+                    <Edge fillStyle0="2" edges="!114 334|125 346!125 346[132 346 178 267!178 267|226 174!226 174|226 173!226 173[226 166 178 84!178 84[129 0 123 0!123 0|112 14"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

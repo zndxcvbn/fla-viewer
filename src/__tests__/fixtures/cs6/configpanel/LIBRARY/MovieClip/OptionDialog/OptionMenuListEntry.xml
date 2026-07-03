@@ -1,0 +1,80 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionDialog/OptionMenuListEntry" itemID="5001fb5a-000000b8" linkageExportForAS="true" linkageIdentifier="OptionMenuListEntry" linkageClassName="skyui.components.list.ButtonListEntry" lastModified="1352047900" lastUniqueIdentifier="3">
+  <timeline>
+    <DOMTimeline name="OptionMenuListEntry">
+      <layers>
+        <DOMLayer name="Layer 10" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ArrowIndicator" name="activeIndicator" centerPoint3DX="72" centerPoint3DY="12">
+                  <matrix>
+                    <Matrix a="0.624969482421875" d="0.624710083007813" tx="62.65" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="8.55" y="10.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="textField" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="textField" selected="true" fontRenderingMode="standard" width="340" height="19.9" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="2" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>SECTION</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" letterSpacing="0.8" lineSpacing="0" size="16" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="trigger" color="#4F80FF" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="background" selected="true" centerPoint3DX="172" centerPoint3DY="12">
+                  <matrix>
+                    <Matrix a="3.52091979980469" d="0.244033813476563"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="48.85" y="49.15"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="select" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ OptionDialog/MenuSelectIndicator" name="selectIndicator" centerPoint3DX="172" centerPoint3DY="12">
+                  <matrix>
+                    <Matrix a="0.670822143554688" d="0.857147216796875" tx="172"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="14"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

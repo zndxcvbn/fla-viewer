@@ -1,0 +1,34 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ColorSwatch" itemID="505fd562-00000f7f" linkageExportForAS="true" linkageIdentifier="ColorSwatch" linkageClassName="skyui.components.colorswatch.ColorSwatch" sourceFlashFilepath="../../../../../Skyrim Dev/WorkingDir/newColorPicker/coloUrPicker.fla" sourceLibraryItemHRef="ColorSwatch Assets/ColorSwatch" sourceLastModified="1348457826" lastModified="1348599505" lastUniqueIdentifier="3" sourceItemID="00000000-ffffffff" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+  <timeline>
+    <DOMTimeline name="ColorSwatch">
+      <layers>
+        <DOMLayer name="Layer 1" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/ColorSwatchBackground" name="background" selected="true" centerPoint3DX="5" centerPoint3DY="5">
+                  <transformationPoint>
+                    <Point x="5" y="5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color tintMultiplier="1" tintColor="#333333"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <parametersAsXML><![CDATA[   <property id="colorRows">
+      <Inspectable name="colorRows" variable="colorRows" category="" verbose="0" defaultValue="2" type="Number"/>
+   </property>
+   <property id="colorSize">
+      <Inspectable name="colorSize" variable="colorSize" category="" verbose="0" defaultValue="25" type="Number"/>
+   </property>
+   <property id="colorList">
+      <Inspectable name="colorList" variable="colorList" category="" verbose="0" defaultValue="" type="Array"/>
+   </property>
+]]></parametersAsXML>
+</DOMComponentItem>

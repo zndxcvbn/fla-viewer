@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Map Markers/MapMarker" itemID="51409b2d-00001659" linkageExportForAS="true" linkageIdentifier="MapMarker" linkageClassName="Map.MapMarker" lastModified="1363966709" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="MapMarker">
+      <layers>
+        <DOMLayer name="hitArea" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/background" name="HitArea">
+                  <matrix>
+                    <Matrix a="0.350006103515625" d="0.350006103515625" tx="-17.5" ty="-17.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="50" y="50"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Marker" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Map Markers/MarkerBlinker" name="IconClip" selected="true" centerPoint3DX="0.5" centerPoint3DY="0.2">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

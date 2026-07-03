@@ -1,0 +1,58 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionsPanel/OptionsPanel" itemID="4ff1ce56-00000104" lastModified="1348002208" lastUniqueIdentifier="7">
+  <timeline>
+    <DOMTimeline name="OptionsPanel">
+      <layers>
+        <DOMLayer name="list" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ OptionsPanel/MultiColumnScrollingList" name="optionsList" selected="true" centerPoint3DX="90.4" centerPoint3DY="244.9" uniqueID="1">
+                  <matrix>
+                    <Matrix tx="2" ty="1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath='10.1.124.5.1'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="entryRenderer">
+      <Inspectable name="entryRenderer" variable="entryRenderer" category="" verbose="0" defaultValue="OptionsListEntry" type="String"/>
+   </property>
+   <property id="topBorder">
+      <Inspectable name="topBorder" variable="topBorder" category="" verbose="0" defaultValue="30" type="Number"/>
+   </property>
+   <property id="bottomBorder">
+      <Inspectable name="bottomBorder" variable="bottomBorder" category="" verbose="0" defaultValue="19" type="Number"/>
+   </property>
+   <property id="leftBorder">
+      <Inspectable name="leftBorder" variable="leftBorder" category="" verbose="0" defaultValue="30" type="Number"/>
+   </property>
+   <property id="rightBorder">
+      <Inspectable name="rightBorder" variable="rightBorder" category="" verbose="0" defaultValue="50" type="Number"/>
+   </property>
+   <property id="entryHeight">
+      <Inspectable name="entryHeight" variable="entryHeight" category="" verbose="0" defaultValue="33" type="Number"/>
+   </property>
+   <property id="isAutoUnselect">
+      <Inspectable name="isAutoUnselect" variable="isAutoUnselect" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="columnSpacing">
+      <Inspectable name="columnSpacing" variable="columnSpacing" category="" verbose="0" defaultValue="40" type="Number"/>
+   </property>
+   <property id="separatorRenderer">
+      <Inspectable name="separatorRenderer" variable="separatorRenderer" category="" verbose="0" defaultValue="ColumnSeparator" type="String"/>
+   </property>
+   <property id="columnCount">
+      <Inspectable name="columnCount" variable="columnCount" category="" verbose="0" defaultValue="2" type="Number"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

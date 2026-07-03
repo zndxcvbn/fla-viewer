@@ -1,0 +1,80 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/NavPanelHolder" itemID="51a0d647-000008bc" lastModified="1369497131" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="NavPanelHolder">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ButtonPanel" name="row1" centerPoint3DX="262.5" centerPoint3DY="14" uniqueID="1">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.42.1'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="buttonRenderer">
+      <Inspectable name="buttonRenderer" variable="buttonRenderer" category="" verbose="0" defaultValue="NavButton" type="String"/>
+   </property>
+   <property id="maxButtons">
+      <Inspectable name="maxButtons" variable="maxButtons" category="" verbose="0" defaultValue="6" type="Number"/>
+   </property>
+   <property id="buttonInitializer">
+      <Inspectable name="buttonInitializer" variable="buttonInitializer" category="" verbose="0" defaultValue="disableConstraints:false,disabled:true,disableFocus:true,hiddenBackground:true" type="Object"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="MovieClip/ButtonPanel" name="row2" centerPoint3DX="262.5" centerPoint3DY="64" uniqueID="2">
+                  <matrix>
+                    <Matrix ty="50"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Holder' oldCopiedComponentPath='1.42.2'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="buttonRenderer">
+      <Inspectable name="buttonRenderer" variable="buttonRenderer" category="" verbose="0" defaultValue="NavButton" type="String"/>
+   </property>
+   <property id="maxButtons">
+      <Inspectable name="maxButtons" variable="maxButtons" category="" verbose="0" defaultValue="6" type="Number"/>
+   </property>
+   <property id="buttonInitializer">
+      <Inspectable name="buttonInitializer" variable="buttonInitializer" category="" verbose="0" defaultValue="disableConstraints:false,disabled:true,disableFocus:true,hiddenBackground:true" type="Object"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient>
+                        <matrix>
+                          <Matrix a="0.369049072265625" d="0.0922698974609375" ty="55"/>
+                        </matrix>
+                        <GradientEntry alpha="0.8" ratio="0"/>
+                        <GradientEntry alpha="0" ratio="1"/>
+                      </RadialGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!3576 2306S2[2032 2600 0 2600!0 2600[-2075 2600 -3638 2294!-3638 2294[-3950 2234 -4243 2160!-4243 2160[-6000 1721 -6000 1100!-6000 1100[-6000 478 -4243 39!-4243 39[-2485 -400 0 -400!0 -400[2485 -400 4243 39!4243 39[6000 478 6000 1100
+!6000 1100[6000 1721 4243 2160!4243 2160[3923 2240 3576 2306"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

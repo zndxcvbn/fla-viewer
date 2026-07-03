@@ -1,0 +1,130 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Menu/ Location Finder/LocationFinder" itemID="5116ab9c-00000732" linkageExportForAS="true" linkageIdentifier="LocationFinder" linkageClassName="Map.LocationFinder" sourceFlashFilepath="../../../MapMenu/map_broken.fla" sourceLibraryItemHRef="Location Finder/LocationFinder" sourceLastModified="1360491655" lastModified="1360603098" lastUniqueIdentifier="13" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="LocationFinder">
+      <layers>
+        <DOMLayer name="loadIcon" color="#808080" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Menu/ Location Finder/LoadIcon" name="loadIcon" selected="true" centerPoint3DX="-0.05">
+                  <matrix>
+                    <Matrix a="1.37931823730469" d="1.37930297851563"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="lines" color="#4FFFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Seperator Shape" symbolType="graphic" centerPoint3DY="-211.75" loop="single frame">
+                  <matrix>
+                    <Matrix ty="-211.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.25"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Graphic/Seperator Shape" symbolType="graphic" centerPoint3DY="233" loop="single frame">
+                  <matrix>
+                    <Matrix ty="233"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.25"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="search" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Menu/ Location Finder/ Search/SearchWidget" name="searchWidget" centerPoint3DX="-47.65" centerPoint3DY="-245.8">
+                  <matrix>
+                    <Matrix tx="-127.75" ty="-256"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="list" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="Menu/ Location Finder/ScrollingList" name="list" centerPoint3DX="-102.6" centerPoint3DY="39.45" uniqueID="9">
+                  <matrix>
+                    <Matrix tx="-191" ty="-204.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="88.4" y="243.9"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Page 1' oldCopiedComponentPath='4.1.9'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="entryRenderer">
+      <Inspectable name="entryRenderer" variable="entryRenderer" category="" verbose="0" defaultValue="LocationListEntry" type="String"/>
+   </property>
+   <property id="topBorder">
+      <Inspectable name="topBorder" variable="topBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="bottomBorder">
+      <Inspectable name="bottomBorder" variable="bottomBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="leftBorder">
+      <Inspectable name="leftBorder" variable="leftBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="rightBorder">
+      <Inspectable name="rightBorder" variable="rightBorder" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="entryHeight">
+      <Inspectable name="entryHeight" variable="entryHeight" category="" verbose="0" defaultValue="36" type="Number"/>
+   </property>
+   <property id="isAutoUnselect">
+      <Inspectable name="isAutoUnselect" variable="isAutoUnselect" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Menu/Background" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0.414138793945313" tx="-200" ty="-276.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="482.95" y="276.15"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.80078125"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,26 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Selector Fill Shape" itemID="4ed13ecb-00000531" symbolType="graphic" lastModified="1322335970" hasValidCenterPoint="true" transformCenterPoint="#4.38, #0.45">
+  <timeline>
+    <DOMTimeline name="Selector Fill Shape">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#999999" alpha="0.501960784313725"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!2160 41S2|0 41!0 41|0 0!0 0|2160 0!2160 0|2160 41!2160 138|0 138!0 138|0 97!0 97|2160 97!2160 97|2160 138"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

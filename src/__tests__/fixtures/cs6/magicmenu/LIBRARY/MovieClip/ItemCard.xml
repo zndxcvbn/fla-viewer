@@ -1,0 +1,15 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ItemCard" itemID="50735a23-00000d6c" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="ItemCard" linkageURL="skyui/itemcard.swf" lastModified="1349736995">
+  <timeline>
+    <DOMTimeline name="ItemCard">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

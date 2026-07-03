@@ -1,0 +1,34 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/ColorIconHighlight" itemID="505ff484-0000142e" symbolType="graphic" lastModified="1348465796">
+  <timeline>
+    <DOMTimeline name="ColorIconHighlight">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!119 208S1|29 118!29 118|119 29!119 29/208 118!208 118|119 208!119 0|0 118!0 118|119 237!119 237|237 118!237 118/119 0"/>
+                    <Edge cubics="!119 0(;119,0 0,118 0,118q119 0 0 118);"/>
+                    <Edge cubics="!29 118(;29,118 119,29 119,29q29 118 119 29);"/>
+                    <Edge cubics="!119 237(;119,237 237,118 237,118q119 237 237 118);"/>
+                    <Edge cubics="!208 118(;208,118 119,208 119,208q208 118 119 208);"/>
+                    <Edge cubics="!237 118(;237,118 119,0 119,0q237 118 119 0);"/>
+                    <Edge cubics="!119 29(;119,29 208,118 208,118q119 29 208 118);"/>
+                    <Edge cubics="!119 208(;119,208 29,118 29,118q119 208 29 118);"/>
+                    <Edge cubics="!0 118(;0,118 119,237 119,237q0 118 119 237);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

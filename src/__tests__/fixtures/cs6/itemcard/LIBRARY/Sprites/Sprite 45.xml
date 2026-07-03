@@ -1,0 +1,32 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/Sprite 45" itemID="4ee20821-00000100" linkageExportForRS="true" linkageIdentifier="item name" linkageURL="itemcard.swf" sourceFlashFilepath="Sprite 45" lastModified="1323873556" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="Sprite 45">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="ItemTextField" fontRenderingMode="standard" width="387.95" height="42.85" includeOutlines="true" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="-17.15" ty="7.15"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>LEGENDARY SPELL REFLECT</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" letterSpacing="2" size="30" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

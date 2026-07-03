@@ -1,0 +1,211 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ZoomBottomTweener" itemID="4ed8fdbd-000003a5" lastModified="1322843853" lastUniqueIdentifier="9">
+  <timeline>
+    <DOMTimeline name="ZoomBottomTweener" currentFrame="7">
+      <layers>
+        <DOMLayer name="Action Layer" color="#FFFF00" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="7" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[stop ();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="7" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[PlayReverse();
+stop ();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#FFFF00">
+          <frames>
+            <DOMFrame index="0" duration="3" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/Button" name="ZoomButton" uniqueID="7">
+                  <matrix>
+                    <Matrix tx="28"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent (construct)
+{
+    XBoxArt = "360_R3";
+    disableConstraints = false;
+    disabled = true;
+    disableFocus = true;
+    labelID = "$Zoom";
+    PCArt = "C";
+    PS3Art = "PS3_R3";
+    toggle = false;
+    visible = false;
+}
+]]></script>
+                  </Actionscript>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath='1.8.7'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="XBoxArt">
+      <Inspectable name="XBoxArt" variable="XBoxArt" category="" verbose="0" defaultValue="360_R3" type="String"/>
+   </property>
+   <property id="disableConstraints">
+      <Inspectable name="disableConstraints" variable="disableConstraints" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="labelID">
+      <Inspectable name="labelID" variable="labelID" category="" verbose="0" defaultValue="$Zoom" type="String"/>
+   </property>
+   <property id="PCArt">
+      <Inspectable name="PCArt" variable="PCArt" category="" verbose="0" defaultValue="C" type="String"/>
+   </property>
+   <property id="PS3Art">
+      <Inspectable name="PS3Art" variable="PS3Art" category="" verbose="0" defaultValue="PS3_R3" type="String"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/Button" name="ZoomButton" uniqueID="8">
+                  <matrix>
+                    <Matrix tx="28"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent (construct)
+{
+    XBoxArt = "360_R3";
+    disableConstraints = false;
+    disabled = true;
+    disableFocus = true;
+    labelID = "$Zoom";
+    PCArt = "C";
+    PS3Art = "PS3_R3";
+    toggle = false;
+    visible = false;
+}
+]]></script>
+                  </Actionscript>
+                  <color>
+                    <Color alphaMultiplier="0.73828125"/>
+                  </color>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath='1.8.8'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="XBoxArt">
+      <Inspectable name="XBoxArt" variable="XBoxArt" category="" verbose="0" defaultValue="360_R3" type="String"/>
+   </property>
+   <property id="disableConstraints">
+      <Inspectable name="disableConstraints" variable="disableConstraints" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="labelID">
+      <Inspectable name="labelID" variable="labelID" category="" verbose="0" defaultValue="$Zoom" type="String"/>
+   </property>
+   <property id="PCArt">
+      <Inspectable name="PCArt" variable="PCArt" category="" verbose="0" defaultValue="C" type="String"/>
+   </property>
+   <property id="PS3Art">
+      <Inspectable name="PS3Art" variable="PS3Art" category="" verbose="0" defaultValue="PS3_R3" type="String"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" duration="4" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/Button" name="ZoomButton" uniqueID="9">
+                  <matrix>
+                    <Matrix tx="28"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent (construct)
+{
+    XBoxArt = "360_R3";
+    disableConstraints = false;
+    disabled = true;
+    disableFocus = true;
+    labelID = "$Zoom";
+    PCArt = "C";
+    PS3Art = "PS3_R3";
+    toggle = false;
+    visible = false;
+}
+]]></script>
+                  </Actionscript>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath='1.8.9'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="XBoxArt">
+      <Inspectable name="XBoxArt" variable="XBoxArt" category="" verbose="0" defaultValue="360_R3" type="String"/>
+   </property>
+   <property id="disableConstraints">
+      <Inspectable name="disableConstraints" variable="disableConstraints" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="disabled">
+      <Inspectable name="disabled" variable="disabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="disableFocus">
+      <Inspectable name="disableFocus" variable="disableFocus" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="labelID">
+      <Inspectable name="labelID" variable="labelID" category="" verbose="0" defaultValue="$Zoom" type="String"/>
+   </property>
+   <property id="PCArt">
+      <Inspectable name="PCArt" variable="PCArt" category="" verbose="0" defaultValue="C" type="String"/>
+   </property>
+   <property id="PS3Art">
+      <Inspectable name="PS3Art" variable="PS3Art" category="" verbose="0" defaultValue="PS3_R3" type="String"/>
+   </property>
+   <property id="toggle">
+      <Inspectable name="toggle" variable="toggle" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

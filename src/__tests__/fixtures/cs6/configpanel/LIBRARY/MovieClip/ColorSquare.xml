@@ -1,0 +1,81 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ColorSquare" itemID="505fd569-00000f81" linkageExportForAS="true" linkageIdentifier="ColorSquare" linkageClassName="skyui.components.colorswatch.ColorSquare" sourceFlashFilepath="../../../../../Skyrim Dev/WorkingDir/newColorPicker/coloUrPicker.fla" sourceLibraryItemHRef="ColorSwatch Assets/ColorSquare" sourceLastModified="1348457833" scaleGridLeft="2.5" scaleGridRight="7.5" scaleGridTop="2.5" scaleGridBottom="7.5" lastModified="1348472500" lastUniqueIdentifier="8" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="ColorSquare">
+      <layers>
+        <DOMLayer name="scripts" color="#4FFFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="9" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[gotoAndPlay("up");]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="18" duration="11" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[gotoAndPlay("over");]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[gotoAndPlay("down");]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="labels" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" name="up" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="10" duration="9" name="over" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="11" name="down" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="30" duration="9" name="disabled" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="selector" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="39" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/ColorSquarePigmentSelector" name="selector" centerPoint3DX="5" centerPoint3DY="5">
+                  <matrix>
+                    <Matrix a="0.999969482421875" d="0.999969482421875"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="5" y="5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="pigment" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="39" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/ColorSquarePigment" name="pigment" centerPoint3DX="5" centerPoint3DY="5">
+                  <matrix>
+                    <Matrix a="1.5986328125" d="1.5986328125" tx="1" ty="1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="2.5" y="2.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

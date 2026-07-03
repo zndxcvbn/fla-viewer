@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes/Shape 31" itemID="4ee20821-00000109" symbolType="graphic" lastModified="1323436065">
+  <timeline>
+    <DOMTimeline name="Shape 31">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#333333"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#FFFFFF" alpha="0.2"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!-77 33|-116 13!-116 13|-302 109!-302 109|-116 205!-116 205|-72 183!-72 183|-28 203!-28 203|4426 203!4426 203|4470 183!4470 183|4514 205!4514 205|4700 109!4700 109|4514 13!4514 13|4475 33!4475 33|4427 16!4427 16|-29 16!-29 16|-77 33!-192
+ 107|-192 109!-192 109|-124 144!-124 144|-95 131!-95 131|-95 85!-95 85|-122 75!-122 75|-192 107"/>
+                    <Edge fillStyle0="1" edges="
+!-33 225|4431 225!4431 225|4470 208!4470 208|4514 230!4514 230|4746 110!4746 110|4514 -9!4514 -9|4474 11!4474 11|4431 -4!4431 -4|-33 -4!-33 -4|-76 11!-76 11|-116 -9!-116 -9[-232 51 -348 110!-348 110|-116 230!-116 230|-72 208!-72 208|-33
+ 225"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="
+!-33 76|-33 143!-33 143|-116 183!-116 183|-259 109!-259 109|-116 35!-116 35|-33 76"/>
+                    <Edge fillStyle0="3" fillStyle1="2" edges="
+!-7 185|4405 185!4405 185|4405 36!4405 36|-7 36!-7 36|-7 185"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="
+!4590 109[4556 127 4522 144!4522 144|4493 131!4493 131|4493 85!4493 85|4520 75!4520 75|4590 107!4590 107|4590 109!4657 109|4514 35!4514 35|4431 76!4431 76|4431 143!4431 143|4514 183!4514 183|4657 109"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,164 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionDialog/OptionColorDialog" itemID="505fdfdc-00001045" linkageExportForAS="true" linkageIdentifier="OptionColorDialog" linkageClassName="ColorDialog" lastModified="1351383412" lastUniqueIdentifier="12">
+  <timeline>
+    <DOMTimeline name="OptionColorDialog">
+      <layers>
+        <DOMLayer name="titleTextField" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="titleTextField" fontRenderingMode="standard" width="346" height="29.9" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="-173" ty="-100"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>STEALTH FIELD DURATION</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" letterSpacing="1.2" size="24" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="rightbtns" color="#4FFFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ButtonPanel" name="rightButtonPanel" centerPoint3DX="428.5" centerPoint3DY="84" uniqueID="12">
+                  <matrix>
+                    <Matrix tx="166" ty="70"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath=''>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="buttonRenderer">
+      <Inspectable name="buttonRenderer" variable="buttonRenderer" category="" verbose="0" defaultValue="DialogButton" type="String"/>
+   </property>
+   <property id="maxButtons">
+      <Inspectable name="maxButtons" variable="maxButtons" category="" verbose="0" defaultValue="2" type="Number"/>
+   </property>
+   <property id="isReversed">
+      <Inspectable name="isReversed" variable="isReversed" category="" verbose="0" defaultValue="true" type="Default"/>
+   </property>
+   <property id="buttonInitializer">
+      <Inspectable name="buttonInitializer" variable="buttonInitializer" category="" verbose="0" defaultValue="disableConstraints:false,disabled:false,disableFocus:true,hiddenBackground:true" type="Object"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="lefbtns" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ButtonPanel" name="leftButtonPanel" selected="true" centerPoint3DX="96.5" centerPoint3DY="84" uniqueID="11">
+                  <matrix>
+                    <Matrix tx="-166" ty="70"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath=''>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="buttonRenderer">
+      <Inspectable name="buttonRenderer" variable="buttonRenderer" category="" verbose="0" defaultValue="DialogButton" type="String"/>
+   </property>
+   <property id="maxButtons">
+      <Inspectable name="maxButtons" variable="maxButtons" category="" verbose="0" defaultValue="2" type="Number"/>
+   </property>
+   <property id="buttonInitializer">
+      <Inspectable name="buttonInitializer" variable="buttonInitializer" category="" verbose="0" defaultValue="disableConstraints:false,disabled:false,disableFocus:true,hiddenBackground:true" type="Object"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seperator Shape" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes/Seperator Shape" symbolType="graphic" centerPoint3DX="-1" centerPoint3DY="62.65" loop="single frame">
+                  <matrix>
+                    <Matrix tx="-1" ty="62.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Seperator Shape" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes/Seperator Shape" symbolType="graphic" centerPoint3DY="-66" loop="single frame">
+                  <matrix>
+                    <Matrix ty="-66"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="colorSwatch" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ColorSwatch" name="colorSwatch" centerPoint3DX="88.4" centerPoint3DY="243.9" uniqueID="9">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath=''>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="colorRows">
+      <Inspectable name="colorRows" variable="colorRows" category="" verbose="0" defaultValue="2" type="Number"/>
+   </property>
+   <property id="colorSize">
+      <Inspectable name="colorSize" variable="colorSize" category="" verbose="0" defaultValue="25" type="Number"/>
+   </property>
+   <property id="colorList">
+      <Inspectable name="colorList" variable="colorList" category="" verbose="0" defaultValue="" type="Array"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ OptionDialog/OptionDialogBG" name="background" centerPoint3DX="200.5" centerPoint3DY="112.05">
+                  <transformationPoint>
+                    <Point y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

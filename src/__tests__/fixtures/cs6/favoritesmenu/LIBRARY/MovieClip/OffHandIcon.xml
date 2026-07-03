@@ -1,0 +1,36 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/OffHandIcon" itemID="51a3500c-00000390" lastModified="1369675976">
+  <timeline>
+    <DOMTimeline name="OffHandIcon">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient>
+                        <matrix>
+                          <Matrix a="0.01080322265625" d="0.01080322265625" tx="8" ty="8"/>
+                        </matrix>
+                        <GradientEntry alpha="0.6" ratio="0"/>
+                        <GradientEntry alpha="0" ratio="1"/>
+                      </RadialGradient>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#CCCCCC" alpha="0.8"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!320 160[320 226 272 273!272 273[226 320 160 320!160 320[94 320 46 273!46 273[20 247 9 215!9 215[0 189 0 160!0 160[0 131 9 105!9 105[20 73 46 46!46 46[94 0 160 0!160 0[226 0 272 46!272 46[320 94 320 160"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!135 68|103 68!103 68|103 252!103 252|217 252!217 252|217 223!217 223|135 223!135 223|135 68"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

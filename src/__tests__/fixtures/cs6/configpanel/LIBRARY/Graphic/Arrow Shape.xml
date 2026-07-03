@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Arrow Shape" itemID="4fe99915-00000036" sourceFlashFilepath="../../../../vanilla/src/quest_journal.fla" sourceLibraryItemHRef="Shapes/Shape 493" sourceLastModified="1323436067" symbolType="graphic" lastModified="1340709141" sourceItemID="4ee20823-0000010d">
+  <timeline>
+    <DOMTimeline name="Arrow Shape">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor alpha="0.6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!677 270S2|387 47!387 47|97 270!97 270|178 270!178 270|387 109!387 109|596 270!596 270|677 270"/>
+                    <Edge fillStyle1="2" edges="!574 297S2|387 154!387 154|201 297!201 297|1 297!1 297|387 0!387 0|773 297!773 297|574 297"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

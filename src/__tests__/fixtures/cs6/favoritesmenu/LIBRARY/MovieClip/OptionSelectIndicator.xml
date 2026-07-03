@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/OptionSelectIndicator" itemID="4ff469ba-000003a0" sourceFlashFilepath="../../../ModConfigPanel/configpanel.fla" sourceLibraryItemHRef="MovieClip/OptionSelectIndicator" sourceLastModified="1341418796" lastModified="1368695712" sourceItemID="4ff469ba-000003a0">
+  <timeline>
+    <DOMTimeline name="OptionSelectIndicator">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient interpolationMethod="linearRGB">
+                        <matrix>
+                          <Matrix a="0.02874755859375" d="0.240478515625" tx="6.6" ty="139.3"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0.4" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" alpha="0" ratio="0.705882352941177"/>
+                      </RadialGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!200 0|-200 0!-200 0|-200 5572!-200 5572|200 5572!200 5572|200 0"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4FFF4F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient interpolationMethod="linearRGB">
+                        <matrix>
+                          <Matrix a="-0.330551147460938" d="0.240478515625" tx="48.55" ty="139.3"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0.4" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" alpha="0" ratio="0.705882352941177"/>
+                      </RadialGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!200 0|4800 0!4800 0|4800 5572!4800 5572|200 5572!200 5572|200 0"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

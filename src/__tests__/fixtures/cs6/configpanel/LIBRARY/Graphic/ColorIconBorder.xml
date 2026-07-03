@@ -1,0 +1,37 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/ColorIconBorder" itemID="505ff4a3-00001430" symbolType="graphic" lastModified="1348466378">
+  <timeline>
+    <DOMTimeline name="ColorIconBorder">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!12 131|131 250!131 250|249 131!249 131/131 13!131 13|12 131"/>
+                    <Edge fillStyle0="1" edges="!0 130|130 261!130 261|261 130!261 130|130 0!130 0|0 130"/>
+                    <Edge cubics="!131 13(;131,13 12,131 12,131q131 13 12 131);"/>
+                    <Edge cubics="!130 261(;130,261 261,130 261,130q130 261 261 130);"/>
+                    <Edge cubics="!131 250(;131,250 249,131 249,131q131 250 249 131);"/>
+                    <Edge cubics="!261 130(;261,130 130,0 130,0q261 130 130 0);"/>
+                    <Edge cubics="!0 130(;0,130 3,133 3,133q0 130 3 133);"/>
+                    <Edge cubics="!3 133(;3,133 130,261 130,261q3 133 130 261);"/>
+                    <Edge cubics="!130 0(;130,0 3,127 3,127q130 0 3 127);"/>
+                    <Edge cubics="!3 127(;3,127 0,130 0,130q3 127 0 130);"/>
+                    <Edge cubics="!249 131(;249,131 131,13 131,13q249 131 131 13);"/>
+                    <Edge cubics="!12 131(;12,131 131,250 131,250q12 131 131 250);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

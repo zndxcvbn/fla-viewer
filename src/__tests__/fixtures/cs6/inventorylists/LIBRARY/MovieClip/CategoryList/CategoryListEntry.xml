@@ -1,0 +1,43 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ CategoryList/CategoryListEntry" itemID="4ec920d9-0000054e" linkageExportForAS="true" linkageIdentifier="CategoryListEntry" linkageClassName="CategoryListEntry" lastModified="1352046436" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="CategoryListEntry">
+      <layers>
+        <DOMLayer name="button layer" color="#FFFF00" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/FillArea" name="background" selected="true" centerPoint3DX="16" centerPoint3DY="15.85">
+                  <matrix>
+                    <Matrix a="0.327499389648438" d="0.32562255859375"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="icon layer" color="#4FFFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/IconArea" name="icon" centerPoint3DX="12.2" centerPoint3DY="12.25">
+                  <matrix>
+                    <Matrix a="0.2501220703125" d="0.249847412109375"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

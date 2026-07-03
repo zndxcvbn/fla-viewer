@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shapes/ScrollbarThumb Shape" itemID="4ffdf7c2-00000820" sourceFlashFilepath="../../../PauseMenu/quest_journal.fla" sourceLibraryItemHRef="Shapes/Shape 426" sourceLastModified="1323436067" symbolType="graphic" lastModified="1342044098" sourceItemID="4ee20823-0000011b">
+  <timeline>
+    <DOMTimeline name="ScrollbarThumb Shape">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#F2F2F2"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#FFFFFF" alpha="0.6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!40 280S2|40 0!40 0|218 0!218 0|218 280!218 280|40 280"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!201 21S3|201 258!201 258|57 258!57 258|57 21!57 21|201 21"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,50 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ OptionDialog/OptionSlider" itemID="4ffafb76-0000055e" lastModified="1349860643" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="OptionSlider">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="MovieClip/ OptionDialog/SliderLarge" name="slider" centerPoint3DX="355.65" centerPoint3DY="37.2" uniqueID="1">
+                  <matrix>
+                    <Matrix a="1.93183898925781" d="1.86286926269531" tx="6.45" ty="31.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Scene 1' oldCopiedComponentPath=''>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="offsetLeft">
+      <Inspectable name="offsetLeft" variable="offsetLeft" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="offsetRight">
+      <Inspectable name="offsetRight" variable="offsetRight" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMDynamicText name="valueTextField" width="346" height="30.5" includeOutlines="true" isSelectable="false" scrollable="true" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="2" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>50000.42</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" bold="true" letterSpacing="0.8" size="22" face="$EverywhereBoldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2" quality="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

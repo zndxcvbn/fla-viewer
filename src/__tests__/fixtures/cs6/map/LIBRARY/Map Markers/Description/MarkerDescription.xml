@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Map Markers/Description/MarkerDescription" itemID="506e45fb-00000150" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="MarkerDescription" linkageClassName="Map.MarkerDescription" linkageURL="." sourceFlashFilepath="Sprite 344" lastModified="1363146087" sourceItemID="00000000-7fffffff">
+  <timeline>
+    <DOMTimeline name="MarkerDescription">
+      <layers>
+        <DOMLayer name="Marker Name" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="Title" fontRenderingMode="device" width="234" height="35.55" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="32" ty="-37.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Marker Name</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" letterSpacing="0.8" lineSpacing="0" size="30" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter blurX="1" blurY="1" distance="2" quality="2" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Line Item" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Map Markers/Description/MarkerLineItem" name="LineItem0">
+                  <matrix>
+                    <Matrix tx="30" ty="0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

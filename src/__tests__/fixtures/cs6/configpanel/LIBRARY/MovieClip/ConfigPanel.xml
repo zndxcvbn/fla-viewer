@@ -1,0 +1,59 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ConfigPanel" itemID="4fcf9efb-00005f70" linkageExportForAS="true" linkageIdentifier="ConfigPanel" linkageClassName="ConfigPanel" sourceFlashFilepath="../../../../vanilla/src/quest_journal.fla" sourceLibraryItemHRef="Shapes/Shape 577" sourceLastModified="1323436067" lastModified="1350918274" lastUniqueIdentifier="128" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="ConfigPanel">
+      <layers>
+        <DOMLayer name="titlebar" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ TitleBar/TitleBar" name="titlebar" centerPoint3DX="904.1" centerPoint3DY="25">
+                  <matrix>
+                    <Matrix tx="721.1" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="content" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ContentHolder" name="contentHolder" centerPoint3DX="640" centerPoint3DY="252.5">
+                  <matrix>
+                    <Matrix tx="157.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bottombar" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/BottomBar" name="bottomBar" selected="true" centerPoint3DX="640" centerPoint3DY="663">
+                  <matrix>
+                    <Matrix ty="670"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="640" y="-7"/>
+                  </transformationPoint>
+                  <color>
+                    <Color/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

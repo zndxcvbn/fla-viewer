@@ -1,0 +1,83 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Menu/ Location Finder/LocationListEntry" itemID="5116c429-00000dd8" linkageExportForAS="true" linkageIdentifier="LocationListEntry" linkageClassName="Map.LocationListEntry" sourceFlashFilepath="../../../MapMenu/map_broken.fla" sourceLibraryItemHRef="Location Finder/LocationListEntry" sourceLastModified="1360491861" lastModified="1363188472" lastUniqueIdentifier="14" sourceItemID="00000000-7fffffff">
+  <timeline>
+    <DOMTimeline name="LocationListEntry">
+      <layers>
+        <DOMLayer name="icon" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Menu/MapMarkerArt" name="icon" centerPoint3DX="18" centerPoint3DY="18">
+                  <matrix>
+                    <Matrix a="0.77777099609375" d="0.77777099609375" tx="18" ty="18"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="textField" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMDynamicText name="textField" selected="true" fontRenderingMode="standard" width="288" height="26.05" isSelectable="false" scrollable="true" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="38" ty="5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Location</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" letterSpacing="0.8" lineSpacing="0" size="22" face="$EverywhereMediumFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter distance="3"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="trigger" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Menu/FillArea" name="triggerArea" centerPoint3DX="175" centerPoint3DY="18">
+                  <matrix>
+                    <Matrix a="3.58238220214844" d="0.36602783203125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="48.85" y="49.2"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="select" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Menu/OptionSelectIndicator" name="selectIndicator" centerPoint3DX="144" centerPoint3DY="4.65">
+                  <matrix>
+                    <Matrix d="0.129135131835938"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

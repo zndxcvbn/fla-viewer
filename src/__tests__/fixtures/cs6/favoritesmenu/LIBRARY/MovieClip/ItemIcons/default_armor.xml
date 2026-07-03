@@ -1,0 +1,32 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemIcons/default_armor" itemID="4f529781-00000ab3" sourceFlashFilepath="../../../Resources/icons_item_psychosteve.fla" sourceLibraryItemHRef="Icons/item/default/default_armor" sourceLastModified="1338654055" lastModified="1338654055" sourceItemID="4f529781-00000ab3">
+  <timeline>
+    <DOMTimeline name="default_armor">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!8331 7462[7190 9816 4655 11117!4655 11117[2269 9816 1014 7506!1014 7506[-221 5170 -176 2218!-176 2218[2317 2037 4655 432!4655 432[6730 1984 9486 2247!9486 2247[9486 5110 8331 7462"/>
+                    <Edge cubics="!9486 2247(;9486,4165 9103,5891 8331,7462q9486 2247Q9486 5110q8331 7462);"/>
+                    <Edge cubics="!1014 7506(;200,5944 -197,4183 -176,2218q1014 7506Q-221 5170q-176 2218);"/>
+                    <Edge cubics="!8331 7462(;7570,9035 6337,10248 4655,11117q8331 7462Q7190 9816q4655 11117);"/>
+                    <Edge cubics="!4655 11117(;3057,10248 1847,9035 1014,7506q4655 11117Q2269 9816q1014 7506);"/>
+                    <Edge cubics="!-176 2218(;1486,2097 3098,1503 4655,432q-176 2218Q2317 2037q4655 432);"/>
+                    <Edge cubics="!4655 432(;6039,1466 7646,2072 9486,2247q4655 432Q6730 1984q9486 2247);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,64 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemList/ItemsListHeader" itemID="4ece5cf9-00000047" linkageExportForAS="true" linkageIdentifier="ItemsListHeader" linkageClassName="skyui.components.list.SortedListHeader" lastModified="1352046607" lastUniqueIdentifier="12">
+  <timeline>
+    <DOMTimeline name="ItemsListHeader">
+      <layers>
+        <DOMLayer name="buttons" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="dot" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/IconColumnIndicator" name="iconColumnIndicator" centerPoint3DX="10" centerPoint3DY="-12">
+                  <matrix>
+                    <Matrix a="1.19999694824219" d="1.19999694824219" tx="7" ty="-15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="2.5" y="2.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="indicator" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/HLine" name="seperator" centerPoint3DX="271">
+                  <matrix>
+                    <Matrix a="0.6875" tx="-4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="400"/>
+                  </transformationPoint>
+                  <filters>
+                    <DropShadowFilter blurX="2" blurY="2" distance="2"/>
+                  </filters>
+                  <color>
+                    <Color alphaMultiplier="0.30078125"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClip/ ItemList/SortIndicator" name="sortIcon" selected="true" centerPoint3DX="64.45" centerPoint3DY="-1.8">
+                  <matrix>
+                    <Matrix tx="59.85" ty="-6.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="4.6" y="4.6"/>
+                  </transformationPoint>
+                  <filters>
+                    <DropShadowFilter blurX="1" blurY="1" distance="2"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

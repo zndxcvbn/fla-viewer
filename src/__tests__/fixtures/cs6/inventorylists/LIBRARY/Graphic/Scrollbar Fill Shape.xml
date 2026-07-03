@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/Scrollbar Fill Shape" itemID="4ee38053-00000052" sourceFlashFilepath="../../startmenu.fla" sourceLibraryItemHRef="Graphic/shape 62" sourceLastModified="1321672308" symbolType="graphic" lastModified="1323532374" sourceItemID="4ec71e74-0000003f">
+  <timeline>
+    <DOMTimeline name="Scrollbar Fill Shape">
+      <layers>
+        <DOMLayer name="Layer 1" color="#FFFF00" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#F2F2F2"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#FFFFFF" alpha="0.6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!201 258|57 258!57 258|57 21!57 21|201 21!201 21|201 258"/>
+                    <Edge fillStyle1="1" edges="!40 0|218 0!218 0|218 280!218 280|40 280!40 280|40 0"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,32 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/CheckBox BG Shape" itemID="505ff2ad-0000141f" sourceFlashFilepath="../../../PauseMenu/quest_journal.fla" sourceLibraryItemHRef="Sprites/Sprite 506" sourceLastModified="1338820141" symbolType="graphic" lastModified="1340710800" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="CheckBox BG Shape">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor alpha="0.6"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!187 92|215 120!215 120|126 210!126 210|90 174!90 174|80 193!80 193|126 239!126 239|244 120!244 120|201 77!201 77|200 79!200 79|187 92!176 53|126 2!126 2|7 120!7 120|52 165!52 165|53 163!53 163|63 152!63 152|65 149!65 149|36 120!36 120
+|126 31!126 31|163 68!163 68|164 67!164 67|175 54!175 54|176 53"/>
+                    <Edge fillStyle0="2" edges="
+!256 119|125 -11!125 -11|-5 119!-5 119|125 250!125 250|256 119"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,109 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Map Markers/Description/MarkerDescriptionFader" itemID="506e464f-00000155" linkageExportForRS="true" linkageIdentifier="DescriptionHolder" linkageURL="." sourceFlashFilepath="Sprite 345" lastModified="1363145798" sourceItemID="00000000-7fffffff">
+  <timeline>
+    <DOMTimeline name="MarkerDescriptionFader">
+      <layers>
+        <DOMLayer name="Labels" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" duration="7" name="Show" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="8" duration="7" name="Hide" labelType="name" keyMode="8704">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Script" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="7" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="7" duration="7" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+Description.OnShowFinish();
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="14" keyMode="8704">
+              <Actionscript>
+                <script><![CDATA[
+_visible = false;
+stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Description Fader" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Map Markers/Description/MarkerDescription" name="Description">
+                  <matrix>
+                    <Matrix a="0.199996948242188" d="0.199996948242188" tx="-23.8" ty="40.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" duration="6" tweenType="motion" motionTweenRotate="none" motionTweenSync="true" motionTweenSnap="true" keyMode="23041">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Map Markers/Description/MarkerDescription" name="Description" selected="true">
+                  <matrix>
+                    <Matrix a="0.199996948242188" d="0.199996948242188" tx="-23.8" ty="40.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" duration="7" tweenType="motion" motionTweenRotate="none" motionTweenSync="true" motionTweenSnap="true" keyMode="23041">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Map Markers/Description/MarkerDescription" name="Description" selected="true">
+                  <matrix>
+                    <Matrix ty="0.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" tweenType="motion" keyMode="17921">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Map Markers/Description/MarkerDescription" name="Description">
+                  <matrix>
+                    <Matrix a="0.199996948242188" d="0.199996948242188" tx="-23.7" ty="40.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

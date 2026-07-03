@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ ItemIcons/weapon_bolt" itemID="50d1b942-00000863" sourceFlashFilepath="../../../Resources/icons_item_psychosteve.fla" sourceLibraryItemHRef="Icons/item/weapon/dlc01/weapon_bolt" sourceLastModified="1355921730" lastModified="1355921730" sourceItemID="50d1b942-00000863">
+  <timeline>
+    <DOMTimeline name="weapon_bolt">
+      <layers>
+        <DOMLayer name="Calque 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1983 1629|2361 2007!2361 2007|2080 1962!2080 1962|2432 2315!2432 2315|2317 2431!2317 2431|1965 2078!1965 2078|2008 2360!2008 2360|1630 1982!1630 1982|1590 1703!1590 1703|522 636!522 636|467 691!467 691|128 123!128 123|692 465!692 465
+|637 520!637 520|1705 1587!1705 1587|1983 1629"/>
+                    <Edge cubics="!2008 2360(;2008,2360 1630,1982 1630,1982q2008 2360 1630 1982);"/>
+                    <Edge cubics="!1965 2078(;1965,2078 2008,2360 2008,2360q1965 2078 2008 2360);"/>
+                    <Edge cubics="!1630 1982(;1630,1982 1590,1703 1590,1703q1630 1982 1590 1703);"/>
+                    <Edge cubics="!2317 2431(;2317,2431 1965,2078 1965,2078q2317 2431 1965 2078);"/>
+                    <Edge cubics="!2361 2007(;2361,2007 1983,1629 1983,1629q2361 2007 1983 1629);"/>
+                    <Edge cubics="!2080 1962(;2080,1962 2361,2007 2361,2007q2080 1962 2361 2007);"/>
+                    <Edge cubics="!1983 1629(;1983,1629 1705,1587 1705,1587q1983 1629 1705 1587);"/>
+                    <Edge cubics="!2080 1962(;2080,1962 2432,2315 2432,2315q2080 1962 2432 2315);"/>
+                    <Edge cubics="!2432 2315(;2432,2315 2317,2431 2317,2431q2432 2315 2317 2431);"/>
+                    <Edge cubics="!467 691(;467,691 522,636 522,636q467 691 522 636);"/>
+                    <Edge cubics="!637 520(;637,520 692,465 692,465q637 520 692 465);"/>
+                    <Edge cubics="!692 465(;692,465 128,123 128,123q692 465 128 123);"/>
+                    <Edge cubics="!128 123(;128,123 467,691 467,691q128 123 467 691);"/>
+                    <Edge cubics="!637 520(;637,520 1705,1587 1705,1587q637 520 1705 1587);"/>
+                    <Edge cubics="!522 636(;522,636 1590,1703 1590,1703q522 636 1590 1703);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

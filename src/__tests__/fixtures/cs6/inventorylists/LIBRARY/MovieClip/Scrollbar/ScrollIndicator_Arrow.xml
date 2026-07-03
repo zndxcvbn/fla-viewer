@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/ Scrollbar/ScrollIndicator_Arrow" itemID="4ed9008c-000003c4" sourceFlashFilepath="../../startmenu.fla" sourceLibraryItemHRef="MovieClip/sprite 66" sourceLastModified="1321672308" lastModified="1322844300" sourceItemID="4ec71e74-00000043">
+  <timeline>
+    <DOMTimeline name="ScrollIndicator_Arrow">
+      <layers>
+        <DOMLayer name="Layer 1" color="#FFFF00" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Graphic/Scrollbar Cap Shape" selected="true" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

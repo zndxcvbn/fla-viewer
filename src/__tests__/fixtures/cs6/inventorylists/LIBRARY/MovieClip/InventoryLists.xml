@@ -1,0 +1,164 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/InventoryLists" itemID="4ec9214d-00000559" linkageExportForAS="true" linkageIdentifier="InventoryLists" linkageClassName="InventoryLists" lastModified="1336819876" lastUniqueIdentifier="29">
+  <timeline>
+    <DOMTimeline name="InventoryLists">
+      <layers>
+        <DOMLayer name="Action Layer" color="#FFFF00">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[this.ZoomButton._visible = false;
+stop ();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" duration="9" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[this.currentState = InventoryLists.HIDE_PANEL;
+stop ();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="10" duration="9" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[this.currentState = InventoryLists.SHOW_PANEL;
+stop ();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[this.currentState = InventoryLists.HIDE_PANEL;
+stop ();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Label Layer" color="#FFFF00">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="NoPanels" labelType="name" motionTweenScale="false" keyMode="8192">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" duration="9" name="PanelShow" labelType="name" motionTweenScale="false" keyMode="8192">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="11" duration="9" name="PanelHide" labelType="name" motionTweenScale="false" keyMode="8192">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="panel1" color="#FFFF00" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/InventoryListsTweener" name="panelContainer" selected="true">
+                  <matrix>
+                    <Matrix tx="25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/InventoryListsTweener" name="panelContainer">
+                  <matrix>
+                    <Matrix tx="-100"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="8" tweenType="motion" motionTweenScale="false" motionTweenSnap="true" keyMode="21505">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/InventoryListsTweener" name="panelContainer">
+                  <matrix>
+                    <Matrix tx="-100"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="10" tweenType="motion" motionTweenScale="false" motionTweenSnap="true" keyMode="21505">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/InventoryListsTweener" name="panelContainer" selected="true">
+                  <matrix>
+                    <Matrix tx="25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="11" duration="7" tweenType="motion" motionTweenScale="false" motionTweenSnap="true" keyMode="21505">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/InventoryListsTweener" name="panelContainer">
+                  <matrix>
+                    <Matrix tx="25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" duration="2" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/InventoryListsTweener" name="panelContainer">
+                  <matrix>
+                    <Matrix tx="-100"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="zoombutton" color="#FFFF00" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="20" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ZoomBottomTweener" name="zoomButtonHolder" centerPoint3DX="476" centerPoint3DY="28.45">
+                  <matrix>
+                    <Matrix tx="379.5" ty="14"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

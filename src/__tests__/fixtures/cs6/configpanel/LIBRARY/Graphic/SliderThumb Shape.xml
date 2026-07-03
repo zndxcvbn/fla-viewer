@@ -1,0 +1,34 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Graphic/SliderThumb Shape" itemID="4ffa3888-000012fb" sourceFlashFilepath="../../../../../vanilla/src/quest_journal.fla" sourceLibraryItemHRef="Shapes/Shape 496" sourceLastModified="1323436067" symbolType="graphic" lastModified="1342041192" sourceItemID="4ee20823-0000010b">
+  <timeline>
+    <DOMTimeline name="SliderThumb Shape">
+      <layers>
+        <DOMLayer name="Shape Sublayer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix ty="-1.3"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#FFFFFF" alpha="0.298039215686275"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!7 47S1|7 241!7 241|26 241!26 241|68 223!68 223|102 244!102 244|266 145!266 145|102 44!102 44|63 67!63 67|25 47!25 47|7 47"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!169 147S3|108 180!108 180[96 175 84 169!84 169|84 122!84 122[97 116 109 109!109 109|168 145!168 145|169 147"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!29 110S3|103 68!103 68|229 145!229 145|102 221!102 221|29 180!29 180|29 110"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

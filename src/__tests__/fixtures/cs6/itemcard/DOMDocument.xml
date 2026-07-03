@@ -1,0 +1,143 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" gridColor="#C0C0C0" guidesColor="#000000" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" gridSpacingX="18" gridSpacingY="18" gridSnapAccuracy="Can be distant" guidesSnapAccuracy="Can be distant" guidesSnapTo="false" guidesVisible="false" snapAlignBorderSpacing="18" snapAlignHorizontalSpacing="1" snapAlignVerticalSpacing="1" objectsSnapTo="false" timelineLabelWidth="-1" sharedLibraryURL="itemcard.swf" useCarbonLineSpacing="true" nextSceneIdentifier="6" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <folders>
+          <DOMFolderItem name="Fonts" itemID="4ee75413-00002445"/>
+          <DOMFolderItem name="Images" itemID="4ee20821-00000129"/>
+          <DOMFolderItem name="Shapes" itemID="4ee20821-00000128"/>
+          <DOMFolderItem name="Sprites" itemID="4ee20821-00000127" isExpanded="true"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="Fonts/$DragonFont" itemID="4ec85a37-000018ef" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$DragonFont" linkageURL="gfxfontlib.swf" font="Dragonscript-Regular" size="0" id="4" sourceLastImported="1321755951" embedRanges="1|2|4|3"/>
+          <DOMFontItem name="Fonts/$EverywhereBoldFont" itemID="4ec85994-000018ed" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereBoldFont" linkageURL="gfxfontlib.swf" font="FuturaStd-CondensedBold" bold="true" size="0" id="3" sourceLastImported="1321755960" embedRanges="1|2|4|3"/>
+          <DOMFontItem name="Fonts/$EverywhereFont" itemID="4ec8937b-000001f1" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereFont" linkageURL="gfxfontlib.swf" font="FuturaStd-CondensedLight" size="0" id="2" sourceLastImported="1321767810" embedRanges="1|2|4|3"/>
+          <DOMFontItem name="Fonts/$EverywhereMediumFont" itemID="4ec84e45-00001751" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereMediumFont" linkageURL="gfxfontlib.swf" font="FuturaStd-Condensed" size="0" id="1" sourceLastImported="1321755965" embedRanges="1|2|4|3"/>
+     </fonts>
+     <media>
+          <DOMBitmapItem name="Images/Image 53" itemID="4ee20821-00000124" sourceExternalFilepath="./LIBRARY/Images/Image 53" sourceLastImported="1071240374" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Images/Image 53" bitmapDataHRef="Media 1.dat" frameRight="3860" frameBottom="440"/>
+          <DOMBitmapItem name="Images/Image 55" itemID="4ee20821-00000125" sourceExternalFilepath="./LIBRARY/Images/Image 55" sourceLastImported="1071240374" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Images/Image 55" bitmapDataHRef="Media 2.dat" frameRight="3860" frameBottom="660"/>
+          <DOMBitmapItem name="Images/Image 63" itemID="4ee20821-00000126" sourceExternalFilepath="./LIBRARY/Images/Image 63" sourceLastImported="1071240374" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Images/Image 63" bitmapDataHRef="Media 3.dat" frameRight="14700" frameBottom="420"/>
+     </media>
+     <symbols>
+          <Include href="Shapes/Shape 1.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-00000116" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 3.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-000000c3" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 5.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-00000123" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 7.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-00000120" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 9.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-00000121" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 11.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-0000011c" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 13.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-0000011d" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 15.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-00000119" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 17.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-00000117" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 19.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-00000111" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 21.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-0000010f" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 23.xml" itemIcon="1" loadImmediate="false" itemID="4ee20822-00000113" lastModified="1323436066"/>
+          <Include href="Shapes/Shape 26.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000ca" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 28.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-0000010c" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 31.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-00000109" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 35.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-00000104" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 46.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000e3" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 54.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000d7" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 56.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000d8" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 58.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000c6" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 61.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000d3" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 62.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000d5" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 64.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000db" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 67.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000dc" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 68.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000de" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 72.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000e0" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 74.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000ea" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 76.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000ec" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 78.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000ee" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 80.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000f0" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 82.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000f2" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 84.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000f4" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 86.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000f6" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 88.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000f8" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 90.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000fa" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 92.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000fb" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 95.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000fc" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 105.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000c8" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 175.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000cc" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 189.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000ce" lastModified="1323436065"/>
+          <Include href="Shapes/Shape 192.xml" itemIcon="1" loadImmediate="false" itemID="4ee20821-000000d0" lastModified="1323436065"/>
+          <Include href="Sprites/ItemCard.xml" itemID="507358ac-00000d48" lastModified="1427472572"/>
+          <Include href="Sprites/Sprite 2.xml" loadImmediate="false" itemID="4ee20822-00000115" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 4.xml" itemID="4ee20822-000000c2" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 6.xml" itemID="4ee20822-00000122" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 8.xml" loadImmediate="false" itemID="4ee20822-0000011f" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 10.xml" itemID="4ee20822-0000011e" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 12.xml" loadImmediate="false" itemID="4ee20822-0000011b" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 14.xml" itemID="4ee20822-0000011a" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 16.xml" itemID="4ee20822-00000118" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 18.xml" itemID="4ee20822-00000114" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 20.xml" itemID="4ee20822-00000110" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 22.xml" itemID="4ee20822-0000010e" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 24.xml" loadImmediate="false" itemID="4ee20822-00000112" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 25.xml" itemID="4ee20822-0000010d" lastModified="1323436066"/>
+          <Include href="Sprites/Sprite 27.xml" itemID="4ee20821-000000c9" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 29.xml" loadImmediate="false" itemID="4ee20821-0000010b" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 30.xml" itemID="4ee20821-0000010a" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 32.xml" loadImmediate="false" itemID="4ee20821-00000108" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 33.xml" itemID="4ee20821-00000107" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 34.xml" itemID="4ee20821-00000106" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 36.xml" loadImmediate="false" itemID="4ee20821-00000103" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 41.xml" itemID="4ee20821-00000105" lastModified="1323872960"/>
+          <Include href="Sprites/Sprite 43.xml" itemID="4ee20821-00000102" lastModified="1323873022"/>
+          <Include href="Sprites/Sprite 45.xml" itemID="4ee20821-00000100" lastModified="1323873556"/>
+          <Include href="Sprites/Sprite 47.xml" loadImmediate="false" itemID="4ee20821-000000e2" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 49.xml" loadImmediate="false" itemID="4ee20821-000000e4" lastModified="1323873192"/>
+          <Include href="Sprites/Sprite 51.xml" loadImmediate="false" itemID="4ee20821-000000e5" lastModified="1323873239"/>
+          <Include href="Sprites/Sprite 52.xml" itemID="4ee20821-000000e1" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 57.xml" itemID="4ee20821-000000d6" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 59.xml" itemID="4ee20821-000000c5" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 65.xml" loadImmediate="false" itemID="4ee20821-000000da" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 66.xml" loadImmediate="false" itemID="4ee20821-000000d9" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 69.xml" loadImmediate="false" itemID="4ee20821-000000dd" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 70.xml" loadImmediate="false" itemID="4ee20821-000000d4" lastModified="1323870804"/>
+          <Include href="Sprites/Sprite 71.xml" loadImmediate="false" itemID="4ee20821-000000d2" lastModified="1323870834"/>
+          <Include href="Sprites/Sprite 73.xml" loadImmediate="false" itemID="4ee20821-000000df" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 75.xml" loadImmediate="false" itemID="4ee20821-000000e9" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 77.xml" loadImmediate="false" itemID="4ee20821-000000eb" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 79.xml" loadImmediate="false" itemID="4ee20821-000000ed" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 81.xml" loadImmediate="false" itemID="4ee20821-000000ef" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 83.xml" loadImmediate="false" itemID="4ee20821-000000f1" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 85.xml" loadImmediate="false" itemID="4ee20821-000000f3" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 87.xml" loadImmediate="false" itemID="4ee20821-000000f5" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 89.xml" loadImmediate="false" itemID="4ee20821-000000f7" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 91.xml" loadImmediate="false" itemID="4ee20821-000000f9" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 93.xml" loadImmediate="false" itemID="4ee20821-000000e8" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 94.xml" loadImmediate="false" itemID="4ee20821-000000e7" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 96.xml" loadImmediate="false" itemID="4ee20821-000000e6" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 104.xml" loadImmediate="false" itemID="4ee20821-00000101" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 106.xml" loadImmediate="false" itemID="4ee20821-000000c7" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 176.xml" loadImmediate="false" itemID="4ee20821-000000cb" lastModified="1323436065"/>
+          <Include href="Sprites/Sprite 181.xml" loadImmediate="false" itemID="4ee20821-000000fe" lastModified="1323876881"/>
+          <Include href="Sprites/Sprite 184.xml" loadImmediate="false" itemID="4ee20821-000000ff" lastModified="1323876943"/>
+          <Include href="Sprites/Sprite 185.xml" loadImmediate="false" itemID="4ee20821-000000fd" lastModified="1323877095"/>
+          <Include href="Sprites/Sprite 190.xml" loadImmediate="false" itemID="4eef619d-00002164" lastModified="1324310941"/>
+          <Include href="Sprites/Sprite 193.xml" loadImmediate="false" itemID="4ee20821-000000cf" lastModified="1324310891"/>
+          <Include href="Sprites/Sprite 202.xml" loadImmediate="false" itemID="4ee20821-000000d1" lastModified="1323877771"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Page 1">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="8704">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Sprites/ItemCard" name="animate" selected="true">
+                                             <matrix>
+                                                  <Matrix tx="327.65" ty="355.55"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <PrinterSettings/>
+     <publishHistory/>
+</DOMDocument>

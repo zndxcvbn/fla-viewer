@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Sprites/Sprite 20" itemID="4ee20822-00000110" linkageExportForRS="true" linkageIdentifier="Arrow DOWN" linkageURL="itemcard.swf" sourceFlashFilepath="Sprite 20" lastModified="1323436066" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="Sprite 20">
+      <layers>
+        <DOMLayer name="Layer 2" color="#4F80FF">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Shapes/Shape 19" symbolType="graphic" loop="single frame">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,72 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClip/MagicMenuObj" itemID="4ef4be75-0000010a" linkageExportForAS="true" linkageExportForRS="true" linkageIdentifier="MagicMenuObj" linkageClassName="MagicMenu" linkageURL="." sourceFlashFilepath="Sprite 76" lastModified="1351985679" lastUniqueIdentifier="9" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="MagicMenuObj">
+      <layers>
+        <DOMLayer name="exitrect" color="#4F80FF" current="true" isSelected="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/TriggerArea" name="exitMenuRect" selected="true" centerPoint3DX="-416.65">
+                  <matrix>
+                    <Matrix a="0.0999908447265625" d="6.45001220703125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0" redMultiplier="0" blueMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bottombar" color="#4F80FF" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/BottomBar" name="bottomBar" selected="true">
+                  <matrix>
+                    <Matrix ty="646"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="InventoryLists" color="#4F80FF" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/InventoryLists" name="inventoryLists" selected="true">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="itemcard" color="#4F80FF" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="8704">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClip/ItemCardContainer" name="itemCardFadeHolder" selected="true" centerPoint3DX="335.8" centerPoint3DY="-5">
+                  <matrix>
+                    <Matrix tx="532" ty="405"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
