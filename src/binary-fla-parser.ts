@@ -16,53 +16,27 @@
  * byte-for-byte against real Flash MX 2004 sample FLAs (see
  * `src/__tests__/binary-fla-parser.test.ts`).
  *
- * NEW (issue #8 shape geometry): per-stream vector SHAPE geometry is decoded —
- * see {@link ./binary-shape-decoder}. The CPicShape fill/stroke styles and edge
- * stream are read and converted to pixel-space PathCommands, so library symbols
- * render real artwork instead of empty placeholders.
+ * The stream body path is native-first: `CPicPage → CPicLayer → CPicFrame`
+ * is walked by {@link ./binary-native-timeline}, and shapes / placements /
+ * text / frame labels come from that tree. Whole-stream recovery scanners are
+ * no longer used as production fallbacks; when a native stream fails, the
+ * migration diagnostics surface it instead of silently substituting guessed
+ * content.
  *
- * NEW (issue #8 instance placement): symbol-INSTANCE placements are now decoded
- * too — see {@link ./binary-instance-decoder}. A scene's stage holds symbol
- * instances (a library reference + a transform matrix), not inline art; those
- * placements are recovered and emitted as `SymbolInstance` elements referencing
- * the decoded library symbols, so a scene that places a symbol composites its
- * artwork ONTO THE STAGE instead of showing an empty stage.
- *
- * NEW (issue #8 timeline attribution): per-LAYER / per-FRAME attribution is now
- * decoded for streams whose `CPicPage → CPicLayer → CPicFrame` tree walks
- * cleanly — see {@link ./binary-timeline-decoder}. A keyframe's SPAN (Flash
- * "duration") is `CPicFrame.field_18c`; the frame INDEX is positional (each
- * keyframe starts where the previous ended). Recovered shapes/instances (which
- * carry their stream offsets) are attributed to the keyframe whose byte range
- * contains them, so a multi-keyframe scene/clip animates instead of showing one
- * overlaid frame. The walk is CONFIDENCE-GATED: when it cannot cleanly decode a
- * stream (legacy schema, desync), the stream keeps the single-frame fallback
- * below — no regression.
- *
- * What is still NOT decoded here: tweens (motion/shape interpolation), frame
- * labels, sounds, and per-frame placement matrices for instances inside a
- * movie-clip frame (the instance's matrix is recovered by the scanner, but
- * Flash's per-frame placement-matrix table — FUN_8f9570 — is not). Streams that
- * fail the confidence gate still composite all recovered content into one frame.
- * We never silently swallow errors (project rule).
+ * What is still NOT fully decoded here: exact compact button frame splitting,
+ * sounds, and some per-frame placement table details. We never silently swallow
+ * errors (project rule).
  */
 import { OLE2File } from './ole2-reader';
+import { collectFlashStrings } from './binary-flash-string';
 import {
-  extractLayers,
   type BinaryLayerInfo,
   type BinaryLayerType,
 } from './binary-fla-structure';
+import type { DecodedShape } from './binary-shape-decoder';
 import {
-  decodeStreamShapes,
-  type DecodedShape,
-} from './binary-shape-decoder';
-import {
-  attachInstanceNames,
-  correctFp8Refs,
   dedupeInstances,
   instanceSymbolType,
-  markUnreliableRefs,
-  scanForInstances,
   scanNamedInstances,
   unjoinedNames,
   type DecodedInstance,
@@ -70,17 +44,29 @@ import {
 } from './binary-instance-decoder';
 import {
   attributeToFrames,
-  decodeStreamTimeline,
+  extractFrameLabelsAll,
   extractFrameScripts,
+  type DecodedFrameLabel,
   type DecodedFrameScript,
   type DecodedStreamTimeline,
 } from './binary-timeline-decoder';
-import { extractLinkage, joinLinkageToSymbolNumbers } from './binary-linkage-decoder';
+import {
+  decodeNativeTimelineTreeDetailed,
+  extractNativeInstances,
+  extractNativeShapes,
+  type NativeCPicPage,
+  nativeTimelineToDecodedTimeline,
+} from './binary-native-timeline';
+import {
+  readNativeContents,
+  type BinaryLibraryEntry,
+} from './binary-native-contents';
 import type {
   BinaryLinkage,
   FLADocument,
   Frame,
   Layer,
+  DisplayElement,
   Matrix,
   Shape,
   Symbol,
@@ -89,37 +75,31 @@ import type {
   Timeline,
 } from './types';
 
-export type BinarySymbolType = 'graphic' | 'button' | 'movieclip' | 'unknown';
-
-export interface BinaryLibraryEntry {
-  /** OLE2 stream number (the N in "Symbol N"). */
-  symbolNumber: number;
-  /** Library display name. */
-  name: string;
-  /** Symbol kind decoded from the type byte after the name. */
-  symbolType: BinarySymbolType;
-}
+export type { BinaryLibraryEntry, BinarySymbolType } from './binary-native-contents';
 
 export interface BinaryFLAInfo {
   width: number;
   height: number;
   frameRate: number;
   backgroundColor: string;
+  /** Target Flash Player version extracted from publish settings, e.g. 8, 9, 10. */
+  flashVersion?: number;
   /** Stream names found in the OLE2 container (Contents, Page N, Symbol N…). */
   streams: string[];
   /** Decoded symbol library table. */
   library: BinaryLibraryEntry[];
   /**
    * ActionScript linkage table from the `Contents` stream (export id → AS class
-   * + document/library kind). Cannot be joined to a specific library symbol from
-   * the binary alone (see {@link ./binary-linkage-decoder}); surfaced for a
-   * consumer that owns the SWF join.
+   * + document/library/import kind). Some records do not have a local symbol
+   * stream (runtime-shared imports or document/root bindings), so the raw table
+   * remains available even when {@link linkageBySymbol} resolves most library
+   * records directly.
    */
   linkage: BinaryLinkage[];
   /**
    * Per-symbol resolution of {@link linkage}: `symbolNumber → linkage record`,
    * joined via the u32 the library-item record writes after the item name (see
-   * {@link joinLinkageToSymbolNumbers}). Lets the parser set per-symbol
+   * {@link readNativeContents}). Lets the parser set per-symbol
    * `linkageClassName` directly — the binary path then matches the XFL shape with
    * no SWF. Imported/shared classes with no local symbol stream are absent.
    */
@@ -135,10 +115,9 @@ export interface BinaryFLAInfo {
   /** Layer list decoded from each `Symbol N` stream, keyed by symbol number. */
   symbolLayers: Map<number, BinaryLayerInfo[]>;
   /**
-   * Vector shapes decoded from each scene's `Page N` stream (issue #8 shape
-   * geometry), keyed by scene number. Located by the CPicShape recovery
-   * scanner (see {@link ./binary-shape-decoder}); each shape carries its own
-   * matrix so the renderer places it on the stage.
+   * Vector shapes decoded from each scene's `Page N` stream, keyed by scene
+   * number. Shapes come from the native CPic walk; compact legacy shape payloads
+   * are bounded to native frame ranges before they are exposed here.
    */
   sceneShapes: Map<number, Shape[]>;
   /** Vector shapes decoded from each `Symbol N` stream, keyed by symbol number. */
@@ -151,10 +130,9 @@ export interface BinaryFLAInfo {
   sceneShapesDecoded: Map<number, DecodedShape[]>;
   symbolShapesDecoded: Map<number, DecodedShape[]>;
   /**
-   * Confident per-LAYER / per-FRAME timeline structure for streams whose
-   * `CPicPage → CPicLayer → CPicFrame` tree decodes cleanly (issue #8 timeline
-   * attribution). Absent when the structural walk was not confident — the
-   * caller then keeps the single-frame fallback. Keyed by scene / symbol number.
+   * Native per-layer / per-frame timeline structure decoded from
+   * `CPicPage → CPicLayer → CPicFrame`. Absent only when the native walk fails.
+   * Keyed by scene / symbol number.
    */
   sceneTimelines: Map<number, DecodedStreamTimeline>;
   symbolTimelines: Map<number, DecodedStreamTimeline>;
@@ -165,48 +143,32 @@ export interface BinaryFLAInfo {
   sceneScripts: Map<number, DecodedFrameScript[]>;
   symbolScripts: Map<number, DecodedFrameScript[]>;
   /**
-   * Symbol-instance PLACEMENTS recovered from each scene's `Page N` stream
-   * (issue #8 instance placement), keyed by scene number. Each placement
-   * references a library item (by `mediaRef`) and carries its matrix, so the
-   * renderer composites the library symbol onto the stage. Located by the
-   * instance recovery scanner (see {@link ./binary-instance-decoder}).
+   * Frame labels independently extracted from each scene / symbol stream by
+   * scanning for the label signature (safe from position 0 — never false-positive
+   * in page body data). Always available even when the structural timeline walk
+   * (`sceneTimelines` / `symbolTimelines`) fails, so frame label names still
+   * surface for AS2 linting / ghost filtering. Keyed by scene / symbol number.
+   */
+  sceneFrameLabels: Map<number, DecodedFrameLabel[]>;
+  symbolFrameLabels: Map<number, DecodedFrameLabel[]>;
+  /**
+   * Symbol-instance placements decoded from each scene's `Page N` stream, keyed
+   * by scene number. Each placement references a library item by `mediaRef` and
+   * carries its matrix, so the renderer composites the library symbol onto the
+   * stage.
    */
   sceneInstances: Map<number, DecodedInstance[]>;
   /** Symbol-instance placements recovered from each `Symbol N` stream. */
   symbolInstances: Map<number, DecodedInstance[]>;
   /**
    * All recovered NAMED instances (name + kind + byte offset) per scene /
-   * symbol stream, including FP8 placements that {@link scanForInstances} cannot
-   * geometry-decode. Those unjoined names become name-only "ghost" timeline
-   * elements (see {@link unjoinedNames}) so every instance name reaches the
-   * timeline for tooling. Keyed by scene / symbol number.
+   * symbol stream. Names that do not join to a native placement become
+   * name-only "ghost" timeline elements (see {@link unjoinedNames}) so every
+   * script-visible instance name reaches the timeline for tooling. Keyed by
+   * scene / symbol number.
    */
   sceneNamed: Map<number, NamedInstance[]>;
   symbolNamed: Map<number, NamedInstance[]>;
-}
-
-const SYMBOL_TYPE_NAMES: Record<number, BinarySymbolType> = {
-  0: 'graphic',
-  1: 'button',
-  2: 'movieclip',
-};
-
-const utf16le = new TextDecoder('utf-16le');
-
-/** Decode a UTF-16LE substring of `data` (byteLen bytes). */
-function decodeUtf16(data: Uint8Array, start: number, byteLen: number): string {
-  return utf16le.decode(data.subarray(start, start + byteLen));
-}
-
-/** Find the first index >= `from` where `needle` occurs in `hay`, or -1. */
-function indexOf(hay: Uint8Array, needle: Uint8Array, from: number): number {
-  outer: for (let i = from; i <= hay.length - needle.length; i++) {
-    for (let j = 0; j < needle.length; j++) {
-      if (hay[i + j] !== needle[j]) continue outer;
-    }
-    return i;
-  }
-  return -1;
 }
 
 /**
@@ -225,99 +187,6 @@ function parseSceneStreamNumber(name: string): number | null {
 function parseSymbolStreamNumber(name: string): number | null {
   const m = /^(?:Symbol|S) (\d+)(?: \d+)?$/.exec(name);
   return m ? parseInt(m[1], 10) : null;
-}
-
-/**
- * Collect every `FF FE FF <u8 len> <len×2 UTF-16LE>` Flash string in the
- * stream. These hold publish-settings keys/values, library names, folders…
- * (fla-decoder docs/FORMAT.md §2 "Length-prefixed strings").
- */
-function collectFlashStrings(data: Uint8Array): string[] {
-  const strings: string[] = [];
-  let pos = 0;
-  while (pos < data.length - 4) {
-    if (data[pos] === 0xff && data[pos + 1] === 0xfe && data[pos + 2] === 0xff) {
-      const len = data[pos + 3];
-      const end = pos + 4 + len * 2;
-      if (len > 0 && end <= data.length) {
-        strings.push(decodeUtf16(data, pos + 4, len * 2));
-        pos = end;
-        continue;
-      }
-    }
-    pos += 1;
-  }
-  return strings;
-}
-
-/**
- * Extract the symbol library table from the `Contents` stream.
- * Mirrors fla-decoder `extract_library.extract_library_table`: each library
- * record holds a `"Symbol N"` MFC CString (u8 charlen + UTF-16LE) followed,
- * within ~100 bytes, by a `FF FE FF` Flash string with the library name and
- * then `u32 id + u8 type`.
- */
-function extractLibrary(contents: Uint8Array): BinaryLibraryEntry[] {
-  // UTF-16LE bytes for "Symbol " (prefix of every library item's CString).
-  const symbolPrefix = new Uint8Array([
-    0x53, 0x00, 0x79, 0x00, 0x6d, 0x00, 0x62, 0x00, 0x6f, 0x00, 0x6c, 0x00,
-    0x20, 0x00,
-  ]);
-  // Keyed by symbol number. A symbol can appear in more than one library
-  // record (Flash writes both a movieclip placeholder and the resolved entry
-  // for auto-named items like "Symbol 1"); the LAST record written is the
-  // authoritative one, matching the fla-decoder reference's dict-overwrite.
-  const byNumber = new Map<number, BinaryLibraryEntry>();
-  let pos = 0;
-  while (pos < contents.length) {
-    const idx = indexOf(contents, symbolPrefix, pos);
-    if (idx < 0) break;
-    // The MFC CString length (chars) is the byte immediately before the text.
-    const strLen = idx > 0 ? contents[idx - 1] : 0;
-    if (strLen > 0 && idx + strLen * 2 <= contents.length) {
-      const s = decodeUtf16(contents, idx, strLen * 2);
-      const m = /^Symbol (\d+)$/.exec(s);
-      if (m) {
-        const symNum = parseInt(m[1], 10);
-        const strEnd = idx + strLen * 2;
-        // Search forward for the FF FE FF library-name string.
-        let search = strEnd;
-        const limit = Math.min(contents.length - 4, strEnd + 100);
-        while (search < limit) {
-          if (
-            contents[search] === 0xff &&
-            contents[search + 1] === 0xfe &&
-            contents[search + 2] === 0xff
-          ) {
-            const ln = contents[search + 3];
-            const nameEnd = search + 4 + ln * 2;
-            if (ln > 0 && nameEnd <= contents.length) {
-              const name = decodeUtf16(contents, search + 4, ln * 2);
-              // Skip path-like strings (folders / import paths).
-              if (!name.includes('/') && !name.startsWith('.\\')) {
-                let symbolType: BinarySymbolType = 'unknown';
-                if (nameEnd + 5 <= contents.length) {
-                  const typeByte = contents[nameEnd + 4];
-                  symbolType = SYMBOL_TYPE_NAMES[typeByte] ?? 'unknown';
-                }
-                byNumber.set(symNum, {
-                  symbolNumber: symNum,
-                  name,
-                  symbolType,
-                });
-                break;
-              }
-            }
-          }
-          search += 1;
-        }
-      }
-    }
-    pos = idx + 1;
-  }
-  return [...byNumber.values()].sort(
-    (a, b) => a.symbolNumber - b.symbolNumber
-  );
 }
 
 /**
@@ -375,6 +244,33 @@ function extractDimensions(
 }
 
 /**
+ * Extract the target Flash Player version from publish-settings strings.
+ * Searches for a "FlashPlayerN" pattern (e.g. "FlashPlayer10", "FlashPlayer8")
+ * among the collected Flash strings and returns the numeric version.
+ */
+function extractFlashVersion(strings: string[]): number | undefined {
+  for (const s of strings) {
+    const m = /^FlashPlayer(\d+)$/.exec(s);
+    if (m) return parseInt(m[1], 10);
+  }
+  return undefined;
+}
+
+function normalizeNativeInstanceRefs(
+  insts: DecodedInstance[],
+  placementIdToStream: ReadonlyMap<number, number>
+): DecodedInstance[] {
+  if (placementIdToStream.size === 0) return insts;
+  return insts.map((inst) => {
+    const mediaRef = placementIdToStream.get(inst.mediaRef) ?? inst.mediaRef;
+    const altMediaRef = placementIdToStream.get(inst.altMediaRef) ?? inst.altMediaRef;
+    return mediaRef !== inst.mediaRef || altMediaRef !== inst.altMediaRef
+      ? { ...inst, mediaRef, altMediaRef, refCorrected: true }
+      : inst;
+  });
+}
+
+/**
  * Read a binary FLA's OLE2 container and extract document-level info.
  * Throws (never silently fails) if the `Contents` stream is missing — that
  * would mean the file is not a recognizable binary FLA.
@@ -393,10 +289,9 @@ export function extractBinaryFLAInfo(bytes: Uint8Array): BinaryFLAInfo {
   const contents = ole.readStream('Contents');
   const strings = collectFlashStrings(contents);
 
+  const flashVersion = extractFlashVersion(strings);
   const { backgroundColor, frameRate } = extractColorAndFrameRate(contents);
   const dims = extractDimensions(strings);
-  const library = extractLibrary(contents);
-  const linkage = extractLinkage(contents);
 
   // The set of library symbol stream numbers, used both to correct FP8
   // placement mediaRefs and to join the linkage table to symbol numbers.
@@ -406,9 +301,16 @@ export function extractBinaryFLAInfo(bytes: Uint8Array): BinaryFLAInfo {
     if (n !== null) symbolNumbers.add(n);
   }
 
-  // ── Decode the layer structure of every scene (`Page N`) and library item
-  // (`Symbol N`) stream. Only the layer list is reliably decodable (see
-  // binary-fla-structure.ts); frame content is intentionally not read.
+  const contentsInfo = readNativeContents(contents, symbolNumbers);
+  const { library, linkage, linkageBySymbol, placementIdToStream } = contentsInfo;
+
+  // `placementIdToStream` is owned by binary-native-contents.ts, next to the
+  // library-item record reader that observes dual-numbered placement ids.
+
+  // ── Decode every scene (`Page N`) and library item (`Symbol N`) stream.
+  // Native CPic walking is the production source for timeline, layers, shapes
+  // and placements. Streams without a valid native page stay empty here so
+  // diagnostics expose the gap instead of masking it with recovery scans.
   const scenes: { scene: number; layers: BinaryLayerInfo[] }[] = [];
   const symbolLayers = new Map<number, BinaryLayerInfo[]>();
   const sceneShapes = new Map<number, Shape[]>();
@@ -423,6 +325,8 @@ export function extractBinaryFLAInfo(bytes: Uint8Array): BinaryFLAInfo {
   const symbolTimelines = new Map<number, DecodedStreamTimeline>();
   const sceneScripts = new Map<number, DecodedFrameScript[]>();
   const symbolScripts = new Map<number, DecodedFrameScript[]>();
+  const sceneFrameLabels = new Map<number, DecodedFrameLabel[]>();
+  const symbolFrameLabels = new Map<number, DecodedFrameLabel[]>();
   for (const name of streams) {
     // Scene streams are named `Page N` (Flash 5..MX 2004) or `P N <timestamp>`
     // (Flash 8 / CS3+); symbol streams `Symbol N` or `S N <timestamp>`. Both
@@ -430,63 +334,94 @@ export function extractBinaryFLAInfo(bytes: Uint8Array): BinaryFLAInfo {
     const pageNum = parseSceneStreamNumber(name);
     if (pageNum !== null) {
       const streamData = ole.readStream(name);
-      scenes.push({ scene: pageNum, layers: extractLayers(streamData) });
-      const decoded = decodeStreamShapes(streamData).decoded;
-      if (decoded.length > 0) {
-        sceneShapes.set(pageNum, decoded.map((d) => d.shape));
-        sceneShapesDecoded.set(pageNum, decoded);
-      }
       const named = scanNamedInstances(streamData);
       if (named.length > 0) sceneNamed.set(pageNum, named);
-      const insts = markUnreliableRefs(
-        attachInstanceNames(
-          correctFp8Refs(scanForInstances(streamData), symbolNumbers),
-          named
-        )
-      );
-      const deduped = dedupeInstances(insts);
-      if (deduped.length > 0) sceneInstances.set(pageNum, deduped);
-      // Attribution uses the UN-deduped placements (deduping would discard the
-      // per-keyframe copies needed to tell frames apart); the dedupe above is
-      // only for the single-frame fallback.
-      const tl = decodeStreamTimeline(streamData);
+
+      const nativeResult = decodeNativeTimelineTreeDetailed(streamData);
+      scenes.push({
+        scene: pageNum,
+        layers: nativeResult.ok && nativeResult.page
+          ? binaryLayersFromNativePage(nativeResult.page)
+          : [],
+      });
+
+      // Shapes: native only. Missing native decode is surfaced by migration
+      // diagnostics instead of being masked by whole-stream recovery scans.
+      if (nativeResult.ok && nativeResult.page) {
+        const nativeS = extractNativeShapes(nativeResult.page);
+        if (nativeS.length > 0) {
+          sceneShapes.set(pageNum, nativeS.map((d) => d.shape));
+          sceneShapesDecoded.set(pageNum, nativeS);
+        }
+      }
+
+      // Timeline: native only.
+      const tl = nativeResult.ok && nativeResult.page
+        ? nativeTimelineToDecodedTimeline(nativeResult.page)
+        : null;
       if (tl) sceneTimelines.set(pageNum, tl);
-      if (tl && insts.length > 0) sceneInstances.set(pageNum, insts);
+
+      // Instances: native only.
+      if (nativeResult.ok && nativeResult.page) {
+        const nativeInsts = normalizeNativeInstanceRefs(
+          extractNativeInstances(nativeResult.page),
+          placementIdToStream
+        );
+        if (nativeInsts.length > 0) sceneInstances.set(pageNum, nativeInsts);
+      }
+
       const scripts = extractFrameScripts(streamData);
       if (scripts.length > 0) sceneScripts.set(pageNum, scripts);
+      const frameLabels = extractFrameLabelsAll(streamData);
+      if (frameLabels.length > 0) sceneFrameLabels.set(pageNum, frameLabels);
       continue;
     }
     const symNum = parseSymbolStreamNumber(name);
     if (symNum !== null) {
       const streamData = ole.readStream(name);
-      symbolLayers.set(symNum, extractLayers(streamData));
-      const decoded = decodeStreamShapes(streamData).decoded;
-      if (decoded.length > 0) {
-        symbolShapes.set(symNum, decoded.map((d) => d.shape));
-        symbolShapesDecoded.set(symNum, decoded);
-      }
       const named = scanNamedInstances(streamData);
       if (named.length > 0) symbolNamed.set(symNum, named);
-      const insts = markUnreliableRefs(
-        attachInstanceNames(
-          correctFp8Refs(scanForInstances(streamData), symbolNumbers),
-          named
-        )
+
+      const nativeResult = decodeNativeTimelineTreeDetailed(streamData);
+      symbolLayers.set(
+        symNum,
+        nativeResult.ok && nativeResult.page
+          ? binaryLayersFromNativePage(nativeResult.page)
+          : []
       );
-      const deduped = dedupeInstances(insts);
-      if (deduped.length > 0) symbolInstances.set(symNum, deduped);
-      const tl = decodeStreamTimeline(streamData);
+
+      // Shapes: native only. Missing native decode is surfaced by migration
+      // diagnostics instead of being masked by whole-stream recovery scans.
+      if (nativeResult.ok && nativeResult.page) {
+        const nativeS = extractNativeShapes(nativeResult.page);
+        if (nativeS.length > 0) {
+          symbolShapes.set(symNum, nativeS.map((d) => d.shape));
+          symbolShapesDecoded.set(symNum, nativeS);
+        }
+      }
+
+      // Timeline: native only.
+      const tl = nativeResult.ok && nativeResult.page
+        ? nativeTimelineToDecodedTimeline(nativeResult.page)
+        : null;
       if (tl) symbolTimelines.set(symNum, tl);
-      if (tl && insts.length > 0) symbolInstances.set(symNum, insts);
+
+      // Instances: native only.
+      if (nativeResult.ok && nativeResult.page) {
+        const nativeInsts = normalizeNativeInstanceRefs(
+          extractNativeInstances(nativeResult.page),
+          placementIdToStream
+        );
+        if (nativeInsts.length > 0) symbolInstances.set(symNum, nativeInsts);
+      }
+
       const scripts = extractFrameScripts(streamData);
       if (scripts.length > 0) symbolScripts.set(symNum, scripts);
+      const frameLabels = extractFrameLabelsAll(streamData);
+      if (frameLabels.length > 0) symbolFrameLabels.set(symNum, frameLabels);
     }
   }
   scenes.sort((a, b) => a.scene - b.scene);
-
-  // Join the linkage table to library symbol NUMBERS so the parser can set
-  // per-symbol linkageClassName (the binary path then matches the XFL shape).
-  const linkageBySymbol = joinLinkageToSymbolNumbers(contents, linkage, symbolNumbers);
 
   return {
     // Flash's default stage is 550×400 @ 24fps on a white stage — apply these
@@ -495,6 +430,7 @@ export function extractBinaryFLAInfo(bytes: Uint8Array): BinaryFLAInfo {
     height: dims.height ?? 400,
     frameRate: frameRate ?? 24,
     backgroundColor: backgroundColor ?? '#FFFFFF',
+    ...(flashVersion !== undefined && { flashVersion }),
     streams,
     library,
     linkage,
@@ -515,6 +451,8 @@ export function extractBinaryFLAInfo(bytes: Uint8Array): BinaryFLAInfo {
     symbolTimelines,
     sceneScripts,
     symbolScripts,
+    sceneFrameLabels,
+    symbolFrameLabels,
   };
 }
 
@@ -525,18 +463,41 @@ export function extractBinaryFLAInfo(bytes: Uint8Array): BinaryFLAInfo {
  * id to its display name (the key under which the symbol lives in
  * `FLADocument.symbols`).
  */
+/**
+ * Convert a decoded CPicText placement into a viewer {@link TextInstance}.
+ */
+function buildTextInstance(inst: DecodedInstance): TextInstance | null {
+  const td = inst.textData;
+  if (!td || !td.characters) return null;
+  return {
+    type: 'text',
+    ...(inst.instanceName && { name: inst.instanceName }),
+    textType: inst.instanceName ? 'dynamic' : 'static',
+    matrix: inst.matrix,
+    left: td.width !== undefined ? td.width / 2 : 0,
+    width: td.width ?? 100,
+    height: td.height ?? 20,
+    ...(inst.filters && { filters: inst.filters }),
+    textRuns: [{
+      characters: td.characters,
+      size: td.fontSize ?? 12,
+      fillColor: td.fillColor ?? '#000000',
+      ...(td.fontFace && { face: td.fontFace }),
+      ...(td.bold !== undefined && { bold: td.bold }),
+      ...(td.alignment && { alignment: td.alignment }),
+      ...(td.letterSpacing !== undefined && { letterSpacing: td.letterSpacing }),
+    }],
+  };
+}
+
 function buildSymbolInstance(
   inst: DecodedInstance,
   libraryByNumber: Map<number, BinaryLibraryEntry>
 ): SymbolInstance | null {
-  // An FP8 placement mis-decodes its mediaRef (see markUnreliableRefs), so emit
-  // the named child WITHOUT a libraryItemName — the consumer types it MovieClip
-  // (or the placement-class kind) instead of inheriting a wrong class.
   const entry = libraryByNumber.get(inst.mediaRef);
-  // No resolvable library item: for an UNNAMED placement we drop it (never
-  // fabricate a reference); for a NAMED one (unreliable FP8 ref, or a corrected
-  // ref whose symbol carries no decoded content) we still emit a name-only
-  // element so its instance name reaches the timeline for tooling.
+  // No resolvable library item: for an unnamed placement we drop it (never
+  // fabricate a reference); for a named one we still emit a name-only element so
+  // its instance name reaches the timeline for tooling.
   if (inst.unreliableRef || !entry) {
     if (!inst.instanceName) return null;
     return {
@@ -546,7 +507,11 @@ function buildSymbolInstance(
       symbolType: instanceSymbolType(inst.className),
       matrix: inst.matrix,
       transformationPoint: { x: 0, y: 0 },
-      loop: 'play once',
+      loop: 'loop',
+      ...(inst.colorTransform && { colorTransform: inst.colorTransform }),
+      ...(inst.filters && { filters: inst.filters }),
+      ...(inst.blendMode && { blendMode: inst.blendMode }),
+      ...(inst.componentParameters && { componentParameters: inst.componentParameters }),
     };
   }
   // Prefer the library item's real kind; when the library type is unknown,
@@ -566,34 +531,44 @@ function buildSymbolInstance(
     // The matrix tx/ty already place the instance; the transformation point is
     // metadata we cannot reliably recover from the binary frame, so use origin.
     transformationPoint: { x: 0, y: 0 },
-    loop: symbolType === 'movieclip' ? 'loop' : 'play once',
+    // XFL defaults omitted DOMSymbolInstance.loop to "loop"; explicit graphic
+    // playback fields still need a proven CPicSymbol tail mapping.
+    loop: 'loop',
+    ...(inst.colorTransform && { colorTransform: inst.colorTransform }),
+    ...(inst.filters && { filters: inst.filters }),
+    ...(inst.blendMode && { blendMode: inst.blendMode }),
+    ...(inst.componentParameters && { componentParameters: inst.componentParameters }),
   };
 }
 
 /**
  * Convert decoded placements into viewer {@link SymbolInstance}s, dropping any
- * whose `mediaRef` does not resolve to a library symbol.
+ * whose `mediaRef` does not resolve to a library symbol. Also converts
+ * CPicText placements to {@link TextInstance}s.
  */
 function buildSymbolInstances(
   insts: DecodedInstance[],
   libraryByNumber: Map<number, BinaryLibraryEntry>
-): SymbolInstance[] {
-  const out: SymbolInstance[] = [];
+): (SymbolInstance | TextInstance)[] {
+  const out: (SymbolInstance | TextInstance)[] = [];
   for (const inst of insts) {
-    const built = buildSymbolInstance(inst, libraryByNumber);
-    if (built) out.push(built);
+    if (inst.textData) {
+      const built = buildTextInstance(inst);
+      if (built) out.push(built);
+    } else {
+      const built = buildSymbolInstance(inst, libraryByNumber);
+      if (built) out.push(built);
+    }
   }
   return out;
 }
 
 /**
- * Build a name-only "ghost" element for a recovered instance name that has NO
- * decoded geometry — an FP8 placement {@link scanForInstances} cannot decode
- * (mostly text fields). It carries the real instance name + kind so tooling sees
- * it on the timeline like any other element; geometry is a zero placeholder
- * (identity matrix at origin) which the renderer draws harmlessly. A symbol ghost
- * gets an EMPTY `libraryItemName` — we never fabricate a library reference, since
- * the binary did not give us one.
+ * Build a name-only "ghost" element for a recovered instance name that has no
+ * joined native placement. It carries the real instance name + kind so tooling
+ * sees it on the timeline; geometry is a zero placeholder (identity matrix at
+ * origin). A symbol ghost gets an empty `libraryItemName` because the binary did
+ * not give us a trustworthy library reference for that orphaned name.
  */
 function ghostElement(n: NamedInstance): SymbolInstance | TextInstance {
   const matrix: Matrix = { a: 1, b: 0, c: 0, d: 1, tx: 0, ty: 0 };
@@ -617,7 +592,7 @@ function ghostElement(n: NamedInstance): SymbolInstance | TextInstance {
     symbolType: n.symbolType ?? 'movieclip',
     matrix,
     transformationPoint: { x: 0, y: 0 },
-    loop: 'play once',
+    loop: 'loop',
   };
 }
 
@@ -652,6 +627,23 @@ function hostGhosts(tl: Timeline, ghosts: (SymbolInstance | TextInstance)[]): Ti
 }
 
 /** Map a decoded binary layer type to the viewer's narrower Layer.layerType. */
+function applyMaskRelationships(layers: Layer[]): void {
+  let currentMask: number | undefined;
+  for (let i = 0; i < layers.length; i++) {
+    const layer = layers[i];
+    if (layer.layerType === 'mask') {
+      currentMask = i;
+      continue;
+    }
+    if (layer.layerType === 'masked' && currentMask !== undefined) {
+      layer.parentLayerIndex = currentMask;
+      layer.maskLayerIndex = currentMask;
+      continue;
+    }
+    currentMask = undefined;
+  }
+}
+
 function toViewerLayerType(
   t: BinaryLayerType
 ): Layer['layerType'] {
@@ -670,40 +662,35 @@ function toViewerLayerType(
   }
 }
 
+function nativeTypeByteToBinaryLayerType(typeByte: number | undefined): BinaryLayerType {
+  if (typeByte === 3) return 'mask';
+  if (typeByte === 4) return 'masked';
+  return 'normal';
+}
+
+function binaryLayersFromNativePage(page: NativeCPicPage): BinaryLayerInfo[] {
+  const timeline = nativeTimelineToDecodedTimeline(page);
+  return timeline.layers.map((layer) => ({
+    name: layer.name,
+    schema: layer.schema,
+    layerType: nativeTypeByteToBinaryLayerType(layer.typeByte),
+    locked: layer.locked,
+    visible: layer.visible,
+  }));
+}
+
 /**
- * Build viewer {@link Layer}s from the reliably-decoded binary layer list.
- * Each layer carries its real name / type / locked / visible state.
- *
- * Frame-by-frame timeline attribution (which keyframe of which layer a given
- * piece of content belongs to) is still NOT decoded — CPicFrame's schema-gated
- * tail is unparsed (see {@link ./binary-fla-structure} and
- * {@link ./binary-instance-decoder}). Two STREAM-level recovery scanners,
- * however, reliably locate content carrying its own matrix:
- *   - the CPicShape scanner ({@link ./binary-shape-decoder}) → inline `Shape`s;
- *   - the placement scanner ({@link ./binary-instance-decoder}) →
- *     `SymbolInstance`s referencing library symbols.
- *
- * Because that per-layer/per-frame attribution is unavailable, all recovered
- * content for a stream is composited into ONE frame; shapes are drawn first,
- * then instances on top, each carrying its own matrix so it lands at the right
- * place on the stage. The decoded layer stack (names / types / locked / visible
- * flags) is preserved untouched — we do NOT overwrite a layer's decoded flags.
- *
- * The content is hosted on the first decoded layer that the renderer will
- * actually draw (visible + not guide/folder). If NO decoded layer qualifies
- * (e.g. the only real layer decoded as hidden, or a stream whose layer records
- * were not recovered), a synthetic always-visible "normal" layer is appended to
- * carry the content — otherwise the recovered artwork would be silently dropped
- * by the renderer's hidden/reference-layer skip. Guide / folder layers are
- * marked as reference layers (never rendered).
+ * Build a single-frame host timeline from decoded layer metadata and already
+ * decoded native content. This is no longer a scanner fallback; it is only the
+ * final display host when a stream has no usable native keyframe attribution.
  */
 function buildLayers(
   binaryLayers: BinaryLayerInfo[],
   shapes: Shape[] = [],
-  instances: SymbolInstance[] = []
+  instances: (SymbolInstance | TextInstance)[] = []
 ): { layers: Layer[]; referenceLayers: Set<number> } {
   const referenceLayers = new Set<number>();
-  const content: (Shape | SymbolInstance)[] = [...shapes, ...instances];
+  const content: DisplayElement[] = [...shapes, ...instances];
 
   // Prefer a host layer the renderer will actually draw: visible AND not a
   // guide/folder reference layer. Fall back to the first non-guide/folder
@@ -755,26 +742,16 @@ function buildLayers(
       frames: [{ index: 0, duration: 1, keyMode: 0, elements: [...content] }],
     });
   }
+  applyMaskRelationships(layers);
   return { layers, referenceLayers };
 }
 
 /**
- * Build viewer {@link Layer}s with REAL per-layer / per-frame attribution from a
- * confident structural timeline walk (issue #8 timeline attribution).
- *
- * For each decoded layer we emit one viewer layer whose `frames[]` are the
- * decoded keyframes (each with its positional `index` and `duration` span). The
- * already-recovered shapes/instances — which carry their stream byte offsets —
- * are attributed to the keyframe whose body byte-range contains them
- * ({@link attributeToFrames}), so the renderer's `findFrameAtIndex` shows the
- * right content as the playhead moves.
- *
- * Returns `null` (so the caller falls back to {@link buildLayers}) when NO
- * content could be attributed to any keyframe — that means the timeline walk
- * and the recovery scanners disagree about where content lives, and the safe
- * single-frame behaviour is preferable to an empty animated timeline. Content
- * that falls outside every keyframe range is hosted on the layer's FIRST
- * keyframe so nothing recovered is ever dropped.
+ * Build viewer {@link Layer}s with native per-layer / per-frame attribution.
+ * Native shapes/instances carry byte offsets and are assigned to the decoded
+ * keyframe whose body range contains them. Returns `null` only when a stream has
+ * content but no attributed keyframe, in which case {@link buildLayers} hosts the
+ * same native content on a single frame rather than rendering an empty symbol.
  */
 function buildAttributedLayers(
   timeline: DecodedStreamTimeline,
@@ -786,64 +763,79 @@ function buildAttributedLayers(
   const referenceLayers = new Set<number>();
   let attributedAny = false;
 
+  // 1. Глобальное распределение контента по ВСЕМ ключевым кадрам ВСЕХ слоев (1 раз)
+  const allKeyframes = timeline.layers.flatMap((l) => l.keyframes);
+  const shapeBuckets = attributeToFrames(allKeyframes, decodedShapes);
+  const instBuckets = attributeToFrames(allKeyframes, decodedInstances);
+  const scriptBuckets = attributeToFrames(allKeyframes, scripts);
+  const labelBuckets = timeline.frameLabels
+    ? attributeToFrames(allKeyframes, timeline.frameLabels)
+    : undefined;
+
+  let globalKfIdx = 0; // Трекаем индекс в глобальном массиве allKeyframes
+
   const layers: Layer[] = timeline.layers.map((dl, index) => {
     const layerType =
-      dl.typeByte === LAYER_TYPE_GUIDE_BYTE
-        ? 'guide'
-        : dl.typeByte === LAYER_TYPE_FOLDER_BYTE
-          ? 'folder'
-          : 'normal';
+      dl.typeByte === LAYER_TYPE_GUIDE_BYTE ? 'guide' :
+      dl.typeByte === LAYER_TYPE_MASK_BYTE ? 'mask' :
+      dl.typeByte === LAYER_TYPE_MASKED_BYTE ? 'masked' :
+      dl.typeByte === LAYER_TYPE_FOLDER_BYTE ? 'folder' : 'normal';
+      
     if (layerType === 'guide' || layerType === 'folder') {
       referenceLayers.add(index);
     }
 
-    const shapeBuckets = attributeToFrames(dl.keyframes, decodedShapes);
-    const instBuckets = attributeToFrames(dl.keyframes, decodedInstances);
-    // A script's byte offset falls in exactly one layer's keyframe range, so
-    // per-layer attribution places each script on its own layer with no dupes.
-    const scriptBuckets = attributeToFrames(dl.keyframes, scripts);
-
-    const frames: Frame[] = dl.keyframes.map((kf, ki) => {
+    const frames: Frame[] = dl.keyframes.flatMap((kf) => {
+      const ki = globalKfIdx++;
       const shapes = shapeBuckets.perKeyframe[ki].map((d) => d.shape);
-      const instances = buildSymbolInstances(
-        instBuckets.perKeyframe[ki],
-        libraryByNumber
-      );
-      if (shapes.length > 0 || instances.length > 0) attributedAny = true;
+      const instances = buildSymbolInstances(instBuckets.perKeyframe[ki], libraryByNumber);
+      const elems = [...shapes, ...instances] as Frame['elements'];
+      
+      // Pick label: prefer byte-range attributed label, fall back to the keyframe's own label
+      const attributedLabels = labelBuckets ? labelBuckets.perKeyframe[ki] : [];
+      const label = attributedLabels.length > 0 ? attributedLabels[0].label : kf.label;
+      
+      if (shapes.length > 0 || instances.length > 0 || label) attributedAny = true;
+      
       const frameScripts = scriptBuckets.perKeyframe[ki];
-      return {
-        index: kf.startIndex,
-        duration: kf.duration,
-        keyMode: 0,
-        elements: [...shapes, ...instances] as Frame['elements'],
-        ...(frameScripts.length > 0 && {
-          // Dedupe identical scripts so a symbol whose stop-frames all collapse
-          // onto one frame shows "stop();" once, not "stop(); stop(); stop();".
-          actionScript: [...new Set(frameScripts.map((s) => s.source))].join('\n\n'),
-        }),
-      };
-    });
-
-    // Any content that fell outside every keyframe range goes on the first
-    // keyframe (never drop recovered artwork). For a layer with no keyframes at
-    // all, synthesise a single frame to carry it.
-    const orphanShapes = shapeBuckets.unattributed.map((d) => d.shape);
-    const orphanInstances = buildSymbolInstances(
-      instBuckets.unattributed,
-      libraryByNumber
-    );
-    if (orphanShapes.length > 0 || orphanInstances.length > 0) {
-      if (frames.length === 0) {
-        frames.push({ index: 0, duration: 1, keyMode: 0, elements: [] });
+      const uniqueScripts = [...new Set(frameScripts.map((s) => s.source))];
+      
+      if (uniqueScripts.length <= 1) {
+        const f: Frame = {
+          index: kf.startIndex,
+          duration: kf.duration,
+          keyMode: kf.keyMode ?? 0,
+          elements: elems,
+        };
+        if (label) { f.label = label; f.labelType = 'name'; }
+        if (uniqueScripts.length > 0) f.actionScript = uniqueScripts[0];
+        if (kf.tweenType) f.tweenType = kf.tweenType;
+        if (kf.acceleration) f.acceleration = kf.acceleration;
+        if (kf.motionTweenRotate) f.motionTweenRotate = kf.motionTweenRotate;
+        if (kf.motionTweenRotateTimes !== undefined) f.motionTweenRotateTimes = kf.motionTweenRotateTimes;
+        if (kf.motionTweenScale !== undefined) f.motionTweenScale = kf.motionTweenScale;
+        if (kf.motionTweenOrientToPath !== undefined) f.motionTweenOrientToPath = kf.motionTweenOrientToPath;
+        return [f];
       }
-      frames[0].elements.push(
-        ...(orphanShapes as Frame['elements']),
-        ...(orphanInstances as Frame['elements'])
-      );
-    }
-    if (frames.length === 0) {
-      frames.push({ index: 0, duration: 1, keyMode: 0, elements: [] });
-    }
+      
+      attributedAny = true;
+      const totalDuration = kf.duration;
+      const perFrameDuration = Math.max(1, Math.floor(totalDuration / uniqueScripts.length));
+      return uniqueScripts.map((src, i) => ({
+        index: kf.startIndex + i * perFrameDuration,
+        duration: i === uniqueScripts.length - 1 ? totalDuration - i * perFrameDuration : perFrameDuration,
+        keyMode: i === 0 ? kf.keyMode ?? 0 : 0,
+        elements: [...elems],
+        ...(i === 0 && label ? { label, labelType: 'name' as const } : {}),
+        actionScript: src,
+        ...(i === 0 && kf.tweenType ? { tweenType: kf.tweenType } : {}),
+        ...(i === 0 && kf.acceleration ? { acceleration: kf.acceleration } : {}),
+        ...(i === 0 && kf.motionTweenRotate ? { motionTweenRotate: kf.motionTweenRotate } : {}),
+        ...(i === 0 && kf.motionTweenRotateTimes !== undefined ? { motionTweenRotateTimes: kf.motionTweenRotateTimes } : {}),
+        ...(i === 0 && kf.motionTweenScale !== undefined ? { motionTweenScale: kf.motionTweenScale } : {}),
+        ...(i === 0 && kf.motionTweenOrientToPath !== undefined ? { motionTweenOrientToPath: kf.motionTweenOrientToPath } : {}),
+      }));
+    });
 
     return {
       name: dl.name,
@@ -852,16 +844,38 @@ function buildAttributedLayers(
       locked: dl.locked,
       outline: false,
       layerType,
+      ...(dl.parentLayerIndex !== undefined
+        ? { parentLayerIndex: dl.parentLayerIndex, maskLayerIndex: dl.parentLayerIndex }
+        : {}),
       frames,
     };
   });
 
-  // Frame scripts that fell outside every keyframe range go on the timeline's
-  // first frame (never drop a recovered script). Keeping a script-bearing
-  // timeline is preferable to the single-frame fallback, which carries no scripts.
+  // Элементы-сироты добавляются СТРОГО 1 раз в Слой 0 (убирает дублирование)
+  const orphanShapes = shapeBuckets.unattributed.map((d) => d.shape);
+  const orphanInstances = buildSymbolInstances(instBuckets.unattributed, libraryByNumber);
+  const orphanLabels = labelBuckets ? labelBuckets.unattributed : [];
+  
+  if (orphanShapes.length > 0 || orphanInstances.length > 0 || orphanLabels.length > 0) {
+    if (layers.length > 0) {
+      let f0 = layers[0].frames.find(f => f.index === 0);
+      if (!f0) {
+        layers[0].frames.unshift({ index: 0, duration: 1, keyMode: 0, elements: [] });
+        f0 = layers[0].frames[0];
+      }
+      f0.elements.push(
+        ...(orphanShapes as Frame['elements']),
+        ...(orphanInstances as Frame['elements'])
+      );
+      if (orphanLabels.length > 0 && !f0.label) {
+        f0.label = orphanLabels[0].label;
+        f0.labelType = 'name';
+      }
+    }
+  }
+
   if (scripts.length > 0 && layers.length > 0 && layers[0].frames.length > 0) {
-    const allKeyframes = timeline.layers.flatMap((l) => l.keyframes);
-    const orphanScripts = attributeToFrames(allKeyframes, scripts).unattributed;
+    const orphanScripts = scriptBuckets.unattributed;
     if (orphanScripts.length > 0) {
       const f0 = layers[0].frames[0];
       const src = [...new Set(orphanScripts.map((s) => s.source))].join('\n\n');
@@ -870,12 +884,95 @@ function buildAttributedLayers(
     attributedAny = true;
   }
 
+  // Честный расчет totalFrames по всем созданным кадрам
+  let maxGeneratedFrame = timeline.totalFrames;
+  for (const layer of layers) {
+    for (const f of layer.frames) {
+      maxGeneratedFrame = Math.max(maxGeneratedFrame, f.index + f.duration);
+    }
+  }
+  // Убедимся, что totalFrames >= 1
+  if (maxGeneratedFrame < 1) maxGeneratedFrame = 1;
+
   if (!attributedAny) return null;
-  return { layers, referenceLayers, totalFrames: timeline.totalFrames };
+  applyMaskRelationships(layers);
+  return { layers, referenceLayers, totalFrames: maxGeneratedFrame };
+}
+
+function mergeExternalFrameLabels(
+  timeline: DecodedStreamTimeline | undefined,
+  frameLabels: DecodedFrameLabel[]
+): DecodedStreamTimeline | undefined {
+  if (!timeline || frameLabels.length === 0) return timeline;
+
+  const existing = new Set<string>();
+  for (const layer of timeline.layers) {
+    for (const keyframe of layer.keyframes) {
+      if (keyframe.label) existing.add(keyframe.label);
+    }
+  }
+
+  const missing = frameLabels.filter((label) => !existing.has(label.label));
+  if (missing.length === 0) return timeline;
+
+  const layers = timeline.layers.map((layer) => ({
+    ...layer,
+    keyframes: layer.keyframes.map((keyframe) => ({ ...keyframe })),
+  }));
+  const targetLayer =
+    layers.find((layer) => /label/i.test(layer.name)) ??
+    layers.find((layer) => layer.keyframes.length > 0);
+  if (!targetLayer) {
+    return {
+      ...timeline,
+      frameLabels: [...(timeline.frameLabels ?? []), ...missing],
+    };
+  }
+
+  let labelIndex = 0;
+  for (const keyframe of targetLayer.keyframes) {
+    if (labelIndex >= missing.length) break;
+    if (keyframe.label) continue;
+    keyframe.label = missing[labelIndex++].label;
+  }
+
+  while (labelIndex < missing.length) {
+    const prior = targetLayer.keyframes[targetLayer.keyframes.length - 1];
+    const startIndex = prior ? prior.startIndex + Math.max(1, prior.duration) : 0;
+    targetLayer.keyframes.push({
+      startIndex,
+      duration: 1,
+      keyMode: 0,
+      bodyStart: missing[labelIndex].bodyStart,
+      bodyEnd: missing[labelIndex].bodyStart,
+      label: missing[labelIndex].label,
+    });
+    labelIndex += 1;
+  }
+
+  const mergedLabels: DecodedFrameLabel[] = [];
+  for (const layer of layers) {
+    for (const keyframe of layer.keyframes) {
+      if (!keyframe.label) continue;
+      mergedLabels.push({
+        label: keyframe.label,
+        id: keyframe.startIndex,
+        bodyStart: keyframe.bodyStart,
+      });
+    }
+  }
+
+  return {
+    ...timeline,
+    layers,
+    frameLabels: mergedLabels,
+  };
 }
 
 // CPicLayer.type byte values used by the structural walk (FORMAT.md §4).
 const LAYER_TYPE_GUIDE_BYTE = 1;
+const LAYER_TYPE_MASK_BYTE = 3;
+const LAYER_TYPE_MASKED_BYTE = 4;
 const LAYER_TYPE_FOLDER_BYTE = 5;
 
 /**
@@ -902,6 +999,9 @@ export function parseBinaryFLA(bytes: Uint8Array): FLADocument {
   // resolves to the library item it references.
   const libraryByNumber = new Map<number, BinaryLibraryEntry>();
   for (const entry of info.library) libraryByNumber.set(entry.symbolNumber, entry);
+
+  const docLink = info.linkage.find(l => l.kind === 'document');
+  const documentClass = docLink ? docLink.className : undefined;
 
   // Some FLAs (Flash 8 / CS3+ with NAMED library items) write a library table
   // we do not yet parse, so `info.library` is empty even though the `Symbol N`
@@ -970,28 +1070,81 @@ export function parseBinaryFLA(bytes: Uint8Array): FLADocument {
     decodedInstances: DecodedInstance[],
     dedupedInstances: DecodedInstance[],
     scripts: DecodedFrameScript[],
-    named: NamedInstance[]
+    named: NamedInstance[],
+    frameLabels: DecodedFrameLabel[]
   ): Timeline => {
-    // Recovered instance names with no decoded geometry (FP8 placements
-    // scanForInstances can't decode — mostly text fields) become name-only
-    // "ghost" elements so every instance name still reaches the timeline.
+    // Build ghost elements from ALL named instances first — we filter out frame
+    // label names only when the attributed path succeeds (they're already on
+    // keyframes via kf.label). When the attributed path fails and we fall back,
+    // ghost elements are the ONLY source of frame labels, so filtering would
+    // silently drop them.
     const ghostEls = unjoinedNames(named, decodedInstances).map(ghostElement);
+    const effectiveStreamTimeline = mergeExternalFrameLabels(streamTimeline, frameLabels);
+
+    const doFilterFrameLabels = (ghosts: (SymbolInstance | TextInstance)[]): (SymbolInstance | TextInstance)[] => {
+      if (!effectiveStreamTimeline) return ghosts;
+      const frameLabelNames = new Set<string>();
+      for (const layer of effectiveStreamTimeline.layers) {
+        for (const kf of layer.keyframes) {
+          if (kf.label) frameLabelNames.add(kf.label);
+        }
+      }
+      if (frameLabelNames.size === 0) return ghosts;
+      return ghosts.filter((g) => {
+        const n = 'name' in g ? g.name : undefined;
+        return n === undefined || !frameLabelNames.has(n);
+      });
+    };
+
+    // Merge layer names from post-page sentinel records into timeline layers
+    // that have empty names (schema=0 — MX2004 doesn't write names inline).
+    // When the post-page data has more layers than the structural walk found,
+    // append the extras as empty keyframe-less layers (they carry name metadata
+    // only — content was already attributed to the structural layer).
+    if (effectiveStreamTimeline) {
+      const tlLen = effectiveStreamTimeline.layers.length;
+      for (let i = 0; i < tlLen && i < fallbackLayers.length; i++) {
+        const tlLayer = effectiveStreamTimeline.layers[i];
+        if (tlLayer.schema === 0 && tlLayer.name === '' && fallbackLayers[i].name) {
+          effectiveStreamTimeline.layers[i] = { ...tlLayer, name: fallbackLayers[i].name };
+        }
+      }
+      // Append any extra layers from post-page data as empty keyframe-less layers
+      if (fallbackLayers.length > tlLen) {
+        for (let i = tlLen; i < fallbackLayers.length; i++) {
+          effectiveStreamTimeline.layers.push({
+            name: fallbackLayers[i].name,
+            schema: fallbackLayers[i].schema,
+            typeByte: 0, // normal
+            locked: fallbackLayers[i].locked,
+            visible: fallbackLayers[i].visible,
+            keyframes: [],
+          });
+        }
+      }
+    }
+
     const tl = ((): Timeline => {
-      if (streamTimeline) {
+      if (effectiveStreamTimeline) {
         const attributed = buildAttributedLayers(
-          streamTimeline,
+          effectiveStreamTimeline,
           decodedShapes,
           decodedInstances,
           libraryByNumber,
           scripts
         );
         if (attributed) {
-          return {
-            name,
-            layers: attributed.layers,
-            totalFrames: attributed.totalFrames,
-            referenceLayers: attributed.referenceLayers,
-          };
+          // Frame labels are already on keyframes via kf.label, so remove
+          // duplicate ghost elements that would shadow them.
+          return hostGhosts(
+            {
+              name,
+              layers: attributed.layers,
+              totalFrames: attributed.totalFrames,
+              referenceLayers: attributed.referenceLayers,
+            },
+            doFilterFrameLabels(ghostEls)
+          );
         }
       }
       // Fallback: everything into one frame on a host layer (pre-issue-8 behaviour).
@@ -1005,12 +1158,51 @@ export function parseBinaryFLA(bytes: Uint8Array): FLADocument {
       if (scripts.length > 0 && layers[0]?.frames[0]) {
         layers[0].frames[0].actionScript = [...new Set(scripts.map((s) => s.source))].join('\n\n');
       }
-      return { name, layers, totalFrames: 1, referenceLayers };
+
+      let totalFrames = 1;
+      // Inject independently-extracted frame labels into the fallback path by creating
+      // a frame for each label. This ensures all labels are indexed for AS2 linting.
+      if (frameLabels.length > 0) {
+        const hostLayer = layers.find(l => l.frames.length > 0 && l.frames[0].elements.length > 0) || layers[0];
+        if (hostLayer && hostLayer.frames[0]) {
+          const firstFrame = hostLayer.frames[0];
+          const elements = firstFrame.elements;
+          const actionScript = firstFrame.actionScript;
+          
+          const newFrames: Frame[] = [];
+          for (let i = 0; i < frameLabels.length; i++) {
+            newFrames.push({
+              index: i,
+              duration: 1,
+              keyMode: 0,
+              elements: [...elements], // Share elements across all frames so they are always visible
+              label: frameLabels[i].label,
+              labelType: 'name',
+              ...(i === 0 && actionScript ? { actionScript } : {})
+            });
+          }
+          hostLayer.frames = newFrames;
+          totalFrames = frameLabels.length;
+        }
+      } else if (layers[0]?.frames[0]) {
+        // Fallback if no frame labels are found but we have a frame
+        totalFrames = 1;
+      }
+
+      // Don't filter frame labels from ghosts in the fallback path — ghost
+      // elements (and the label we just set) are the surviving sources of frame
+      // labels here. Ghosts still needed for multi-frame label coverage.
+      return hostGhosts({ name, layers, totalFrames, referenceLayers }, ghostEls);
     })();
-    return hostGhosts(tl, ghostEls);
+    return tl;
   };
 
   const symbols = new Map<string, Symbol>();
+  // Linkage records already bound by the u32 symbol-number join — excluded from the
+  // name fallback below so a record never binds two symbols.
+  const numberJoinedIds = new Set(
+    [...info.linkageBySymbol.values()].map((l) => l.identifier)
+  );
   for (const entry of libraryByNumber.values()) {
     const symbolType =
       entry.symbolType === 'unknown' ? 'graphic' : entry.symbolType;
@@ -1023,7 +1215,8 @@ export function parseBinaryFLA(bytes: Uint8Array): FLADocument {
       info.symbolInstances.get(num) ?? [],
       dedupeInstances(info.symbolInstances.get(num) ?? []),
       info.symbolScripts.get(num) ?? [],
-      info.symbolNamed.get(num) ?? []
+      info.symbolNamed.get(num) ?? [],
+      info.symbolFrameLabels.get(num) ?? []
     );
     const symbol: Symbol = {
       name: entry.name,
@@ -1034,13 +1227,56 @@ export function parseBinaryFLA(bytes: Uint8Array): FLADocument {
     // Apply the resolved AS linkage to this symbol — per-symbol class +
     // identifier, exactly like the XFL path (Symbol.linkageClassName). The join
     // is u32-by-symbol-number, so it sets the class on the right library item.
-    const link = info.linkageBySymbol.get(num);
+    // u32-by-symbol-number join (the normal library-item case).
+    let link = info.linkageBySymbol.get(num);
+    // Name fallback — a container/document symbol (e.g. "InventoryLists") whose linkage
+    // record's u32 lands in a stream-number gap (no S/Symbol stream): its library NAME
+    // equals the class, so match it by name. Only records NOT already number-joined, and
+    // an exact name match, so a record never mis-binds to the wrong symbol.
+    if (!link) {
+      link = info.linkage.find(
+        (l) =>
+          !numberJoinedIds.has(l.identifier) &&
+          (l.className === entry.name || l.identifier === entry.name)
+      );
+    }
     if (link) {
       symbol.linkageIdentifier = link.identifier;
-      symbol.linkageExportForAS = true;
+      if (link.kind === 'import') {
+        symbol.linkageImportForRS = true;
+        symbol.linkageURL = link.linkageURL;
+      } else {
+        if (link.className) {
+          symbol.linkageExportForAS = true;
+        }
+        symbol.linkageExportForRS = true;
+      }
       if (link.className) symbol.linkageClassName = link.className;
     }
     symbols.set(entry.name, symbol);
+  }
+
+  // Repair split symbols: the u32 number-join can land a linkage on an EMPTY "Symbol N" library
+  // stub while that symbol's real content lives under a separate library item named by its class
+  // (observed in inventorylists.fla: linkage CategoryList → empty "Symbol 22", content in
+  // "CategoryList"). Move the linkage to the content-bearing symbol whose name == the class, so a
+  // consumer can both type it AND descend into it. Only when the bound symbol is content-less and
+  // the target has content and no linkage of its own, so a real binding is never disturbed.
+  const hasContent = (s: Symbol): boolean =>
+    s.timeline.layers.some((l) => l.frames.some((f) => f.elements.length > 0));
+  for (const sym of symbols.values()) {
+    if (!sym.linkageClassName || hasContent(sym)) continue;
+    const target = symbols.get(sym.linkageClassName);
+    if (target && target !== sym && !target.linkageClassName && hasContent(target)) {
+      target.linkageClassName = sym.linkageClassName;
+      target.linkageIdentifier = sym.linkageIdentifier;
+      target.linkageExportForAS = sym.linkageExportForAS;
+      target.linkageExportForRS = sym.linkageExportForRS;
+      sym.linkageClassName = undefined;
+      sym.linkageIdentifier = undefined;
+      sym.linkageExportForAS = undefined;
+      sym.linkageExportForRS = undefined;
+    }
   }
 
   // One timeline per scene (`Page N`). If no scene streams were found, fall
@@ -1056,7 +1292,8 @@ export function parseBinaryFLA(bytes: Uint8Array): FLADocument {
             info.sceneInstances.get(s.scene) ?? [],
             dedupeInstances(info.sceneInstances.get(s.scene) ?? []),
             info.sceneScripts.get(s.scene) ?? [],
-            info.sceneNamed.get(s.scene) ?? []
+            info.sceneNamed.get(s.scene) ?? [],
+            info.sceneFrameLabels.get(s.scene) ?? []
           )
         )
       : [
@@ -1082,5 +1319,7 @@ export function parseBinaryFLA(bytes: Uint8Array): FLADocument {
     // owns the SWF join can assign per-symbol classes (the join is not in the
     // .fla bytes). Omitted when empty so XFL/older binaries are unaffected.
     ...(info.linkage.length > 0 && { linkage: info.linkage }),
+    ...(info.flashVersion !== undefined && { flashVersion: info.flashVersion }),
+    ...(documentClass && { documentClass }),
   };
 }

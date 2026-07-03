@@ -74,7 +74,16 @@
  */
 
 import { ByteReader, EndOfStreamError } from './binary-shape-decoder';
-import type { Matrix } from './types';
+import {
+  buildCombinedClassTable as buildArchiveCombinedClassTable,
+  scanCArchiveObjectStarts,
+} from './binary-carchive';
+import {
+  decodeRawUtf16UntilNull,
+  readFlashStringAt,
+} from './binary-flash-string';
+import { parseSwfFilterStack } from './binary-swf-filters';
+import type { BlendMode, ColorTransform, ComponentParameter, Filter, Matrix } from './types';
 
 /** 16.16 fixed-point divisor (1.0 == 0x00010000). */
 const FIXED_16_16 = 65536;
@@ -105,9 +114,30 @@ export function instanceSymbolType(
   }
 }
 
+export interface DecodedTextData {
+  /** Text content characters (e.g. "SELECTED  TEXT"). */
+  characters: string;
+  /** Font face name (e.g. "$EverywhereMediumFont*", "_sans"). */
+  fontFace?: string;
+  /** Font size in points. */
+  fontSize?: number;
+  /** Fill color as hex string (e.g. "#FFFFFF"). */
+  fillColor?: string;
+  /** True when the text run uses the bold face flag from CPicText format data. */
+  bold?: boolean;
+  /** Text alignment. */
+  alignment?: 'left' | 'center' | 'right' | 'justify';
+  /** Letter spacing in twips. */
+  letterSpacing?: number;
+  /** Width in twips. */
+  width?: number;
+  /** Height in twips. */
+  height?: number;
+}
+
 /** One decoded placement: a library reference + transform, from one stream. */
 export interface DecodedInstance {
-  /** Source class (CPicSprite / CPicShapeObj / CPicButton). */
+  /** Source class (CPicSprite / CPicShapeObj / CPicButton / CPicText). */
   className: InstanceClassName | string;
   /** Library item id (the N in "Symbol N"); maps to a library entry. */
   mediaRef: number;
@@ -121,6 +151,8 @@ export interface DecodedInstance {
   bodyStart: number;
   /** Byte offset just past the body. */
   endPos: number;
+  /** Text-specific data for CPicText placements. */
+  textData?: DecodedTextData;
   /**
    * The u32 at `bodyStart + 72` — the REAL library symbol number for an FP8
    * (float32-matrix) placement, which {@link tryParseInstanceAt}'s 16.16 reader
@@ -147,6 +179,20 @@ export interface DecodedInstance {
    * class. See {@link markUnreliableRefs}.
    */
   unreliableRef?: boolean;
+  /**
+   * Color transform (CXForm) decoded from the CPicSprite/CPicButton tail
+   * after mediaRef. Undefined when absent or not parseable. PLAN.md §3.1.
+   */
+  colorTransform?: ColorTransform;
+  /** Blur/Glow/DropShadow filters decoded from the placement tail. */
+  filters?: Filter[];
+  /**
+   * Component Inspector parameters. The binary layout is version-specific; this
+   * is only populated when a future structured decoder can prove a safe read.
+   */
+  componentParameters?: ComponentParameter[];
+  componentDataBindingXML?: string;
+  blendMode?: BlendMode;
 }
 
 /** Read a 6-u32 affine matrix (a,b,c,d 16.16 FP; tx,ty twips → px). */
@@ -173,6 +219,110 @@ const MAX_TX_TWIPS = 20 * 200_000; // ±200k px
 const MAX_MEDIA_REF = 5000;
 const MAX_NAME_LEN = 0x40;
 
+function readU16At(data: Uint8Array, pos: number): number {
+  return data[pos] | (data[pos + 1] << 8);
+}
+
+function readU32At(data: Uint8Array, pos: number): number {
+  return (
+    data[pos] |
+    (data[pos + 1] << 8) |
+    (data[pos + 2] << 16) |
+    (data[pos + 3] * 0x1000000)
+  ) >>> 0;
+}
+
+function hasBytes(data: Uint8Array, pos: number, bytes: readonly number[]): boolean {
+  if (pos < 0 || pos + bytes.length > data.length) return false;
+  for (let i = 0; i < bytes.length; i++) {
+    if (data[pos + i] !== bytes[i]) return false;
+  }
+  return true;
+}
+
+function tryConsumeSchema22TransformTail(
+  data: Uint8Array,
+  pos: number
+): { end: number; targetRef: number } | null {
+  // Observed native schema>=22 placement tail in CS4/FP10 streams:
+  // fixed fields, empty marker FF FF FE FF 00, u32 target symbol id,
+  // followed by four identity float anchors and padding. This is not a SWF
+  // filter/CXForm stack, so the placement must consume it even when no
+  // viewer-facing field is emitted.
+  const len = 128;
+  if (pos + len > data.length) return null;
+  // First fixed words vary (`01 00 00 00`, `01 00 00 03`, `03 00 00 00`),
+  // but the u16 immediately before the marker is consistently zero.
+  if (readU16At(data, pos + 8) !== 0) return null;
+  if (!hasBytes(data, pos + 10, [0xff, 0xff, 0xfe, 0xff, 0x00])) return null;
+
+  const targetRef = readU32At(data, pos + 15);
+  if (targetRef < 1 || targetRef > MAX_MEDIA_REF) return null;
+
+  for (const rel of [26, 46, 66, 86]) {
+    if (!hasBytes(data, pos + rel, [0x00, 0x00, 0x80, 0x3f])) return null;
+  }
+
+  return { end: pos + len, targetRef };
+}
+
+function findSchema22TransformTail(
+  data: Uint8Array,
+  start: number,
+  maxForward = 32
+): { start: number; end: number; targetRef: number } | null {
+  const limit = Math.min(data.length, start + maxForward);
+  for (let pos = Math.max(0, start); pos <= limit; pos++) {
+    const tail = tryConsumeSchema22TransformTail(data, pos);
+    if (tail) return { start: pos, ...tail };
+  }
+  return null;
+}
+
+function tryParseComponentDataBindingTail(
+  data: Uint8Array,
+  start: number,
+  maxScan = 4096
+): { xml: string; instanceName?: string; end: number } | null {
+  const limit = Math.min(data.length - 4, start + maxScan);
+  let instanceName: string | undefined;
+
+  for (let p = start; p < limit; p++) {
+    if (
+      p + 10 <= data.length &&
+      data[p] === 0x00 &&
+      data[p + 1] === 0x00 &&
+      data[p + 2] === 0x00 &&
+      data[p + 3] === 0x00 &&
+      data[p + 4] === 0x00 &&
+      data[p + 5] === 0x80 &&
+      data[p + 6] === 0x00 &&
+      data[p + 7] === 0x00 &&
+      data[p + 8] === 0x00 &&
+      data[p + 9] === 0x80
+    ) {
+      return null;
+    }
+
+    const decoded = readFlashStringAt(data, p, { allowEmpty: true, maxChars: 4096 });
+    if (!decoded) continue;
+
+    if (/^[A-Za-z_][A-Za-z0-9_]*$/.test(decoded.value)) {
+      instanceName = decoded.value;
+    }
+
+    if (
+      decoded.value.startsWith('<component ') &&
+      decoded.value.includes('</component>')
+    ) {
+      return { xml: decoded.value, instanceName, end: decoded.end };
+    }
+
+    p = decoded.end - 1;
+  }
+
+  return null;
+}
 /**
  * Try to parse a `CPicSymbol`-derived placement body starting at `bodyStart`
  * (the byte just past the placement's class tag). Returns the decoded instance
@@ -208,6 +358,7 @@ export function tryParseInstanceAt(
     r.s32();
     if (schema >= 3) r.u8();
     if (schema >= 4) r.u8();
+    if (schema >= 6) r.u8();
 
     const symbolSchema = r.u8();
     if (symbolSchema < 1 || symbolSchema > 40) return null;
@@ -233,27 +384,99 @@ export function tryParseInstanceAt(
     r.u16();
     r.u16(); // 4×u16 field_90 struct
 
-    const nameLen = r.u8();
-    if (nameLen > MAX_NAME_LEN) return null;
-    const nameBytes = r.bytes(nameLen);
+    const nameStart = r.pos;
     let instanceName = '';
-    for (const ch of nameBytes) {
-      // Control bytes (other than common whitespace) mean we mis-parsed.
-      if (ch < 9) return null;
-      instanceName += String.fromCharCode(ch);
+    let mediaRef: number | undefined;
+    let altMediaRef = 0;
+    let schema22Tail: { start: number; end: number; targetRef: number } | null = null;
+
+    const nameLen = r.u8();
+    if (nameLen <= MAX_NAME_LEN) {
+      const nameBytes = r.bytes(nameLen);
+      let validName = true;
+      for (const ch of nameBytes) {
+        // Control bytes (other than common whitespace) mean we mis-parsed.
+        if (ch < 9) {
+          validName = false;
+          break;
+        }
+        instanceName += String.fromCharCode(ch);
+      }
+      if (validName && r.remaining() >= 4) {
+        const parsedMediaRef = r.u32();
+        if (parsedMediaRef >= 1 && parsedMediaRef <= MAX_MEDIA_REF) {
+          mediaRef = parsedMediaRef;
+        }
+      }
     }
 
-    const mediaRef = r.u32();
-    if (mediaRef < 1 || mediaRef > MAX_MEDIA_REF) return null;
+    if (mediaRef === undefined && symbolSchema >= 22) {
+      schema22Tail = findSchema22TransformTail(data, nameStart - 8);
+      if (!schema22Tail) return null;
+      mediaRef = schema22Tail.targetRef;
+      altMediaRef = schema22Tail.targetRef;
+      instanceName = '';
+      r.pos = schema22Tail.end;
+    }
+
+    if (mediaRef === undefined) return null;
 
     // The real symbol number for an FP8 placement sits at a fixed offset from the
     // body start (the 16.16 reader above mis-reads `mediaRef`). Read it raw; the
     // parser validates it against the actual symbol-stream numbers.
     const a = bodyStart + 72;
-    const altMediaRef =
+    altMediaRef = altMediaRef || (
       a + 4 <= data.length
         ? data[a] | (data[a + 1] << 8) | (data[a + 2] << 16) | data[a + 3] * 0x1000000
-        : 0;
+        : 0
+    );
+
+    // Read color transform from CPicSprite/CPicButton tail after mediaRef.
+    // PLAN.md §3.1: u8 hasColorTransform + conditional 14-byte CXForm struct.
+    let colorTransform: ColorTransform | undefined;
+    let filters: Filter[] | undefined;
+    let componentDataBindingXML: string | undefined;
+    const componentTail =
+      symbolSchema >= 22
+        ? tryParseComponentDataBindingTail(data, r.pos)
+        : null;
+    if (componentTail) {
+      componentDataBindingXML = componentTail.xml;
+      if (!instanceName && componentTail.instanceName) {
+        instanceName = componentTail.instanceName;
+      }
+      r.pos = componentTail.end;
+    }
+
+    if (!componentTail && symbolSchema >= 22) {
+      schema22Tail = schema22Tail ?? findSchema22TransformTail(data, r.pos);
+      if (schema22Tail) {
+        altMediaRef = schema22Tail.targetRef;
+        r.pos = schema22Tail.end;
+      }
+    }
+
+    if (!componentTail && !schema22Tail && (className === 'CPicSprite' || className === 'CPicButton') && r.remaining() >= 1) {
+      const hasCT = r.u8();
+      if (hasCT && r.remaining() >= 13) {
+        const alphaMult16 = r.u16();          // 8.8 fixed point
+        colorTransform = {
+          alphaMultiplier: alphaMult16 / 256,
+          redMultiplier: r.u8() / 255,
+          redOffset: r.s16(),
+          greenMultiplier: r.u8() / 255,
+          greenOffset: r.s16(),
+          blueMultiplier: r.u8() / 255,
+          blueOffset: r.s16(),
+          alphaOffset: r.s16(),
+        };
+      }
+      const parsedFilters = parseSwfFilterStack(data, r.pos);
+      if (parsedFilters) {
+        filters = parsedFilters.filters;
+        r.pos = parsedFilters.end;
+      }
+    }
 
     return {
       className,
@@ -264,6 +487,154 @@ export function tryParseInstanceAt(
       bodyStart,
       endPos: r.pos,
       altMediaRef,
+      colorTransform,
+      filters,
+      componentDataBindingXML,
+    };
+  } catch (err) {
+    if (err instanceof EndOfStreamError || err instanceof Error) return null;
+    throw err;
+  }
+}
+
+/**
+ * Try to parse a CPicText placement body starting at `bodyStart`.
+ * Returns the decoded instance with text data or null if the bytes do not
+ * validate. Uses a fresh reader so a failed attempt never disturbs the caller.
+ *
+ * Two-phase scan:
+ *   Phase 1 — scan all Flash strings (len>0) for font faces and instance name.
+ *   Phase 2 — scan for sentinels (len=0) AFTER the last font face to extract
+ *   characters. This avoids the unbounded decodeRawUTF16 from a pre-font-face
+ *   sentinel consuming through font name strings.
+ */
+export function tryParseTextInstanceAt(
+  data: Uint8Array,
+  bodyStart: number,
+  recoveredVia: 'class_decl' | 'backref'
+): DecodedInstance | null {
+  try {
+    const r = new ByteReader(data);
+    r.pos = bodyStart;
+    const maxScan = Math.min(data.length - bodyStart, 2000);
+
+    // ── CPicObj base (same as CPicSprite/CPicButton) ──
+    const schema = r.u8();
+    const flags = r.u8();
+    if (schema < 1 || schema > 30 || flags > 0x40) return null;
+
+    const childTag = r.u16();
+    if (childTag !== 0x0000) return null;
+
+    r.s32(); // regPoint.x (INT_MIN sentinel)
+    r.s32(); // regPoint.y (INT_MIN sentinel)
+    if (schema >= 3) r.u8(); // extra1
+    if (schema >= 4) r.u8(); // extra2
+    if (schema >= 6) r.u8(); // extra3
+
+    const baseEnd = r.pos;
+
+    // ── Read structured formatting fields from fixed offsets ──
+    // Verified for schema=5: width/fontSize/height at body+43/+44/+51/+52.
+    const fmtAvailable = bodyStart + 60 <= data.length;
+    let fontSize: number | undefined;
+    let width: number | undefined;
+    let height: number | undefined;
+    if (fmtAvailable) {
+      const rawSize = data[bodyStart + 44];
+      if (rawSize > 0 && rawSize < 300) fontSize = rawSize;
+      const rawW = (data[bodyStart + 44] << 8) | data[bodyStart + 43];
+      if (rawW > 0 && rawW < 100000) width = rawW / TWIPS_PER_PX;
+      const rawH = (data[bodyStart + 52] << 8) | data[bodyStart + 51];
+      if (rawH > 0 && rawH < 100000) height = rawH / TWIPS_PER_PX;
+    }
+
+    // ── Phase 1: Scan Flash strings (non-zero len) for font faces and instance name ──
+    let fontFace: string | undefined;
+    let instanceName = '';
+    let lastFontFaceEnd = baseEnd;
+    let instanceNameEnd = baseEnd;
+
+    for (let p = baseEnd; p + 4 < bodyStart + maxScan; p++) {
+      if (data[p] !== 0xff || data[p + 1] !== 0xfe || data[p + 2] !== 0xff) continue;
+      if (data[p + 3] === 0) continue; // skip sentinels in Phase 1
+
+      const decoded = readFlashStringAt(data, p, { maxChars: 100 });
+      if (!decoded) continue;
+
+      // Font faces start with $ or look like font names (e.g., "_sans")
+      if (decoded.value.startsWith('$') || decoded.value === '_sans' || decoded.value === '_serif' || decoded.value === '_typewriter' || decoded.value.endsWith('Font*') || decoded.value.endsWith('MT')) {
+        if (!fontFace) fontFace = decoded.value;
+        lastFontFaceEnd = decoded.end;
+        continue;
+      }
+      // Instance name: looks like a valid AS identifier
+      if (!instanceName && /^[A-Za-z_][A-Za-z0-9_]*$/.test(decoded.value) && !decoded.value.startsWith('$') && !decoded.value.endsWith('MT') && decoded.value.length > 1) {
+        instanceName = decoded.value;
+        instanceNameEnd = decoded.end;
+        continue;
+      }
+    }
+
+    // ── Phase 2: Scan for text sentinel (len=0) AFTER last font face ──
+    let characters = '';
+    let textEnd = baseEnd;
+
+    for (let p = Math.max(baseEnd, lastFontFaceEnd); p + 4 < bodyStart + maxScan; p++) {
+      if (data[p] !== 0xff || data[p + 1] !== 0xfe || data[p + 2] !== 0xff) continue;
+      if (data[p + 3] !== 0) continue; // only sentinels
+
+      const rawText = decodeRawUtf16UntilNull(data, p + 4);
+      if (rawText && rawText.value.length > 0) {
+        // Only accept if the text starts with printable content (rejects
+        // formatting bytes that happen to not contain 00 00 in between).
+        const first = rawText.value.charCodeAt(0);
+        if (first >= 0x20 && first <= 0x7e || first > 0xa0) {
+          characters = rawText.value;
+          textEnd = rawText.end;
+        }
+      }
+    }
+
+    // ── Fill color extraction ──
+    // After the last font face Flash string, there is 4-byte zero padding
+    // followed by 4 bytes ABGR color (memory: B G R A, u32 LE = 0xAABBGGRR).
+    // Verified against XFL values (#FFFFFF, #999999, #9A9A9A).
+    let fillColor = '#000000';
+    if (lastFontFaceEnd > baseEnd) {
+      for (let p = lastFontFaceEnd; p + 8 <= bodyStart + maxScan; p++) {
+        if (data[p] === 0 && data[p + 1] === 0 && data[p + 2] === 0 && data[p + 3] === 0) {
+          const r = data[p + 6];
+          const g = data[p + 5];
+          const b = data[p + 4];
+          const a = data[p + 7];
+          if (a === 0xff && (r | g | b) !== 0) {
+            fillColor = '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('').toUpperCase();
+          }
+          break;
+        }
+      }
+    }
+
+    const matrix: Matrix = { a: 1, b: 0, c: 0, d: 1, tx: 0, ty: 0 };
+
+    return {
+      className: 'CPicText',
+      mediaRef: 0,
+      instanceName,
+      matrix,
+      recoveredVia,
+      bodyStart,
+      endPos: Math.max(textEnd, instanceNameEnd),
+      altMediaRef: 0,
+      textData: {
+        characters,
+        fontFace,
+        fontSize,
+        fillColor,
+        width,
+        height,
+      },
     };
   } catch (err) {
     if (err instanceof EndOfStreamError || err instanceof Error) return null;
@@ -279,139 +650,48 @@ export function tryParseInstanceAt(
  * not a structured walk, so it never desyncs on CPicFrame's tail.
  */
 export function buildCombinedClassTable(data: Uint8Array): string[] {
-  const combined: string[] = [];
-  let i = 0;
-  while (i < data.length - 6) {
-    if (data[i] === 0xff && data[i + 1] === 0xff) {
-      const nameLen = data[i + 4] | (data[i + 5] << 8);
-      if (nameLen > 0 && nameLen < 40 && i + 6 + nameLen <= data.length) {
-        let printable = true;
-        for (let j = 0; j < nameLen; j++) {
-          const c = data[i + 6 + j];
-          // ASCII letters / digits / underscore — every CPic*/MFI* class name.
-          const ok =
-            (c >= 0x41 && c <= 0x5a) ||
-            (c >= 0x61 && c <= 0x7a) ||
-            (c >= 0x30 && c <= 0x39) ||
-            c === 0x5f;
-          if (!ok) {
-            printable = false;
-            break;
-          }
-        }
-        if (printable) {
-          let name = '';
-          for (let j = 0; j < nameLen; j++) {
-            name += String.fromCharCode(data[i + 6 + j]);
-          }
-          combined.push(name); // odd slot: the CRuntimeClass
-          combined.push(name); // even slot: the created CObject
-          i += 6 + nameLen;
-          continue;
-        }
-      }
-    }
-    i += 1;
-  }
-  return combined;
+  return buildArchiveCombinedClassTable(data);
 }
 
-function matchAt(hay: Uint8Array, needle: Uint8Array, at: number): boolean {
-  if (at < 0 || at + needle.length > hay.length) return false;
-  for (let j = 0; j < needle.length; j++) {
-    if (hay[at + j] !== needle[j]) return false;
-  }
-  return true;
+const PLACEMENT_CLASSES = new Set(["CPicSprite", "CPicShapeObj", "CPicButton", "CPicText"]);
+const KNOWN_CLASSES = new Set([
+  "CPicPage", "CPicLayer", "CPicFrame", "CPicSprite", "CPicShape", 
+  "CPicShapeObj", "CPicButton", "CPicText", "CPicBitmap", "CPicObj", 
+  "CPicSymbol", "CStrokeStyle", "CFillStyle"
+]);
+
+/** Known classes that are NOT placement classes — serve as range boundaries. */
+const BOUNDARY_CLASSES = new Set([...KNOWN_CLASSES].filter(c => !PLACEMENT_CLASSES.has(c)));
+
+/** 100% native simulation of MFC CArchive load array. */
+function simulateCArchivePlacements(data: Uint8Array): Array<{ pos: number; cls: string; recoveredVia: 'class_decl' | 'backref' }> {
+  return scanCArchiveObjectStarts(data, KNOWN_CLASSES).map((s) => ({
+    pos: s.bodyStart,
+    cls: s.className,
+    recoveredVia: s.recoveredVia,
+  }));
 }
 
-function indexOf(hay: Uint8Array, needle: Uint8Array, from: number): number {
-  for (let i = Math.max(0, from); i <= hay.length - needle.length; i++) {
-    if (matchAt(hay, needle, i)) return i;
-  }
-  return -1;
-}
-
-/** `<len u16> "CPicXxx"` — the tail of a NEWCLASS declaration for `cls`. */
-function classDeclTail(cls: string): Uint8Array {
-  const out = new Uint8Array(2 + cls.length);
-  out[0] = cls.length;
-  out[1] = 0;
-  for (let i = 0; i < cls.length; i++) out[2 + i] = cls.charCodeAt(i);
-  return out;
-}
-
-/**
- * Recover every symbol-instance placement in one `Page N` / `Symbol N` stream.
- *
- * Two complementary strategies (see module docstring):
- *   1. class-declaration recovery for the first instance of each instance class;
- *   2. back-reference recovery for the rest, gated on the back-ref index
- *      resolving to an instance class via {@link buildCombinedClassTable}.
- *
- * Taken-region tracking prevents the same bytes being recovered twice, and the
- * results are returned in stream order.
- */
 export function scanForInstances(data: Uint8Array): DecodedInstance[] {
-  const combined = buildCombinedClassTable(data);
-  // 1-based combined indices that resolve to an instance class.
-  const instanceIndices = new Set<number>();
-  for (let k = 0; k < combined.length; k++) {
-    if ((INSTANCE_CLASS_NAMES as readonly string[]).includes(combined[k])) {
-      instanceIndices.add(k + 1);
-    }
-  }
-
+  const starts = simulateCArchivePlacements(data);
   const found: DecodedInstance[] = [];
-  const taken: Array<[number, number]> = [];
-  const covered = (p: number) => taken.some(([s, e]) => s <= p && p < e);
-
-  // 1) class-declaration recovery: the first placement of each instance class
-  //    follows a guaranteed `FFFF <schema> <len> "CPicXxx"` declaration.
-  for (const cls of INSTANCE_CLASS_NAMES) {
-    const tail = classDeclTail(cls);
-    let from = 0;
-    for (;;) {
-      const m = indexOf(data, tail, from);
-      if (m < 0) break;
-      from = m + 1;
-      // Require the 4 bytes before to be a NEWCLASS tag (FF FF <u16 schema>).
-      if (m < 4 || data[m - 4] !== 0xff || data[m - 3] !== 0xff) continue;
-      const bodyStart = m + tail.length;
-      if (covered(bodyStart)) continue;
-      const inst = tryParseInstanceAt(data, bodyStart, cls, 'class_decl');
-      if (!inst) continue;
-      found.push(inst);
-      taken.push([inst.bodyStart, inst.endPos]);
-    }
-  }
-
-  // 2) back-reference recovery: a placement instantiated from an
-  //    already-declared instance class is preceded by a back-ref tag 0x80NN
-  //    whose index resolves to that instance class.
-  let i = 2;
-  while (i < data.length - 2) {
-    if (covered(i)) {
-      i += 1;
+  for (let s = 0; s < starts.length; s++) {
+    const { pos, cls, recoveredVia } = starts[s];
+    if (BOUNDARY_CLASSES.has(cls)) continue;
+    
+    if (cls === 'CPicText') {
+      const inst = tryParseTextInstanceAt(data, pos, recoveredVia);
+      if (inst) {
+        found.push(inst);
+      }
       continue;
     }
-    const tag = data[i - 2] | (data[i - 1] << 8);
-    if (tag & 0x8000) {
-      const idx = tag & 0x7fff;
-      if (instanceIndices.has(idx)) {
-        const className = combined[idx - 1] ?? 'CPicSprite';
-        const inst = tryParseInstanceAt(data, i, className, 'backref');
-        if (inst) {
-          found.push(inst);
-          taken.push([inst.bodyStart, inst.endPos]);
-          i = inst.endPos;
-          continue;
-        }
-      }
+    
+    const inst = tryParseInstanceAt(data, pos, cls, recoveredVia);
+    if (inst) {
+      found.push(inst);
     }
-    i += 1;
   }
-
-  found.sort((a, b) => a.bodyStart - b.bodyStart);
   return found;
 }
 
@@ -531,13 +811,20 @@ export function unjoinedNames(
  */
 export function correctFp8Refs(
   insts: DecodedInstance[],
-  symbolNumbers: Set<number>
+  symbolNumbers: Set<number>,
+  aliasToContent?: Map<number, number>
 ): DecodedInstance[] {
-  return insts.map((i) =>
-    i.instanceName === '' && i.altMediaRef !== i.mediaRef && symbolNumbers.has(i.altMediaRef)
-      ? { ...i, mediaRef: i.altMediaRef, refCorrected: true }
-      : i
-  );
+  return insts.map((i) => {
+    if (i.instanceName !== '') return i;
+    // The placement-id `altMediaRef` resolves to a content stream either directly
+    // (it IS a stream) or, in dual-numbered files, via the alias map (its u32
+    // placement-id may have no stream of its own — inventorylists itemList 46→36).
+    const target = aliasToContent?.get(i.altMediaRef) ??
+      (symbolNumbers.has(i.altMediaRef) ? i.altMediaRef : undefined);
+    return target !== undefined && target !== i.mediaRef
+      ? { ...i, mediaRef: target, refCorrected: true }
+      : i;
+  });
 }
 
 export function markUnreliableRefs(insts: DecodedInstance[]): DecodedInstance[] {
@@ -569,9 +856,6 @@ export interface NamedInstance {
   bodyStart: number;
 }
 
-/** Placement classes whose records carry an instance name (incl. CPicText). */
-const NAMED_PLACEMENT_CLASSES = ['CPicSprite', 'CPicButton', 'CPicShapeObj', 'CPicText'] as const;
-
 function placementKind(cls: string): Pick<NamedInstance, 'type' | 'symbolType'> {
   switch (cls) {
     case 'CPicText':
@@ -589,25 +873,8 @@ function placementKind(cls: string): Pick<NamedInstance, 'type' | 'symbolType'> 
 const NAMED_INSTANCE_RE = /^[A-Za-z_][A-Za-z0-9_]*$/;
 /** Flash device-font aliases — these are font names, never instance names. */
 const DEVICE_FONTS = new Set(['_sans', '_serif', '_typewriter']);
-/**
- * Tokens that aren't instance names but can be picked up by the heuristic name
- * scan: button/clip frame-label state words (which live on CPicFrame records, not
- * placements), boolean literal component-param values, and similar labels.
- */
-const NON_INSTANCE = new Set([
-  // button/clip states
-  'Up', 'Over', 'Down', 'Hit', '_up', '_over', '_down', '_hit',
-  'Normal', 'Selected', 'Hover', 'Disabled', 'Off', 'On', 'Blink',
-  'up', 'over', 'down', 'hover', 'select', 'normal', 'selected', 'disabled', 'off', 'on',
-  // equip-state labels
-  'Equipped', 'Unequipped', 'LeftEquip', 'RightEquip', 'LeftAndRightEquip',
-  // meter labels
-  'Full', 'Empty',
-  // platform-art labels (siblings of PS3Art/XBoxArt)
-  'PCArt', 'XBoxArt', 'PS3Art', 'PS3_A', 'PS3_B', 'PS3_R3', 'PS3_L3',
-  // "none" labels and boolean-literal component-param values
-  'None', 'NONE', 'none', 'true', 'false',
-]);
+
+
 /** Embedded-font face names (e.g. TimesNewRomanPSMT, ArialMT) — never instances. */
 const FONT_NAME_RE = /MT$/;
 
@@ -615,7 +882,7 @@ const FONT_NAME_RE = /MT$/;
 function isInstanceName(s: string, classRefs: Set<string>): boolean {
   if (!NAMED_INSTANCE_RE.test(s)) return false;
   if (s.startsWith('$') || DEVICE_FONTS.has(s) || FONT_NAME_RE.test(s)) return false; // fonts
-  if (classRefs.has(s) || NON_INSTANCE.has(s)) return false; // class refs / labels
+  if (classRefs.has(s)) return false;
   return true;
 }
 
@@ -626,19 +893,16 @@ function isInstanceName(s: string, classRefs: Set<string>): boolean {
  */
 function placementName(data: Uint8Array, start: number, end: number, classRefs: Set<string>): string {
   for (let p = start; p + 4 <= end; p++) {
-    if (data[p] !== 0xff || data[p + 1] !== 0xfe || data[p + 2] !== 0xff) continue;
-    const len = data[p + 3];
-    if (len === 0 || len > 40 || p + 4 + len * 2 > end) continue;
-    let s = '';
+    const decoded = readFlashStringAt(data, p, { maxChars: 40 });
+    if (!decoded || decoded.end > end) continue;
+    p = decoded.end - 1;
     let ok = true;
-    for (let i = 0; i < len; i++) {
-      const c = data[p + 4 + i * 2] | (data[p + 4 + i * 2 + 1] << 8);
+    for (let i = 0; i < decoded.value.length; i++) {
+      const c = decoded.value.charCodeAt(i);
       if (c < 0x20 || c > 0x7e) { ok = false; break; }
-      s += String.fromCharCode(c);
     }
-    p += 3 + len * 2;
-    if (!ok || !isInstanceName(s, classRefs)) continue;
-    return s;
+    if (!ok || !isInstanceName(decoded.value, classRefs)) continue;
+    return decoded.value;
   }
   return '';
 }
@@ -655,99 +919,22 @@ function placementName(data: Uint8Array, start: number, end: number, classRefs: 
  * skipping the version-specific matrix entirely. Unnamed placements are omitted.
  */
 export function scanNamedInstances(data: Uint8Array): NamedInstance[] {
-  const combined = buildCombinedClassTable(data);
-  const classRefs = new Set(combined);
-  const named = new Set<string>(NAMED_PLACEMENT_CLASSES);
-
-  const starts: Array<{ pos: number; cls: string }> = [];
-
-  // 1) class-declaration recovery — the first placement of each class.
-  for (const cls of NAMED_PLACEMENT_CLASSES) {
-    const tail = classDeclTail(cls);
-    let from = 0;
-    for (;;) {
-      const m = indexOf(data, tail, from);
-      if (m < 0) break;
-      from = m + 1;
-      if (m < 4 || data[m - 4] !== 0xff || data[m - 3] !== 0xff) continue;
-      starts.push({ pos: m + tail.length, cls });
-    }
-  }
-
-  // 2) back-reference recovery — 0x80NN tag whose index resolves to a placement class.
-  const placementIndex = new Map<number, string>();
-  for (let k = 0; k < combined.length; k++) {
-    if (named.has(combined[k])) placementIndex.set(k + 1, combined[k]);
-  }
-  for (let i = 2; i < data.length - 2; i++) {
-    const tag = data[i - 2] | (data[i - 1] << 8);
-    if (!(tag & 0x8000)) continue;
-    const cls = placementIndex.get(tag & 0x7fff);
-    if (cls) starts.push({ pos: i, cls });
-  }
-
-  starts.sort((a, b) => a.pos - b.pos);
+  const starts = simulateCArchivePlacements(data);
+  const classRefs = new Set(buildCombinedClassTable(data));
 
   const out: NamedInstance[] = [];
   const seen = new Set<string>();
   for (let s = 0; s < starts.length; s++) {
     const { pos, cls } = starts[s];
     const end = s + 1 < starts.length ? starts[s + 1].pos : data.length;
+    if (!PLACEMENT_CLASSES.has(cls)) continue;
     const name = placementName(data, pos, end, classRefs);
-    if (!name || seen.has(name)) continue;
-    seen.add(name);
-    out.push({ ...placementKind(cls), name, bodyStart: pos });
-  }
-
-  // 3) Text-field recovery. Class-index back-refs find the FIRST CPicText of a
-  //    stream; later text fields reference a prior CPicText OBJECT by a high MFC
-  //    load-array index (e.g. 0x8083), which the class-index filter misses — so
-  //    their names get swallowed into a preceding sprite's range. A text field
-  //    references a font (`$…*` or a device font) immediately before its instance
-  //    name, so recover the name as the next identifier after each font token.
-  for (let p = 0; p + 4 <= data.length; p++) {
-    if (data[p] !== 0xff || data[p + 1] !== 0xfe || data[p + 2] !== 0xff) continue;
-    const len = data[p + 3];
-    if (len === 0 || len > 40 || p + 4 + len * 2 > data.length) continue;
-    let f = '';
-    let ok = true;
-    for (let i = 0; i < len; i++) {
-      const c = data[p + 4 + i * 2] | (data[p + 4 + i * 2 + 1] << 8);
-      if (c < 0x20 || c > 0x7e) { ok = false; break; }
-      f += String.fromCharCode(c);
-    }
-    p += 3 + len * 2;
-    if (!ok || !(f.startsWith('$') || DEVICE_FONTS.has(f))) continue;
-    // The name is the next identifier within the same text record (bounded window).
-    const name = placementName(data, p + 1, Math.min(data.length, p + 200), classRefs);
     if (name && !seen.has(name)) {
       seen.add(name);
-      out.push({ type: 'text', name, bodyStart: p });
+      const kind = placementKind(cls);
+      out.push({ type: kind.type, name, symbolType: kind.symbolType, bodyStart: pos });
     }
   }
 
-  // 4) Name-field recovery. A CPicSymbol instance name is serialized as an EMPTY
-  //    Flash string immediately followed by the name Flash string
-  //    (FF FE FF 00 · FF FE FF <name>). Catches sprite/button placements whose
-  //    object-index back-ref start wasn't detected (e.g. prevBtn, a sibling of an
-  //    already-found nextBtn). Only ADDS missed names (existing ones are deduped).
-  for (let p = 0; p + 8 <= data.length; p++) {
-    if (data[p] !== 0xff || data[p + 1] !== 0xfe || data[p + 2] !== 0xff || data[p + 3] !== 0x00) continue;
-    const q = p + 4;
-    if (data[q] !== 0xff || data[q + 1] !== 0xfe || data[q + 2] !== 0xff) continue;
-    const len = data[q + 3];
-    if (len === 0 || len > 40 || q + 4 + len * 2 > data.length) continue;
-    let s = '';
-    let ok = true;
-    for (let i = 0; i < len; i++) {
-      const c = data[q + 4 + i * 2] | (data[q + 4 + i * 2 + 1] << 8);
-      if (c < 0x20 || c > 0x7e) { ok = false; break; }
-      s += String.fromCharCode(c);
-    }
-    p = q + 3 + len * 2;
-    if (!ok || seen.has(s) || !isInstanceName(s, classRefs)) continue;
-    seen.add(s);
-    out.push({ type: 'symbol', symbolType: 'movieclip', name: s, bodyStart: p });
-  }
   return out;
 }

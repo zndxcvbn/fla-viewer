@@ -173,7 +173,7 @@ const NULL_TAG = 0x0000;
 const NEWCLASS_TAG = 0xffff;
 const LONG_BACKREF_TAG = 0x7fff;
 
-interface ClassTag {
+export interface ClassTag {
   kind: 'null' | 'new_class' | 'backref';
   name?: string;
   schema?: number;
@@ -186,19 +186,21 @@ interface ClassTag {
  * object), so a 1-based backref index maps to `combined[idx-1]`.
  */
 export class ArchiveReader {
-  /** Combined class+object table; entries carry the resolved class name. */
+  /** Combined class+object table; entries carry the resolved class name prefixed with type info. */
   private combined: string[] = [];
   constructor(public r: ByteReader) {}
 
   registerClass(name: string): void {
-    this.combined.push(name); // odd slot: the CRuntimeClass
-    this.combined.push(name); // even slot: the created CObject
+    // New class definitions populate both class reference and first instantiated object slots
+    this.combined.push(`class:${name}`);
+    this.combined.push(`obj:${name}`);
   }
 
-  /** Read one object-header class tag. */
+  /** Read one object-header class tag and dynamically track object instantiation. */
   readClassTag(): ClassTag {
     const tag = this.r.u16();
     if (tag === NULL_TAG) return { kind: 'null' };
+    
     if (tag === NEWCLASS_TAG) {
       const schema = this.r.u16();
       const nameLen = this.r.u16();
@@ -206,16 +208,51 @@ export class ArchiveReader {
       this.registerClass(name);
       return { kind: 'new_class', name, schema };
     }
+    
     if (tag === LONG_BACKREF_TAG) {
       const idx = this.r.u32();
-      const name = this.combined[idx - 1];
-      return { kind: 'backref', name };
+      if (idx >= 1 && idx <= this.combined.length) {
+        const item = this.combined[idx - 1];
+        if (item.startsWith('class:')) {
+          const className = item.substring(6);
+          this.combined.push(`obj:${className}`);
+          return { kind: 'backref', name: className };
+        } else if (item.startsWith('obj:')) {
+          const className = item.substring(4);
+          return { kind: 'backref', name: className };
+        }
+      }
+      throw new Error(`CArchive: invalid big backref index ${idx}`);
     }
+    
     if (tag & 0x8000) {
       const idx = tag & 0x7fff;
-      const name = this.combined[idx - 1];
-      return { kind: 'backref', name };
+      if (idx >= 1 && idx <= this.combined.length) {
+        const item = this.combined[idx - 1];
+        if (item.startsWith('class:')) {
+          const className = item.substring(6);
+          this.combined.push(`obj:${className}`);
+          return { kind: 'backref', name: className };
+        } else if (item.startsWith('obj:')) {
+          const className = item.substring(4);
+          return { kind: 'backref', name: className };
+        }
+      }
+      throw new Error(`CArchive: invalid backref index ${idx}`);
     }
+    
+    // Object backreferences (tag < 0x7FFF)
+    if (tag >= 1 && tag < 0x7fff) {
+      if (tag <= this.combined.length) {
+        const item = this.combined[tag - 1];
+        if (item.startsWith('obj:')) {
+          const className = item.substring(4);
+          return { kind: 'backref', name: className };
+        }
+      }
+      return { kind: 'backref', name: 'CPicSprite' };
+    }
+    
     throw new Error(
       `bad class tag 0x${tag.toString(16).padStart(4, '0')} @ 0x${(this.r.pos - 2).toString(16)}`
     );
@@ -255,7 +292,7 @@ function readFillStyle(
   const sel = subtype & 0x70;
   const base = colorFromU32(colorU32);
 
-  if (sel & SUBTYPE_GRADIENT) {
+  if (sel === SUBTYPE_GRADIENT) {
     const matrix = readMatrix(r);
     const numStops = Math.min(r.u8(), 15);
     let gradType = 0;
@@ -284,7 +321,7 @@ function readFillStyle(
       },
     };
   }
-  if (sel & SUBTYPE_BITMAP) {
+  if (sel === SUBTYPE_BITMAP) {
     const matrix = readMatrix(r);
     const bitmapId = r.u32();
     return {
@@ -298,7 +335,7 @@ function readFillStyle(
       },
     };
   }
-  if (sel & SUBTYPE_TYPE20) {
+  if (sel === SUBTYPE_TYPE20) {
     // Undocumented variant: consume its bytes so the stream stays aligned,
     // render as the base solid color.
     readMatrix(r);

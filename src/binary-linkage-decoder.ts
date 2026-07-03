@@ -10,13 +10,15 @@
  * marker (schema varies by Flash version) and reading the three strings back
  * from it captures both separator styles and every schema seen in the corpus.
  *
- * NOT solved here: joining a linkage record to a specific library Symbol number.
- * That join is object-identity based (not positional, and there is no shared
- * GUID between a linkage record and a `Symbol N` stream — only per-component edit
- * timestamps), so a binary FLA cannot resolve it from its own bytes. The table is
- * surfaced on the document for a consumer that owns the join (e.g. the compiled
- * SWF's registerClass map) to fingerprint each symbol's child instance names
- * against. See memory binary_fla_linkage_names.
+ * The native Contents path resolves most local linkage records to concrete
+ * `Symbol N` streams in `binary-native-contents.ts`, after the library table is
+ * decoded. This module deliberately stays narrower: it reads linkage/import
+ * records and preserves each record's nearest `"Symbol N"` / `"Sprite N"`
+ * binding for the Contents-level join.
+ *
+ * Still not fully decoded: Contents is not yet represented as a typed CArchive
+ * object graph. These helpers are structural field readers over the observed
+ * Contents records, not broad whole-file string recovery.
  */
 import type { BinaryLinkage } from './types';
 
@@ -57,13 +59,12 @@ function matchPrefix(d: Uint8Array, q: number, pre: number[]): boolean {
 }
 
 /**
- * True iff the NEAREST "Symbol N"/"Sprite N" edit-name before the linkage
- * identifier is exactly "Symbol 0" — i.e. this record binds the root (character
- * 0) = the document class. Taking the nearest edit-name (not just "is there a
- * Symbol 0 within a window") avoids tagging a later library record whose own
- * binding (e.g. "Sprite 4") sits between it and an unrelated earlier "Symbol 0".
+ * The NEAREST "Symbol N"/"Sprite N" edit-name before the linkage identifier — the
+ * library symbol this record binds to. Taking the nearest (not just "is there one in
+ * a window") avoids tagging a later record whose own binding sits between it and an
+ * unrelated earlier edit-name. `null` when none precedes within 200 bytes.
  */
-function boundToRoot(d: Uint8Array, identifierStart: number): boolean {
+function nearestEditName(d: Uint8Array, identifierStart: number): { num: number; isSymbol: boolean } | null {
   for (let q = identifierStart - 2; q >= Math.max(0, identifierStart - 200); q--) {
     const isSym = matchPrefix(d, q, SYMBOL_PREFIX);
     if (!isSym && !matchPrefix(d, q, SPRITE_PREFIX)) continue;
@@ -72,9 +73,16 @@ function boundToRoot(d: Uint8Array, identifierStart: number): boolean {
       n += String.fromCharCode(d[p]);
     }
     if (n === '') continue;
-    return isSym && n === '0'; // nearest edit-name decides
+    return { num: parseInt(n, 10), isSymbol: isSym }; // nearest edit-name decides
   }
-  return false;
+  return null;
+}
+
+/** True iff the nearest edit-name before the identifier is exactly "Symbol 0" — the
+ *  record binds the root (character 0) = the document class. */
+function boundToRoot(d: Uint8Array, identifierStart: number): boolean {
+  const e = nearestEditName(d, identifierStart);
+  return e !== null && e.isSymbol && e.num === 0;
 }
 
 /**
@@ -108,74 +116,49 @@ export function extractLinkage(contents: Uint8Array): BinaryLinkage[] {
     const key = id + '|' + cls;
     if (seen.has(key)) continue;
     seen.add(key);
-    const kind = boundToRoot(contents, identifier.start) ? 'document' : 'library';
-    out.push({ identifier: id, className: cls, kind });
+    const bound = nearestEditName(contents, identifier.start);
+    const kind = bound !== null && bound.isSymbol && bound.num === 0 ? 'document' : 'library';
+    const boundName = bound !== null ? `${bound.isSymbol ? 'Symbol' : 'Sprite'} ${bound.num}` : undefined;
+    out.push({ identifier: id, className: cls, kind, boundName });
   }
   return out;
 }
 
-/**
- * The library symbol NUMBER a linkage identifier binds to, or null.
- *
- * The library-item record writes the item's name as a Flash string immediately
- * followed by a `u32` — the REAL symbol number (the `N` in the `S <N>` /
- * `Symbol <N>` stream). This is NOT the "Symbol 1"/"Symbol 2" default edit-name
- * string seen elsewhere (that is just the pre-rename display name). We take the
- * FIRST occurrence of the identifier whose trailing 4 bytes are a `u32` (not
- * another Flash-string header — that would be the linkage-TABLE record, where the
- * separator string follows) AND whose value is an existing symbol stream number.
- * Later occurrences (component-param references) can carry an unrelated u32, so
- * first-match + the stream-number gate is what keeps the join 1:1.
- */
-function symbolNumberFor(
-  contents: Uint8Array,
-  identifier: string,
-  symbolNumbers: Set<number>
-): number | null {
-  const len = identifier.length;
-  for (let p = 0; p + 4 + len * 2 + 4 <= contents.length; p++) {
-    if (contents[p] !== 0xff || contents[p + 1] !== 0xfe || contents[p + 2] !== 0xff || contents[p + 3] !== len) {
-      continue;
+export function extractImports(contents: Uint8Array): BinaryLinkage[] {
+  const out: BinaryLinkage[] = [];
+  const seen = new Set<string>();
+  const u16 = (at: number, lenBytes: number): string => {
+    let s = '';
+    for (let i = 0; i < lenBytes; i += 2) {
+      s += String.fromCharCode(contents[at + i] | (contents[at + i + 1] << 8));
     }
-    let ok = true;
-    for (let i = 0; i < len; i++) {
-      if ((contents[p + 4 + i * 2] | (contents[p + 4 + i * 2 + 1] << 8)) !== identifier.charCodeAt(i)) {
-        ok = false;
-        break;
+    return s;
+  };
+  const flashStr = (p: number): { text: string; end: number } | undefined => {
+    if (p + 4 > contents.length) return undefined;
+    if (!(contents[p] === 0xff && contents[p + 1] === 0xfe && contents[p + 2] === 0xff)) return undefined;
+    const ln = contents[p + 3];
+    const end = p + 4 + ln * 2;
+    return ln > 0 && end <= contents.length ? { text: u16(p + 4, ln * 2), end } : undefined;
+  };
+
+  for (let p = 0; p + 4 < contents.length; p++) {
+    const name = flashStr(p);
+    if (!name || !/^[A-Za-z_$][\w$.]*$/.test(name.text)) continue;
+    const url = flashStr(name.end);
+    if (url && /\.swf$/i.test(url.text)) {
+      const key = name.text + '|' + url.text;
+      if (!seen.has(key)) {
+        seen.add(key);
+        out.push({
+          identifier: name.text,
+          className: name.text,
+          kind: 'import',
+          linkageURL: url.text
+        });
       }
     }
-    if (!ok) continue;
-    const after = p + 4 + len * 2;
-    // A Flash-string header here means this is the linkage-table record (the
-    // separator/className strings follow), not the library-item record.
-    if (contents[after] === 0xff && contents[after + 1] === 0xfe && contents[after + 2] === 0xff) {
-      continue;
-    }
-    const val =
-      contents[after] | (contents[after + 1] << 8) | (contents[after + 2] << 16) | (contents[after + 3] * 0x1000000);
-    if (symbolNumbers.has(val)) return val;
-  }
-  return null;
-}
-
-/**
- * Join each linkage record to its library Symbol number (see
- * {@link symbolNumberFor}). Returns `symbolNumber → linkage record`, so the
- * parser can set per-symbol `linkageClassName` directly — making the binary path
- * match the XFL shape with no SWF and no consumer-side join. Records with no
- * local symbol stream (imported/shared classes) are left unjoined (they stay in
- * the document-level table only). The join is 1:1 (first writer wins on the rare
- * chance two records resolve to the same number).
- */
-export function joinLinkageToSymbolNumbers(
-  contents: Uint8Array,
-  linkage: BinaryLinkage[],
-  symbolNumbers: Set<number>
-): Map<number, BinaryLinkage> {
-  const out = new Map<number, BinaryLinkage>();
-  for (const rec of linkage) {
-    const num = symbolNumberFor(contents, rec.identifier, symbolNumbers);
-    if (num !== null && !out.has(num)) out.set(num, rec);
   }
   return out;
 }
+

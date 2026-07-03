@@ -180,6 +180,7 @@ export class FLAParser {
     const height = parseFloat(root.getAttribute('height') || '400') || 400;
     const frameRate = parseFloat(root.getAttribute('frameRate') || '24') || 24;
     const backgroundColor = root.getAttribute('backgroundColor') || '#FFFFFF';
+    const documentClass = root.getAttribute('documentClass') || undefined;
 
     // Parse symbol references and load them
     await this.loadSymbols(root, progress);
@@ -209,7 +210,8 @@ export class FLAParser {
       symbols: this.symbolCache,
       bitmaps,
       sounds,
-      videos
+      videos,
+      ...(documentClass && { documentClass })
     };
   }
 
@@ -400,12 +402,13 @@ export class FLAParser {
       const symbolDoc = this.parser.parseFromString(symbolXml, 'text/xml');
       const symbolRoot = symbolDoc.documentElement;
 
-      // A Component Inspector / SWC component lives in the library as a COMPILED
-      // CLIP — a <DOMCompiledClipItem>, not a <DOMSymbolItem>. It still carries
+      // A Component Inspector / SWC component lives in the library as a COMPONENT
+      // item — a <DOMComponentItem> (or, for some compiled SWCs, a
+      // <DOMCompiledClipItem>), not a <DOMSymbolItem>. It still carries
       // name + linkageClassName (the registerClass'd AS class), so a stage
       // instance referencing it can be typed. Load it the same way; without it
       // the symbol is absent from doc.symbols and the instance can't be typed.
-      const isCompiledClip = symbolRoot.tagName === 'DOMCompiledClipItem';
+      const isCompiledClip = symbolRoot.tagName === 'DOMCompiledClipItem' || symbolRoot.tagName === 'DOMComponentItem';
       if (symbolRoot.tagName === 'DOMSymbolItem' || isCompiledClip) {
         const rawName = symbolRoot.getAttribute('name') || filename.replace('.xml', '');
         const name = normalizePath(rawName);
@@ -417,9 +420,10 @@ export class FLAParser {
         // Compiled clips are movie clips; they carry no symbolType attribute.
         const symbolType = (symbolRoot.getAttribute('symbolType') || (isCompiledClip ? 'movieclip' : 'graphic')) as 'graphic' | 'movieclip' | 'button';
 
-        // ActionScript linkage (Export for ActionScript). Used by tooling to map
+        // ActionScript linkage (Export for ActionScript / Runtime Sharing). Used by tooling to map
         // a library symbol to its AS class / attachMovie identifier.
         const linkageExportForAS = symbolRoot.getAttribute('linkageExportForAS') === 'true' ? true : undefined;
+        const linkageExportForRS = symbolRoot.getAttribute('linkageExportForRS') === 'true' ? true : undefined;
         const linkageClassName = symbolRoot.getAttribute('linkageClassName') || undefined;
         const linkageIdentifier = symbolRoot.getAttribute('linkageIdentifier') || undefined;
         const linkageBaseClass = symbolRoot.getAttribute('linkageBaseClass') || undefined;
@@ -466,6 +470,7 @@ export class FLAParser {
           ...(scale9Grid && { scale9Grid }),
           ...(hitAreaFrame !== undefined && { hitAreaFrame }),
           ...(linkageExportForAS && { linkageExportForAS }),
+          ...(linkageExportForRS && { linkageExportForRS }),
           ...(linkageClassName && { linkageClassName }),
           ...(linkageIdentifier && { linkageIdentifier }),
           ...(linkageBaseClass && { linkageBaseClass })

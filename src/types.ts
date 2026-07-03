@@ -11,6 +11,11 @@ export interface FLADocument {
   sounds: Map<string, SoundItem>;
   videos: Map<string, VideoItem>;
   /**
+   * Target Flash Player version extracted from publish settings.
+   * Present for binary FLAs (pre-CS5); XFL consumers should read PublishSettings.xml.
+   */
+  flashVersion?: number;
+  /**
    * The full ActionScript linkage table for *binary* (pre-CS5) FLAs only —
    * undefined for XFL, whose linkage lives per-symbol on
    * `Symbol.linkageClassName`. Most records are ALSO resolved onto their library
@@ -22,6 +27,7 @@ export interface FLADocument {
    * and the document/root class. Out of the extractor's `doc.binary` side-channel.
    */
   linkage?: BinaryLinkage[];
+  documentClass?: string;
 }
 
 /**
@@ -34,11 +40,28 @@ export interface BinaryLinkage {
   /** Bound AS class path (may be empty when only an export id is set). */
   className: string;
   /**
-   * 'document' = the main-timeline/root class (bound to character 0); 'library'
-   * = a regular library symbol. Lets a resolver avoid mistaking the document
-   * class for a library symbol.
+   * 'document' = the main-timeline/root class (bound to character 0);
+   * 'library' = a regular library symbol. Lets a resolver avoid mistaking the document
+   * class for a library symbol;
+   * 'import' = a shared library/runtime-shared asset (linkageImportForRS="true") 
+   * imported from another SWF.
    */
-  kind: 'document' | 'library';
+  kind: 'document' | 'library' | 'import';
+  /**
+   * The `"Symbol N"` / `"Sprite N"` edit-name CString nearest before the identifier in
+   * the linkage-table record — the library item this linkage binds to (the same signal
+   * `kind` uses). The JOIN fallback when a symbol has no library-item record with a
+   * placement-id u32 (itemcard.fla component symbols). The number is a DISPLAY-name id,
+   * not a stream number — it resolves to the stream of the library item with this exact
+   * name (Symbol 64 is named "Sprite 43", so GamepadButton's `boundName: "Sprite 43"`
+   * → stream 64). undefined when none precedes.
+   */
+  boundName?: string;
+  /**
+   * The source SWF path or URL from which this asset is imported. Present only when 
+   * `kind` is 'import'. Corresponds directly to the XFL `linkageURL` attribute.
+   */
+  linkageURL?: string;
 }
 
 export interface BitmapItem {
@@ -410,7 +433,10 @@ export interface Symbol {
   // ActionScript linkage (Properties panel > "Export for ActionScript"). Read
   // from <DOMSymbolItem>. Captured for tooling (resolving instances to their AS
   // class); the renderer does not use these.
-  linkageExportForAS?: boolean; // linkageExportForAS="true"
+  linkageExportForAS?: boolean; // linkageExportForAS="true" Export for ActionScript
+  linkageExportForRS?: boolean; // linkageExportForRS="true" Export for Runtime Sharing
+  linkageImportForRS?: boolean; // linkageImportForRS="true" Import for Runtime Sharing
+  linkageURL?: string;          // linkageURL="skyui/itemcard.swf"
   linkageClassName?: string; // AS class path, e.g. "skyui.components.ItemCard"
   linkageIdentifier?: string; // export id used by attachMovie("ItemCard", ...)
   linkageBaseClass?: string; // declared base class, when present

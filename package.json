@@ -9,7 +9,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "build:extractor": "node scripts/build-extractor.mjs"
+    "build:extractor": "node scripts/build-extractor.mjs",
+    "diagnose:native-timeline": "tsx scripts/diagnose-native-timeline.ts"
   },
   "keywords": [
     "fla",

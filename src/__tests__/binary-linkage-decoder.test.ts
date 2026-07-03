@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { extractLinkage, joinLinkageToSymbolNumbers } from '../binary-linkage-decoder';
+import {
+  extractImports,
+  extractLinkage,
+} from '../binary-linkage-decoder';
 
 // ── byte-builder helpers ────────────────────────────────────────────────────
 function u8(...v: number[]): number[] {
   return v.map((n) => n & 0xff);
-}
-function u32le(v: number): number[] {
-  return [v & 0xff, (v >> 8) & 0xff, (v >> 16) & 0xff, (v >>> 24) & 0xff];
 }
 function utf16(s: string): number[] {
   const o: number[] = [];
@@ -16,10 +16,6 @@ function utf16(s: string): number[] {
 /** A Flash string `FF FE FF <u8 len> <UTF-16LE>`. */
 function flashStr(s: string): number[] {
   return [0xff, 0xfe, 0xff, s.length, ...utf16(s)];
-}
-/** A library-item record fragment: the item name followed by its u32 symbol number. */
-function libraryItem(name: string, symbolNumber: number): number[] {
-  return [...flashStr(name), ...u32le(symbolNumber)];
 }
 /**
  * One linkage record: `<id> <sep> <className> <schema> 02 00 00 00`. The schema
@@ -49,9 +45,12 @@ describe('extractLinkage — binary Contents linkage table', () => {
       ...utf16('Symbol 0'), // root edit-name immediately precedes the record
       ...record('DocClass', '.', 'MyDocument', 0x05),
     ]);
-    expect(extractLinkage(bytes)).toEqual([
-      { identifier: 'DocClass', className: 'MyDocument', kind: 'document' },
-    ]);
+    const links = extractLinkage(bytes);
+    expect(links).toHaveLength(1);
+    expect(links[0].identifier).toBe('DocClass');
+    expect(links[0].className).toBe('MyDocument');
+    expect(links[0].kind).toBe('document');
+    expect(links[0].boundName).toBe('Symbol 0');
   });
 
   it('keeps a library record bound to a non-root "Symbol 1" edit-name', () => {
@@ -67,42 +66,82 @@ describe('extractLinkage — binary Contents linkage table', () => {
   });
 });
 
-describe('joinLinkageToSymbolNumbers — linkage → library Symbol number', () => {
-  it('joins each identifier to the u32 after its library-item name string', () => {
+describe('extractLinkage — export record variants', () => {
+  it('returns className empty for RS-only export records', () => {
+    // RS-only: has export identifier but NO class name (schema=5, cls="")
     const bytes = new Uint8Array([
-      // library-item records: name string immediately followed by u32 symbol id
-      ...libraryItem('MyClip', 677),
+      ...utf16('Symbol 1'),
+      ...record('PS3_A', '.', '', 0x05),
       ...u8(0, 0, 0, 0),
-      ...libraryItem('MyButton', 254),
-      ...u8(0, 0, 0, 0),
-      // linkage-table records (the same ids, but followed by a separator string)
-      ...record('MyClip', '.', 'com.MyClip', 0x05),
-      ...u8(0, 0, 0, 0),
-      ...record('MyButton', '', 'skyui.MyButton', 0x07),
+      ...utf16('Symbol 2'),
+      ...record('Tab', '.', '', 0x05),
     ]);
-    const linkage = extractLinkage(bytes);
-    const join = joinLinkageToSymbolNumbers(bytes, linkage, new Set([677, 254]));
-    expect(join.get(677)?.identifier).toBe('MyClip');
-    expect(join.get(677)?.className).toBe('com.MyClip');
-    expect(join.get(254)?.identifier).toBe('MyButton');
-    expect(join.size).toBe(2);
+    const links = extractLinkage(bytes);
+    const rsRecords = links.filter((l) => !l.className);
+    expect(rsRecords).toHaveLength(2);
+    expect(rsRecords[0].identifier).toBe('PS3_A');
+    expect(rsRecords[1].identifier).toBe('Tab');
   });
 
-  it('ignores the linkage-table occurrence (separator string follows, not a u32)', () => {
-    // Only the table record exists — no library-item record — so no join.
-    const bytes = new Uint8Array([...record('Imported', '.', 'shared.Imported', 0x05)]);
-    const linkage = extractLinkage(bytes);
-    expect(joinLinkageToSymbolNumbers(bytes, linkage, new Set([1, 2, 3])).size).toBe(0);
+  it('returns non-empty className for AS+RS export records', () => {
+    // AS+RS: has both export identifier and class name (schema=7, cls!="")
+    const bytes = new Uint8Array([
+      ...utf16('Symbol 1'),
+      ...record('ItemCard', '.', 'ItemCard', 0x07),
+      ...u8(0, 0, 0, 0),
+      ...utf16('Symbol 2'),
+      ...record('QSlider', '.', 'Components.QuantitySlider', 0x07),
+    ]);
+    const links = extractLinkage(bytes);
+    const asRecords = links.filter((l) => l.className);
+    expect(asRecords).toHaveLength(2);
+    expect(asRecords[0].className).toBe('ItemCard');
+    expect(asRecords[1].className).toBe('Components.QuantitySlider');
   });
 
-  it('does not join when the trailing u32 is not an existing symbol stream', () => {
+  it('mixes RS-only and AS+RS records in the same stream', () => {
+    // Real-world scenario: some symbols have only an export identifier (RS),
+    // others have a full class name (AS+RS)
     const bytes = new Uint8Array([
-      ...libraryItem('Ghost', 999),
-      ...u8(0, 0, 0, 0),
-      ...record('Ghost', '.', 'Ghost', 0x05),
+      ...utf16('Sprite 45'),
+      ...record('item_name', '.', '', 0x05),                // RS-only
+      ...u8(0, 0, 0, 0, 0, 0, 0, 0),
+      ...utf16('Sprite 32'),
+      ...record('ItemCard', '.', 'ItemCard', 0x07),        // AS+RS
     ]);
-    const linkage = extractLinkage(bytes);
-    // 999 is not in the symbol-number set → no join.
-    expect(joinLinkageToSymbolNumbers(bytes, linkage, new Set([42])).size).toBe(0);
+    const links = extractLinkage(bytes);
+    expect(links).toHaveLength(2);
+    // RS-only: identifier present, className empty
+    const rsOnly = links.find((l) => l.identifier === 'item_name');
+    expect(rsOnly?.className).toBe('');
+    // AS+RS: both present
+    const asPlus = links.find((l) => l.identifier === 'ItemCard');
+    expect(asPlus?.className).toBe('ItemCard');
   });
+
+  it('decodes runtime-shared import records from adjacent name/url strings', () => {
+    const bytes = new Uint8Array([
+      ...flashStr('ButtonArt'),
+      ...flashStr('skyui/buttonart.swf'),
+      ...u8(0, 0, 0, 0),
+      ...flashStr('$EverywhereMediumFont'),
+      ...flashStr('gfxfontlib.swf'),
+    ]);
+
+    expect(extractImports(bytes)).toEqual([
+      {
+        identifier: 'ButtonArt',
+        className: 'ButtonArt',
+        kind: 'import',
+        linkageURL: 'skyui/buttonart.swf',
+      },
+      {
+        identifier: '$EverywhereMediumFont',
+        className: '$EverywhereMediumFont',
+        kind: 'import',
+        linkageURL: 'gfxfontlib.swf',
+      },
+    ]);
+  });
+
 });

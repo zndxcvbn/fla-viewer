@@ -17,6 +17,7 @@ import {
   scanForInstances,
   scanNamedInstances,
   tryParseInstanceAt,
+  tryParseTextInstanceAt,
   unjoinedNames,
   type DecodedInstance,
   type NamedInstance,
@@ -43,6 +44,21 @@ function u32le(v: number): number[] {
 }
 function ascii(s: string): number[] {
   return [...s].map((c) => c.charCodeAt(0));
+}
+
+/** Encode a string as UTF-16LE bytes. */
+function utf16le(s: string): number[] {
+  const out: number[] = [];
+  for (let i = 0; i < s.length; i++) {
+    const code = s.charCodeAt(i);
+    out.push(code & 0xff, (code >> 8) & 0xff);
+  }
+  return out;
+}
+
+/** A Flash string: FF FE FF <len_u8> <UTF-16LE chars>. */
+function flashString(s: string): number[] {
+  return [0xff, 0xfe, 0xff, s.length, ...utf16le(s)];
 }
 
 const FIXED_1 = 0x00010000; // 1.0 in 16.16 fixed-point
@@ -81,6 +97,43 @@ function placementBody(opts: {
   out.push(...u16le(256), ...u16le(0), ...u16le(256), ...u16le(0)); // 4×u16
   out.push(...u8(name.length), ...ascii(name)); // instance name
   out.push(...u32le(opts.mediaRef)); // media_ref → library item id
+  return out;
+}
+
+function cpicSymbolSchema22Tail(targetRef: number): number[] {
+  return [
+    ...u32le(1),
+    ...u32le(0),
+    ...u16le(0),
+    0xff, 0xff, 0xfe, 0xff, 0x00,
+    ...u32le(targetRef),
+    ...u8(0, 0, 0, 0, 0, 0, 0),
+    0x00, 0x00, 0x80, 0x3f,
+    ...u8(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+    0x00, 0x00, 0x80, 0x3f,
+    ...u8(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+    0x00, 0x00, 0x80, 0x3f,
+    ...u8(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+    0x00, 0x00, 0x80, 0x3f,
+    ...u8(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+  ];
+}
+
+function placementBodySchema22Variant(opts: {
+  matrix: [number, number, number, number, number, number];
+  targetRef: number;
+}): number[] {
+  const out: number[] = [];
+  out.push(...u8(5, 0));
+  out.push(...u16le(0x0000));
+  out.push(...s32le(0), ...s32le(0));
+  out.push(...u8(0, 0));
+  out.push(...u8(22));
+  for (const m of opts.matrix) out.push(...s32le(m));
+  out.push(...u16le(0), ...u16le(2), ...u8(1));
+  out.push(...u16le(56), ...u16le(0), ...u16le(108), ...u16le(64));
+  out.push(...u8(108, 0, 148, 0, 108, 0));
+  out.push(...cpicSymbolSchema22Tail(opts.targetRef));
   return out;
 }
 
@@ -124,6 +177,42 @@ describe('binary-instance-decoder: tryParseInstanceAt', () => {
     expect(inst!.endPos).toBe(body.length);
   });
 
+  it('consumes CPicSymbol schema 22 native tail before the next CArchive tag', () => {
+    const tail = cpicSymbolSchema22Tail(4);
+    expect(tail).toHaveLength(128);
+    const body = new Uint8Array([
+      ...placementBody({
+        cpicObjSchema: 5,
+        symbolSchema: 22,
+        matrix: [FIXED_1, 0, 0, FIXED_1, 0, 0],
+        mediaRef: 1,
+      }),
+      ...tail,
+    ]);
+
+    const inst = tryParseInstanceAt(body, 0, 'CPicSymbol', 'class_decl');
+    expect(inst).not.toBeNull();
+    expect(inst!.mediaRef).toBe(1);
+    expect(inst!.altMediaRef).toBe(4);
+    expect(inst!.endPos).toBe(body.length);
+  });
+
+  it('uses schema 22 transform tail when legacy name/media fields are absent', () => {
+    const body = new Uint8Array(
+      placementBodySchema22Variant({
+        matrix: [FIXED_1, 0, 0, FIXED_1, 0, 0],
+        targetRef: 38,
+      })
+    );
+
+    const inst = tryParseInstanceAt(body, 0, 'CPicSprite', 'class_decl');
+    expect(inst).not.toBeNull();
+    expect(inst!.mediaRef).toBe(38);
+    expect(inst!.altMediaRef).toBe(38);
+    expect(inst!.instanceName).toBe('');
+    expect(inst!.endPos).toBe(body.length);
+  });
+
   it('decodes a non-identity matrix (scale + translate)', () => {
     // a=0.5, d=2.0, tx=40 twips (=2px), ty=-100 twips (=-5px).
     const body = new Uint8Array(
@@ -151,6 +240,100 @@ describe('binary-instance-decoder: tryParseInstanceAt', () => {
     expect(inst.matrix.tx).toBe(300);
   });
 
+  it('decodes a BlurFilter from the placement tail', () => {
+    const body = new Uint8Array([
+      ...placementBody({ matrix: IDENTITY, mediaRef: 3 }),
+      0x00, // no color transform
+      0x01, // one filter
+      0x01, // BlurFilter
+      ...s32le(10 * FIXED_1),
+      ...s32le(12 * FIXED_1),
+      0x10, // quality=2 in the top five bits
+    ]);
+    const inst = tryParseInstanceAt(body, 0, 'CPicSprite', 'class_decl')!;
+    expect(inst.filters).toEqual([{ type: 'blur', blurX: 10, blurY: 12, quality: 2 }]);
+    expect(inst.endPos).toBe(body.length);
+  });
+
+  it('decodes a DropShadowFilter after a color transform tail', () => {
+    const body = new Uint8Array([
+      ...placementBody({ matrix: IDENTITY, mediaRef: 3 }),
+      0x01, // has color transform
+      ...u16le(128), // alphaMultiplier = 0.5
+      0xff, ...u16le(0),
+      0xff, ...u16le(0),
+      0xff, ...u16le(0),
+      ...u16le(0),
+      0x01, // one filter
+      0x00, // DropShadowFilter
+      0x11, 0x22, 0x33, 0x80,
+      ...s32le(4 * FIXED_1),
+      ...s32le(5 * FIXED_1),
+      ...s32le(Math.round(Math.PI / 4 * FIXED_1)),
+      ...s32le(6 * FIXED_1),
+      ...u16le(512), // strength = 2.0 fixed8
+      0x18, // quality=3
+    ]);
+    const inst = tryParseInstanceAt(body, 0, 'CPicSprite', 'class_decl')!;
+    expect(inst.colorTransform?.alphaMultiplier).toBeCloseTo(0.5, 6);
+    expect(inst.filters).toHaveLength(1);
+    const filter = inst.filters![0];
+    expect(filter.type).toBe('dropShadow');
+    if (filter.type === 'dropShadow') {
+      expect(filter.color).toBe('#112233');
+      expect(filter.alpha).toBeCloseTo(128 / 255, 6);
+      expect(filter.blurX).toBe(4);
+      expect(filter.blurY).toBe(5);
+      expect(filter.distance).toBe(6);
+      expect(filter.angle).toBeCloseTo(45, 3);
+      expect(filter.strength).toBe(2);
+      expect(filter.quality).toBe(3);
+    }
+    expect(inst.endPos).toBe(body.length);
+  });
+
+  it('decodes schema 23 component dataBindingXML tail and Flash-string instance name', () => {
+    const componentXml = "<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='ItemCard' oldCopiedComponentPath=''>\n</component>\n";
+    const body = new Uint8Array([
+      ...u8(6, 2),
+      ...u16le(0),
+      ...s32le(6553),
+      ...s32le(7111),
+      ...u8(0, 0, 0),
+      ...u8(23),
+      ...s32le(FIXED_1),
+      ...s32le(0),
+      ...s32le(0),
+      ...s32le(FIXED_1),
+      ...s32le(6553),
+      ...s32le(7111),
+      ...u16le(0),
+      ...u16le(2),
+      ...u8(1),
+      ...u16le(1),
+      ...u16le(0),
+      ...u16le(1),
+      ...u16le(1),
+      ...u8(0),
+      ...u32le(1),
+      ...u32le(1),
+      ...u32le(0),
+      ...flashString(''),
+      ...u32le(2),
+      ...new Array(120).fill(0),
+      ...flashString('animate'),
+      ...u8(2, 0, 0, 0, 0, 0),
+      ...flashString(componentXml),
+    ]);
+
+    const inst = tryParseInstanceAt(body, 0, 'CPicSprite', 'class_decl')!;
+    expect(inst).not.toBeNull();
+    expect(inst.instanceName).toBe('animate');
+    expect(inst.mediaRef).toBe(1);
+    expect(inst.componentDataBindingXML).toBe(componentXml);
+    expect(inst.colorTransform).toBeUndefined();
+    expect(inst.endPos).toBe(body.length);
+  });
   it('rejects a body whose child list is not the NULL terminator', () => {
     const body = new Uint8Array(
       placementBody({ matrix: IDENTITY, mediaRef: 1 })
@@ -180,6 +363,236 @@ describe('binary-instance-decoder: tryParseInstanceAt', () => {
       placementBody({ matrix: IDENTITY, mediaRef: 1 })
     ).subarray(0, 10);
     expect(tryParseInstanceAt(body, 0, 'CPicSprite', 'class_decl')).toBeNull();
+  });
+});
+
+/**
+ * Build a CPicText body for tryParseTextInstanceAt.
+ *
+ * Layout (schema=5, 14-byte header):
+ *   [0-1]   schema(5), flags(0)
+ *   [2-3]   childTag = 0x0000
+ *   [4-7]   regPoint.x = INT_MIN
+ *   [8-11]  regPoint.y = INT_MIN
+ *   [12-13] extra1=0, extra2=0
+ *   [14-52] format block (39 bytes)
+ *     [43]    width LSB, [44] fontSize (=width MSB), [45] fontSize MSB (0)
+ *     [51]    height LSB, [52] height MSB
+ *   [53+]   Flash strings + fillColor
+ *
+ * fillColor encoded as 4 padding zeros + ABGR bytes after last font face.
+ * E.g., #999999 → `00 00 00 00 99 99 99 ff`.
+ */
+function cpicTextBody(opts: {
+  widthLow?: number;
+  fontSize?: number;
+  heightTwips?: number;
+  fontFace?: string;
+  characters?: string;
+  instanceName?: string;
+  fillColor?: string;
+}): Uint8Array {
+  const fontSize = opts.fontSize ?? 30;
+  const widthLow = opts.widthLow ?? 79;
+  const height = opts.heightTwips ?? 857;
+  const fontFace = opts.fontFace ?? '';
+  const text = opts.characters ?? '';
+  const name = opts.instanceName ?? '';
+  const fillColor = opts.fillColor ?? '';
+
+  const out: number[] = [];
+
+  // CPicObj header (schema=5)
+  out.push(5, 0);
+  out.push(...u16le(0x0000));
+  out.push(...s32le(0x80000000));
+  out.push(...s32le(0x80000000));
+  out.push(0, 0);
+
+  // Format block fill (14..42 = 29 bytes of plausible padding)
+  out.push(0x0e, 0x00, 0x00, 0x01); // [14-17]
+  for (let i = 0; i < 25; i++) out.push(0); // [18-42]
+
+  // [43] width low byte, [44] fontSize (overlap), [45] zero
+  out.push(widthLow, fontSize, 0);
+
+  // [46-50] padding
+  for (let i = 0; i < 5; i++) out.push(0);
+
+  // [51] height LSB, [52] height MSB
+  out.push(height & 0xff, (height >> 8) & 0xff);
+
+  // Flash strings after the format block.
+  // In real FLAs, the font face is followed immediately by fillColor
+  // (4-zero padding + ABGR bytes), then text sentinel + instance name.
+  if (fontFace) {
+    out.push(...flashString(fontFace));
+    // Fill color: 4-zero padding + ABGR bytes (after last font face string)
+    if (fillColor && fillColor.startsWith('#') && fillColor.length >= 7) {
+      const r = parseInt(fillColor.slice(1, 3), 16);
+      const g = parseInt(fillColor.slice(3, 5), 16);
+      const b = parseInt(fillColor.slice(5, 7), 16);
+      if (!isNaN(r) && !isNaN(g) && !isNaN(b)) {
+        out.push(0x00, 0x00, 0x00, 0x00); // padding
+        out.push(b, g, r, 0xff); // ABGR: B, G, R, A
+      }
+    }
+  }
+  if (text) {
+    // Text sentinel FF FE FF 00 + UTF-16LE text + null terminator
+    out.push(0xff, 0xfe, 0xff, 0x00, ...utf16le(text), 0x00, 0x00);
+  }
+  if (name) out.push(...flashString(name));
+
+  return new Uint8Array(out);
+}
+
+// ── tryParseTextInstanceAt: CPicText body parser ────────────────────────────
+describe('binary-instance-decoder: tryParseTextInstanceAt (CPicText)', () => {
+  it('decodes fontFace, characters, instanceName from Flash strings', () => {
+    const body = cpicTextBody({
+      fontFace: '$EverywhereMediumFont*',
+      characters: 'Hello',
+      instanceName: 'myField',
+    });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst).not.toBeNull();
+    expect(inst!.className).toBe('CPicText');
+    expect(inst!.instanceName).toBe('myField');
+    expect(inst!.textData?.characters).toBe('Hello');
+    expect(inst!.textData?.fontFace).toBe('$EverywhereMediumFont*');
+  });
+
+  it('returns null for invalid schema', () => {
+    const body = cpicTextBody({ characters: 'x' });
+    body[0] = 99; // invalid schema
+    expect(tryParseTextInstanceAt(body, 0, 'backref')).toBeNull();
+  });
+
+  it('returns null for non-null childTag', () => {
+    const body = cpicTextBody({ characters: 'x' });
+    body[2] = 0x01; // non-null childTag
+    body[3] = 0x00;
+    expect(tryParseTextInstanceAt(body, 0, 'class_decl')).toBeNull();
+  });
+
+  it('handles empty characters (no text sentinel)', () => {
+    const body = cpicTextBody({
+      fontFace: '_sans',
+      characters: '', // no text sentinel included
+    });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst).not.toBeNull();
+    expect(inst!.textData?.characters).toBe('');
+    expect(inst!.textData?.fontFace).toBe('_sans');
+  });
+
+  it('handles unnamed text (no instance name)', () => {
+    const body = cpicTextBody({
+      characters: 'static text',
+      instanceName: '', // no instance name Flash string
+    });
+    const inst = tryParseTextInstanceAt(body, 0, 'backref');
+    expect(inst).not.toBeNull();
+    expect(inst!.instanceName).toBe('');
+    expect(inst!.textData?.characters).toBe('static text');
+  });
+
+  it('recovers non-ASCII characters (Cyrillic)', () => {
+    const body = cpicTextBody({
+      fontFace: 'ArialMT',
+      characters: 'Привет мир',
+    });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst).not.toBeNull();
+    expect(inst!.textData?.characters).toBe('Привет мир');
+    expect(inst!.textData?.fontFace).toBe('ArialMT');
+  });
+});
+
+describe('binary-instance-decoder: tryParseTextInstanceAt structured fields (P1.2)', () => {
+  it('reads fontSize from bodyStart+44', () => {
+    const body = cpicTextBody({ fontSize: 30, characters: 'x' });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst!.textData?.fontSize).toBe(30);
+  });
+
+  it('reads height from bodyStart+51/52', () => {
+    const body = cpicTextBody({ heightTwips: 857, characters: 'x' });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst!.textData?.height).toBeCloseTo(857 / 20, 4);
+  });
+
+  it('reads width from bodyStart+43 with fontSize overlap', () => {
+    // width = (fontSize << 8) | widthLow
+    const body = cpicTextBody({ fontSize: 30, widthLow: 79, characters: 'x' });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    // 30 * 256 + 79 = 7759 twips ÷ 20 = 387.95 px
+    expect(inst!.textData?.width).toBeCloseTo(7759 / 20, 4);
+  });
+
+  it('defaults fontSize when byte[44] is 0', () => {
+    const body = cpicTextBody({ fontSize: 0, characters: 'x' });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst!.textData?.fontSize).toBeUndefined();
+  });
+
+  it('defaults height when twips out of range', () => {
+    // height 0 → out of range (zero)
+    const zero = cpicTextBody({ heightTwips: 0, characters: 'x' });
+    const inst = tryParseTextInstanceAt(zero, 0, 'class_decl');
+    expect(inst!.textData?.height).toBeUndefined();
+  });
+
+  it('defaults width when twips out of range', () => {
+    const body = cpicTextBody({ fontSize: 1, widthLow: 0, characters: 'x' });
+    // width = (1 << 8) | 0 = 256 twips = 12.8 px — in range
+    const inst1 = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst1!.textData?.width).toBeCloseTo(256 / 20, 4);
+
+    // width 0 → out of range (zero)
+    const zero = cpicTextBody({ fontSize: 0, widthLow: 0, characters: 'x' });
+    const inst2 = tryParseTextInstanceAt(zero, 0, 'class_decl');
+    expect(inst2!.textData?.width).toBeUndefined();
+  });
+
+  it('extracts fillColor from ABGR bytes after font face', () => {
+    const body = cpicTextBody({
+      fontFace: '$EverywhereMediumFont*',
+      characters: 'x',
+      fillColor: '#FFFFFF',
+    });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst!.textData?.fillColor).toBe('#FFFFFF');
+  });
+
+  it('extracts #999999 fillColor', () => {
+    const body = cpicTextBody({
+      fontFace: '$EverywhereMediumFont*',
+      characters: 'x',
+      fillColor: '#999999',
+    });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst!.textData?.fillColor).toBe('#999999');
+  });
+
+  it('defaults fillColor to #000000 when no color bytes follow font face', () => {
+    const body = cpicTextBody({
+      fontFace: '$EverywhereMediumFont*',
+      characters: 'x',
+      fillColor: '', // no padding/color appended
+    });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst!.textData?.fillColor).toBe('#000000');
+  });
+
+  it('defaults fillColor to #000000 when no font face present', () => {
+    const body = cpicTextBody({
+      characters: 'static text',
+      fontFace: '',
+    });
+    const inst = tryParseTextInstanceAt(body, 0, 'class_decl');
+    expect(inst!.textData?.fillColor).toBe('#000000');
   });
 });
 
@@ -399,6 +812,66 @@ describe('binary-instance-decoder: real Flash MX 2004 FLA (btnstrob.fla)', () =>
     expect(hostLayer.layerType === 'guide' || hostLayer.layerType === 'folder').toBe(
       false
     );
+  });
+});
+
+// ── scanNamedInstances: CPicFrame boundary prevents frame labels as names ────
+describe('binary-instance-decoder: scanNamedInstances CPicFrame boundary', () => {
+  it('excludes a CPicFrame frame label from named instances (regression: SoulGem)', () => {
+    // Binary stream with:
+    //   1. CPicText NEWCLASS + empty instance name (unnamed text field)
+    //   2. CPicFrame NEWCLASS + frame label "frameLabel"
+    //
+    // Without the BOUNDARY_CLASSES fix, placementName for the CPicText range
+    // would scan past the CPicFrame and find "frameLabel" as a text-field name.
+    // The fix records CPicFrame as a range boundary, so the scan stops there.
+    const data = new Uint8Array([
+      // ── CPicText NEWCLASS ──
+      0xff, 0xff, 0x01, 0x00, // NEWCLASS tag + schema
+      0x08, 0x00,             // MFC CString length (8)
+      0x43, 0x50, 0x69, 0x63, 0x54, 0x65, 0x78, 0x74, // "CPicText"
+      0x00,                   // empty instance name (unnamed)
+      // ── CPicFrame NEWCLASS ──
+      0xff, 0xff, 0x01, 0x00, // NEWCLASS tag + schema
+      0x09, 0x00,             // MFC CString length (9)
+      0x43, 0x50, 0x69, 0x63, 0x46, 0x72, 0x61, 0x6d, 0x65, // "CPicFrame"
+      // Frame label Flash string: FF FE FF 07 "frameLabel"
+      0xff, 0xfe, 0xff, 0x07,
+      0x66, 0x00, 0x72, 0x00, 0x61, 0x00, 0x6d, 0x00, 0x65, 0x00,
+      0x4c, 0x00, 0x61, 0x00, 0x62, 0x00, 0x65, 0x00, 0x6c, 0x00,
+    ]);
+    const result = scanNamedInstances(data);
+    // The frame label must NOT appear as a named instance.
+    expect(result.some((n) => n.name === 'frameLabel')).toBe(false);
+    // The unnamed CPicText produces no names either.
+    expect(result).toHaveLength(0);
+  });
+
+  it('still recovers a named CPicText when a CPicFrame follows it', () => {
+    // Same layout, but the CPicText carries a real instance name "myText".
+    const data = new Uint8Array([
+      // ── CPicText NEWCLASS ──
+      0xff, 0xff, 0x01, 0x00,
+      0x08, 0x00,
+      0x43, 0x50, 0x69, 0x63, 0x54, 0x65, 0x78, 0x74,
+      // Instance name Flash string: FF FE FF 06 "myText"
+      0xff, 0xfe, 0xff, 0x06,
+      0x6d, 0x00, 0x79, 0x00, 0x54, 0x00, 0x65, 0x00, 0x78, 0x00, 0x74, 0x00,
+      // ── CPicFrame NEWCLASS ──
+      0xff, 0xff, 0x01, 0x00,
+      0x09, 0x00,
+      0x43, 0x50, 0x69, 0x63, 0x46, 0x72, 0x61, 0x6d, 0x65,
+      // Frame label Flash string: FF FE FF 07 "frameLabel"
+      0xff, 0xfe, 0xff, 0x07,
+      0x66, 0x00, 0x72, 0x00, 0x61, 0x00, 0x6d, 0x00, 0x65, 0x00,
+      0x4c, 0x00, 0x61, 0x00, 0x62, 0x00, 0x65, 0x00, 0x6c, 0x00,
+    ]);
+    const result = scanNamedInstances(data);
+    // The real CPicText name is still recovered.
+    expect(result.some((n) => n.name === 'myText')).toBe(true);
+    expect(result.some((n) => n.name === 'myText' && n.type === 'text')).toBe(true);
+    // The frame label is still excluded.
+    expect(result.some((n) => n.name === 'frameLabel')).toBe(false);
   });
 });
 

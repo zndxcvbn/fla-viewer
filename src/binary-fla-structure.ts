@@ -39,6 +39,11 @@
  * recorded reason rather than crashing the whole parse (project rule).
  */
 
+import {
+  FLASH_STRING_BOM,
+  decodeUtf16Le,
+} from './binary-flash-string';
+
 export type BinaryLayerType =
   | 'normal'
   | 'guide'
@@ -77,9 +82,6 @@ const LAYER_SIG = new Uint8Array([
   0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x80,
 ]);
 
-// Flash length-prefixed UTF-16LE string BOM: FF FE FF <u8 len>.
-const FLASH_STR_BOM = new Uint8Array([0xff, 0xfe, 0xff]);
-
 // CPicLayer.type byte → semantic kind (FORMAT.md §4). 0=normal, 1=guide,
 // 3=mask, 4=masked, 5=folder. Values we have not observed map to 'normal'.
 const LAYER_TYPE_BY_BYTE: Record<number, BinaryLayerType> = {
@@ -89,8 +91,6 @@ const LAYER_TYPE_BY_BYTE: Record<number, BinaryLayerType> = {
   4: 'masked',
   5: 'folder',
 };
-
-const utf16le = new TextDecoder('utf-16le');
 
 function matchesAt(hay: Uint8Array, needle: Uint8Array, at: number): boolean {
   if (at < 0 || at + needle.length > hay.length) return false;
@@ -115,12 +115,26 @@ export function extractLayers(streamData: Uint8Array): BinaryLayerInfo[] {
   let pos = 0;
 
   while (pos <= data.length - LAYER_SIG.length) {
-    if (!matchesAt(data, LAYER_SIG, pos)) {
+    // Check for the standard sentinel first, relaxed sentinel below.
+    let schemaPos: number | null = null;
+    if (matchesAt(data, LAYER_SIG, pos)) {
+      schemaPos = pos + LAYER_SIG.length;
+    } else {
+      // Fallback: NULL child tag (00 00) with any 8-byte point.
+      // CS6 may use sentinel values different from MX 2004's INT_MIN.
+      if (data[pos] === 0x00 && data[pos + 1] === 0x00) {
+        const maybeSchema = data[pos + 10];
+        const maybeBom = data[pos + 11];
+        if (maybeSchema >= 1 && maybeSchema <= 63 && maybeBom === 0xff) {
+          schemaPos = pos + 10;
+        }
+      }
+    }
+    if (schemaPos === null) {
       pos += 1;
       continue;
     }
     // After the 10-byte sentinel: u8 layer_schema, then the name Flash string.
-    const schemaPos = pos + LAYER_SIG.length;
     const schema = data[schemaPos];
     const bomPos = schemaPos + 1;
     // A plausible layer schema is small; bail this candidate otherwise. (The
@@ -128,13 +142,13 @@ export function extractLayers(streamData: Uint8Array): BinaryLayerInfo[] {
     // are not followed by a layer-schema byte + name Flash string.)
     if (
       schema < 1 ||
-      schema > 30 ||
-      !matchesAt(data, FLASH_STR_BOM, bomPos)
+      schema > 63 ||
+      !matchesAt(data, FLASH_STRING_BOM, bomPos)
     ) {
       pos += 1;
       continue;
     }
-    const lenPos = bomPos + FLASH_STR_BOM.length;
+    const lenPos = bomPos + FLASH_STRING_BOM.length;
     const charLen = data[lenPos];
     const nameStart = lenPos + 1;
     const nameEnd = nameStart + charLen * 2;
@@ -142,7 +156,7 @@ export function extractLayers(streamData: Uint8Array): BinaryLayerInfo[] {
       pos += 1;
       continue;
     }
-    const name = utf16le.decode(data.subarray(nameStart, nameEnd));
+    const name = decodeUtf16Le(data, nameStart, charLen * 2);
 
     // Post-name triple (layer_schema >= 4): u8 type, u8 locked, u8 visible.
     let typeByte = 0;
